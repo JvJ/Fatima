@@ -1,0 +1,23 @@
+<GoalLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="./schemas/GoalLibrary.xsd">
+	
+	<ActivePursuitGoal name="MakeAnotherLaugh([target])">
+		<PreConditions>
+			<RecentEvent subject="[SELF]" action="look-at" target="[target]"/>	
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<Property name="[target]" operator="!=" value="[SELF]" />	
+			<Property name="[target]" operator="!=" value="User" />	
+		</PreConditions>
+		<SuccessConditions>
+			<NewEvent subject="[SELF]" action="SuccesfulJoke" target="[target]"/>
+		</SuccessConditions>
+		<FailureConditions>
+			<NewEvent subject="[SELF]" action="LameJoke" target="[target]"/>
+		</FailureConditions>
+		<ExpectedEffects>
+			<OnSelect drive="Affiliation" target="[SELF]" value="+2"/>
+			<OnSelect drive="Affiliation" target="[target]" value="+2"/>			
+		</ExpectedEffects>	
+	</ActivePursuitGoal>
+
+</GoalLibrary>

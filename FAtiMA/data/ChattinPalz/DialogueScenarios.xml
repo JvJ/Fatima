@@ -1,8 +1,6 @@
 <Scenarios>
-	
-- 
 	<Scenario name="DialogueScenario">
-		<WorldSimulator port="46874" scenery="Office" actionsFile="CompositeActions.xml" 
+		<WorldSimulator port="46874" scenery="Office" actionsFile="CompositeActions" 
 						agentLanguageFile="/language/agent/en/language-set-1"
 						userLanguageFile="/language/user/en/language-set-1" 
 						userOptionsFile="UserOptions"	
@@ -13,7 +11,7 @@
 		</WorldSimulator>	
 		
 		<Agent name="Sam" displayName="Sam" role="Sam" platform="worldsim" host="localhost" 
-			   port="46874" displayMode="True" sex="M" actionsFile="CompositeActions" 
+			   port="46874" debugMode="True" sex="M" actionsFile="CompositeActions" 
 			   goalsFile="CompositeGoalLibrary">
 			<Properties>				
 				<Property name="location" value="Office"/>
@@ -23,7 +21,7 @@
 		</Agent>
 		
 		<Agent name="John" displayName="John" role="John" platform="worldsim" host="localhost" 
-			   port="46874" displayMode="True" sex="M" actionsFile="CompositeActions" 
+			   port="46874" debugMode="True" sex="M" actionsFile="CompositeActions" 
 			   goalsFile="CompositeGoalLibrary">
 			<Properties>				
 				<Property name="location" value="Office"/>

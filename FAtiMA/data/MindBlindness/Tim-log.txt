@@ -1,0 +1,122 @@
+
+Connecting to localhost:46874
+
+Motivator found: Affiliation
+
+Motivator found: Integrity
+
+Motivator found: Energy
+
+Motivator found: Certainty
+
+Motivator found: Competence
+
+LOADING Needs: 
+
+WARNING: condition [[target]]:![box](Contains,coin) of the goal/action HideCoin([target]) cannot be achived by any step!
+
+Tim: Processing message: AGENTS Tim BoxA BoxB User
+
+Sending Look-AT: Tim
+
+Perceiving Entities: [Tim, BoxA, BoxB, User]
+
+Tim: Processing message: LOOK-AT Tim sex:M time:Morning location:LivingRoom name:Tim role:Child isPerson:True 
+
+Look-At:Tim sex M
+
+Look-At:Tim time Morning
+
+Look-At:Tim location LivingRoom
+
+Look-At:Tim name Tim
+
+Look-At:Tim role Child
+
+Look-At:Tim isPerson True
+
+Sending Look-AT: BoxA
+
+Tim: Processing message: ACTION-FINISHED Tim look-at Tim
+
+can act now!
+
+Tim: Processing message: LOOK-AT BoxA OnTable:True owner:Child type:Box location:LivingRoom 
+
+Look-At:BoxA OnTable True
+
+Look-At:BoxA owner Child
+
+Look-At:BoxA type Box
+
+Look-At:BoxA location LivingRoom
+
+Sending Look-AT: BoxB
+
+Tim: Processing message: ACTION-FINISHED Tim look-at BoxA
+
+can act now!
+
+PropertyChanged: [*] SELF(sex) M
+
+PropertyChanged: [*] SELF(time) Morning
+
+PropertyChanged: [*] SELF(location) LivingRoom
+
+PropertyChanged: [*] SELF(name) SELF
+
+PropertyChanged: [*] SELF(role) Child
+
+PropertyChanged: [*] SELF(isPerson) True
+
+PropertyChanged: [*] BoxA(OnTable) True
+
+PropertyChanged: [*] BoxA(owner) Child
+
+PropertyChanged: [*] BoxA(type) Box
+
+PropertyChanged: [*] BoxA(location) LivingRoom
+
+appraising event: EVENT(SELF,look-at,SELF)
+
+appraising event: EVENT(SELF,look-at,BoxA)
+
+Tim: Processing message: LOOK-AT BoxB OnTable:True owner:Child type:Box location:LivingRoom 
+
+Look-At:BoxB OnTable True
+
+Look-At:BoxB owner Child
+
+Look-At:BoxB type Box
+
+Look-At:BoxB location LivingRoom
+
+Sending Look-AT: User
+
+Tim: Processing message: ACTION-FINISHED Tim look-at BoxB
+
+can act now!
+
+PropertyChanged: [*] BoxB(OnTable) True
+
+PropertyChanged: [*] BoxB(owner) Child
+
+PropertyChanged: [*] BoxB(type) Box
+
+PropertyChanged: [*] BoxB(location) LivingRoom
+
+appraising event: EVENT(SELF,look-at,BoxB)
+
+Tim: Processing message: LOOK-AT User 
+
+Tim: Processing message: ACTION-FINISHED Tim look-at User
+
+can act now!
+
+appraising event: EVENT(SELF,look-at,User)
+
+Tim: Processing message: ACTION-FINISHED User SpeechAct Tim startgame
+
+can act now!
+
+appraising event: EVENT(User,SpeechAct,SELF,startgame)
