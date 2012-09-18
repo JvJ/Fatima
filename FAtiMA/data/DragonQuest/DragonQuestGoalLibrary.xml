@@ -1,0 +1,334 @@
+<GoalLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="./schemas/GoalLibrary.xsd">
+	
+	<ActivePursuitGoal name="UsePotion()">
+		<PreConditions>
+			<Property name="SELF(has,Potions)" operator="=" value="True" />
+			<Property name="SELF(currentHP)" operator="=" value="[cHP]" />
+			<Property name="SELF(maxHP)" operator="=" value="[maxHP]" />
+			<Equation result="[x]" operator="-" operand1="[maxHP]" operand2="[cHP]" />
+			<Property name="[x]" operator="GreaterThan" value="10" />
+		</PreConditions>
+		<SuccessConditions>
+			<NewEvent occurred="True" subject="SELF" action="UsePotion" />
+		</SuccessConditions>
+		<FailureConditions>
+		</FailureConditions>
+		<ExpectedEffects>
+			<OnSelect drive="Integrity" target="SELF" value="+3"/>
+			<!--<OnSelect drive="Equipment" target="SELF" value="-1" />-->
+			<!--<OnSelect drive="Affiliation" target="SELF" value="+3" />-->
+		</ExpectedEffects>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="AttackAttacker([target])">
+		<PreConditions>
+			<Property name="[target](isEnemy)" operator="=" value="True" />
+			<Property name="[target](isAlive)" operator="=" value="True" />
+			<RecentEvent occurred="True" subject="[target]" action="Attack" target="SELF" />
+		</PreConditions>
+		<SuccessConditions>
+			<NewEvent occurred="True" subject="SELF" action="Attack" target="[target]" />
+		</SuccessConditions>
+		<FailureConditions>
+		</FailureConditions>
+		<ExpectedEffects>
+			<OnSelect drive="Score" target="SELF" value="+4"/>
+			<OnIgnore drive="Integrity" target="SELF" value="-4" />
+		</ExpectedEffects>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="Attack([target])">
+		<PreConditions>
+			<Property name="[target](isEnemy)" operator="=" value="True" />
+			<Property name="[target](isAlive)" operator="=" value="True" />
+		</PreConditions>
+		<SuccessConditions>
+			<NewEvent occurred="True" subject="SELF" action="Attack" target="[target]" />
+		</SuccessConditions>
+		<FailureConditions>
+		</FailureConditions>
+		<ExpectedEffects>
+			<OnSelect drive="Score" target="SELF" value="+4"/>
+		</ExpectedEffects>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="RunAway([target])">
+		<PreConditions>
+			<NewEvent occurred="True" subject="[target]" action="Attack" target="SELF" />
+			<Property name="[target](isEnemy)" operator="=" value="True" />
+			<Property name="[target](isAlive)" operator="=" value="True" />
+		</PreConditions>
+		<SuccessConditions>
+			<NewEvent occurred="True" subject="SELF" action="RunAway" target="[target]" />
+		</SuccessConditions>
+		<FailureConditions>
+		</FailureConditions>
+		<ExpectedEffects>
+			<OnIgnore drive="Integrity" target="SELF" value="-4" />
+		</ExpectedEffects>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="SummonCompanion()">
+		<PreConditions>
+			<Property name="SELF(hasSpell,SummonCompanion)" operator="=" value="True" />
+		</PreConditions>
+		<SuccessConditions>
+			<NewEvent occurred="True" subject="SELF" action="SummonCompanion" />
+		</SuccessConditions>
+		<FailureConditions>
+		</FailureConditions>
+		<ExpectedEffects>
+			<OnSelect drive="Integrity" target="SELF" value="+1"/>
+			<OnSelect drive="Energy" target="SELF" value="-1" />
+			<OnSelect drive="Affiliation" target="SELF" value="+3" />
+		</ExpectedEffects>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="RayOfFrost([target])">
+		<PreConditions>
+			<Property name="[target](isEnemy)" operator="=" value="True" />
+			<Property name="[target](isAlive)" operator="=" value="True" />
+			<Property name="SELF(hasSpell,RayOfFrost)" operator="=" value="True" />
+		</PreConditions>
+		<SuccessConditions>
+			<NewEvent occurred="True" subject="SELF" action="RayOfFrost" target="[target]" />
+		</SuccessConditions>
+		<FailureConditions>
+		</FailureConditions>
+		<ExpectedEffects>
+			<OnSelect drive="Energy" target="SELF" value="-0.2"/>
+			<OnSelect drive="Score" target="SELF" value="+2" />
+		</ExpectedEffects>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="MagicMissile([target])">
+		<PreConditions>
+			<Property name="[target](isEnemy)" operator="=" value="True" />
+			<Property name="[target](isAlive)" operator="=" value="True" />
+			<Property name="SELF(hasSpell,MagicMissile)" operator="=" value="True" />
+		</PreConditions>
+		<SuccessConditions>
+			<NewEvent occurred="True" subject="SELF" action="MagicMissile" target="[target]" />
+		</SuccessConditions>
+		<FailureConditions>
+		</FailureConditions>
+		<ExpectedEffects>
+			<OnSelect drive="Energy" target="SELF" value="-0.6"/>
+			<OnSelect drive="Score" target="SELF" value="+4" />
+		</ExpectedEffects>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="AreaElectricLoop([target])">
+		<PreConditions>
+			<Property name="[target](isEnemy)" operator="=" value="True" />
+			<Property name="[target](isAlive)" operator="=" value="True" />
+			<Property name="[target2](isEnemy)" operator="=" value="True" />
+			<Property name="[target2](isAlive)" operator="=" value="True" />
+			<Property name="[target]" operator="!=" value="[target2]" />
+			<Property name="SELF(hasSpell,ElectricLoop)" operator="=" value="True" />
+		</PreConditions>
+		<SuccessConditions>
+			<NewEvent occurred="True" subject="SELF" action="ElectricLoop" target="[target]" />
+		</SuccessConditions>
+		<FailureConditions>
+		</FailureConditions>
+		<ExpectedEffects>
+			<OnSelect drive="Energy" target="SELF" value="-0.8"/>
+			<OnSelect drive="Score" target="SELF" value="+8" />
+		</ExpectedEffects>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="ElectricLoop([target])">
+		<PreConditions>
+			<Property name="[target](isEnemy)" operator="=" value="True" />
+			<Property name="[target](isAlive)" operator="=" value="True" />
+			<Property name="SELF(hasSpell,ElectricLoop)" operator="=" value="True" />
+		</PreConditions>
+		<SuccessConditions>
+			<NewEvent occurred="True" subject="SELF" action="ElectricLoop" target="[target]" />
+		</SuccessConditions>
+		<FailureConditions>
+		</FailureConditions>
+		<ExpectedEffects>
+			<OnSelect drive="Energy" target="SELF" value="-0.8"/>
+			<OnSelect drive="Score" target="SELF" value="+4" />
+		</ExpectedEffects>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="LightningBolt([target])">
+		<PreConditions>
+			<Property name="[target](isEnemy)" operator="=" value="True" />
+			<Property name="[target](isAlive)" operator="=" value="True" />
+			<Property name="SELF(hasSpell,LightningBolt)" operator="=" value="True" />
+		</PreConditions>
+		<SuccessConditions>
+			<NewEvent occurred="True" subject="SELF" action="LightningBolt" target="[target]" />
+		</SuccessConditions>
+		<FailureConditions>
+		</FailureConditions>
+		<ExpectedEffects>
+			<OnSelect drive="Energy" target="SELF" value="-1.2"/>
+			<OnSelect drive="Score" target="SELF" value="+6" />
+		</ExpectedEffects>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="Rest()">
+		<PreConditions>
+		</PreConditions>
+		<SuccessConditions>
+			<NewEvent occurred="True" subject="SELF" action="Rests" />
+		</SuccessConditions>
+		<FailureConditions>
+		</FailureConditions>
+		<ExpectedEffects>
+			<OnSelect drive="Integrity" target="SELF" value="+2"/>
+		</ExpectedEffects>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="ReactiveNegativeRegulation([target])">
+		<PreConditions>
+			<Property name="SELF(isPlaying)" operator="=" value="True" />
+			<Property name="SELF(isAlive)" operator="=" value="True" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<Property name="[target](isAlive)" operator="=" value="True" />
+			<Property name="[target]" operator="!=" value="SELF" />
+			<LikeRelation target="[target]" operator="LesserThan" value="0" />
+			<EmotionCondition ToM="[target]" emotion="Joy" min-intensity="[x]" />
+			<Property name="[x]" operator="GreaterThan" value="1" />
+		</PreConditions>
+		<SuccessConditions>
+			<!--<NewEvent occurred="True" subject="[target]" action="Smile"/>-->
+			<EmotionCondition ToM="[target]" emotion="Distress" min-intensity="[x]" />
+		</SuccessConditions>
+		<FailureConditions>
+		</FailureConditions>
+		<ExpectedEffects>
+			<OnSelect drive="Score" target="SELF" value="[x]"/>
+		</ExpectedEffects>	
+	</ActivePursuitGoal>
+
+	<ActivePursuitGoal name="ReactivePositiveRegulation([target])">
+		<PreConditions>
+			<Property name="SELF(isPlaying)" operator="=" value="True" />
+			<Property name="SELF(isAlive)" operator="=" value="True" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<Property name="[target](isAlive)" operator="=" value="True" />
+			<Property name="[target]" operator="!=" value="SELF" />
+			<Property name="SELF(inCombat)" operator="=" value="False" />
+			<LikeRelation target="[target]" operator="GreaterThan" value="0" />
+			<EmotionCondition ToM="[target]" emotion="Distress" min-intensity="-2" />
+			<Property name="[x]" operator="GreaterThan" value="1" />
+		</PreConditions>
+		<SuccessConditions>
+			<!--<NewEvent occurred="True" subject="[target]" action="Smile"/>-->
+			<EmotionCondition ToM="[target]" emotion="Joy"  min-intensity="[x]" />
+		</SuccessConditions>
+		<FailureConditions>
+		</FailureConditions>
+		<ExpectedEffects>
+			<OnSelect drive="Score" target="SELF" value="[x]"/>
+		</ExpectedEffects>	
+	</ActivePursuitGoal>
+
+	<ActivePursuitGoal name="ProactivePositiveRegulation([target])">
+		<PreConditions>
+			<Property name="SELF(isPlaying)" operator="=" value="True" />
+			<Property name="SELF(isAlive)" operator="=" value="True" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<Property name="[target]" operator="!=" value="SELF" />
+			<Property name="[target](isAlive)" operator="=" value="True" />
+			<Property name="SELF(inCombat)" operator="=" value="False" />
+			<LikeRelation target="[target]" operator="=" value="[l1]" />
+			<Property name="[l1]" operator="GreaterThan" value="0" />
+			<LikeRelation ToM="[target]" target="SELF" operator="=" value="[l2]" />
+			<Equation result="[x]" operator="-" operand1="[l1]" operand2="[l2]" />
+			<Property name="[x]" operator="GreaterThan" value="0" />
+		</PreConditions>
+		<SuccessConditions>
+			<EmotionCondition ToM="[target]" emotion="Joy" min-intensity="[x]" />
+		</SuccessConditions>
+		<FailureConditions>
+		</FailureConditions>			
+		<ExpectedEffects>
+			<OnSelect drive="Affiliation" target="SELF" value="[x]"/>
+		</ExpectedEffects>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="ProactiveNegativeRegulation([target])">
+		<PreConditions>
+			<Property name="SELF(isAlive)" operator="=" value="True" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<Property name="[target]" operator="!=" value="SELF" />
+			<Property name="[target](isAlive)" operator="=" value="True" />
+			<LikeRelation target="[target]" operator="=" value="[l1]" />
+			<Property name="[l1]" operator="LesserThan" value="0" />
+			<LikeRelation ToM="[target]" target="SELF" operator="=" value="[l2]" />
+			<Equation result="[x]" operator="-" operand1="[l2]" operand2="[l1]" />
+			<Property name="[x]" operator="GreaterThan" value="0" />
+		</PreConditions>
+		<SuccessConditions>
+			<EmotionCondition ToM="[target]" emotion="Distress" min-intensity="[x]" />
+		</SuccessConditions>
+		<FailureConditions>
+		</FailureConditions>			
+		<ExpectedEffects>
+			<OnSelect drive="Affiliation" target="SELF" value="[x]"/>
+		</ExpectedEffects>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="EmotionSharing([target])">
+		<PreConditions>
+			<Property name="SELF(isPlaying)" operator="=" value="True" />
+			<Property name="SELF(inCombat)" operator="=" value="False" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<Property name="[target]" operator="!=" value="SELF" />
+			<LikeRelation target="[target]" operator="GreaterThan" value="0" />
+			<EmotionalEpisodeCondition episode="[x]" emotion="[e]" min-intensity="3" />
+			<RecentEvent occurred="False" subject="SELF" action="SpeechAct" target="[target]" parameters="episodesummary,[x],[e]"/>
+			<PastEvent occurred="False" subject="SELF" action="SpeechAct" target="[target]" parameters="episodesummary,[x],[e]"/>
+		</PreConditions>
+		<SuccessConditions>
+			<NewEvent occurred="True" subject="SELF" action="SpeechAct" target="[target]" parameters="episodesummary,[x],[e]"/>
+			<!--<NewEvent occurred="True" subject="[target]" action="SpeechAct" target="SELF" parameters="showsupport,[e]"/>-->
+		</SuccessConditions>
+		<FailureConditions>
+			<NewEvent occurred="True" subject="[target]" action="SpeechAct" target="SELF" parameters="rejectsupport"/>
+		</FailureConditions>
+		<ExpectedEffects>
+			<OnSelect drive="Affiliation" target="SELF" value="+3"/>
+		</ExpectedEffects>	
+	</ActivePursuitGoal>
+	<ActivePursuitGoal name="ProvideSupport([target])">
+		<PreConditions>
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<Property name="[target]" operator="!=" value="SELF" />
+			<LikeRelation target="[target]" operator="GreaterThan" value="0" />
+			<NewEvent occurred="True" subject="[target]" action="SpeechAct" target="SELF" parameters="episodesummary,[x],[e]"/>
+		</PreConditions>
+		<SuccessConditions>
+			<NewEvent occurred="True" subject="SELF" action="SpeechAct" target="[target]" parameters="showsupport,[e]"/>
+		</SuccessConditions>
+		<FailureConditions>
+		</FailureConditions>
+		<ExpectedEffects>
+			<OnSelect drive="Affiliation" target="[target]" value="+4"/>
+		</ExpectedEffects>	
+	</ActivePursuitGoal>
+	<ActivePursuitGoal name="RejectSupport([target])">
+		<PreConditions>
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<Property name="[target]" operator="!=" value="SELF" />
+			<LikeRelation target="[target]" operator="LesserThan" value="0" />
+			<NewEvent occurred="True" subject="[target]" action="SpeechAct" target="SELF" parameters="episodesummary,[x],[e]"/>
+		</PreConditions>
+		<SuccessConditions>
+			<NewEvent occurred="True" subject="SELF" action="SpeechAct" target="[target]" parameters="rejectsupport"/>
+		</SuccessConditions>
+		<FailureConditions>
+		</FailureConditions>
+		<ExpectedEffects>
+			<OnSelect drive="Affiliation" target="SELF" value="+2"/>
+		</ExpectedEffects>	
+	</ActivePursuitGoal>	
+</GoalLibrary>

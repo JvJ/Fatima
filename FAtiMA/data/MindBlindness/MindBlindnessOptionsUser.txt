@@ -1,0 +1,6 @@
+User SpeechAct Tim startgame
+User SpeechAct Tim starttest
+User SpeechAct Tim restartgame
+User Open BoxA
+User Open BoxB
+

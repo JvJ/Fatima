@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:include schemaLocation="Conditions.xsd" />
+
+<xs:element name="RoleLibrary">
+  <xs:complexType>
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="Role" type="Role" />
+    </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+ 
+
+<xs:complexType name="Role">
+  <xs:sequence minOccurs="1" maxOccurs="unbounded">
+    <xs:element name="ActivationConditions" type="ActivationConditions" />
+    <xs:element name="ExpirationConditions" type="ExpirationConditions" />
+  </xs:sequence>
+  <xs:attribute name="name" type="xs:string" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="ActivationConditions">
+  <xs:choice minOccurs="0" maxOccurs="unbounded">
+    <xs:element name="Property" type="PropertyCondition" />
+    <xs:element name="Predicate" type="PredicateCondition" />
+    <xs:element name="RecentEvent" type="EventCondition"/>
+    <xs:element name="PastEvent" type="EventCondition"/>
+    <xs:element name="NewEvent" type="EventCondition"/>
+    <xs:element name="RitualCondition" type="RitualCondition"/>
+    <xs:element name="EmotionCondition" type="EmotionCondition"/>
+    <xs:element name="MoodCondition" type="EmotionCondition"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="ExpirationConditions">
+  <xs:choice minOccurs="0" maxOccurs="unbounded">
+    <xs:element name="Property" type="PropertyCondition" />
+    <xs:element name="Predicate" type="PredicateCondition" />
+    <xs:element name="RecentEvent" type="EventCondition"/>
+    <xs:element name="PastEvent" type="EventCondition"/>
+    <xs:element name="NewEvent" type="EventCondition"/>
+    <xs:element name="RitualCondition" type="RitualCondition"/>
+    <xs:element name="EmotionCondition" type="EmotionCondition"/>
+    <xs:element name="MoodCondition" type="EmotionCondition"/>
+  </xs:choice>
+</xs:complexType>
+
+</xs:schema>

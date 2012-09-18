@@ -1,0 +1,89 @@
+<DomainActions>
+		
+	<Action name="Move([location])">
+		<PreConditions>
+			<Property name="[AGENT](location)" operator="!=" value="[location]" />
+		</PreConditions>
+		<Effects>
+			<Effect probability="1.0">
+				<Property name="[AGENT](location)" operator="=" value="[location]" />
+			</Effect>
+		</Effects>
+	</Action>
+				
+	<Action name="LightCigarette()">
+		<PreConditions>
+			<Property name="[AGENT](hasLitCigarette)" operator="=" value="False" />
+		</PreConditions>
+		<Effects>
+			<Effect probability="1.0">
+				<Property name="[AGENT](hasLitCigarette)" operator="=" value="True" />
+			</Effect>	
+		</Effects>
+	</Action>	
+	
+	<Action name="AskSmokerToStop([target])">
+		<PreConditions>
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<RecentEvent subject="[AGENT]" action="DiscussAboutSmoker" />
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+		</PreConditions>
+		<Effects>	
+		</Effects>
+	</Action>
+	
+	<Action name="PutOutCigarette()">
+		<PreConditions>
+			<RecentEvent subject="[any]" action="AskSmokerToStop" target="[AGENT]" />
+		</PreConditions>
+		<Effects>
+			<Property name="[AGENT](hasLitCigarette)" operator="=" value="False" />
+		</Effects>
+	</Action>
+	
+	<Action name="SmallTalk()">
+		<PreConditions>
+		</PreConditions>
+		<Effects>
+		</Effects>
+	</Action>
+	
+	<Action name="DiscussAboutSmoker([target])">
+		<PreConditions>
+			<RecentEvent subject="[any]" action="LightCigarette" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[AGENT](group)" operator="=" value="[target](group)" />
+		</PreConditions>
+		<Effects>
+		</Effects>
+	</Action>	
+	
+	<Action name="SuggestLeave()">
+		<PreConditions>
+			<RecentEvent subject="[AGENT]" action="DiscussAboutSmoker" />
+		</PreConditions>
+		<Effects>	
+		</Effects>
+	</Action>
+
+	<Action name="Ignore()">
+		<PreConditions>
+			<RecentEvent subject="[AGENT]" action="DiscussAboutSmoker" />
+		</PreConditions>
+		<Effects>	
+		</Effects>
+	</Action>
+
+	<Action name="AgreeToLeave()">
+		<PreConditions>
+			<RecentEvent subject="[x]" action="SuggestLeave" />
+			<Property name="[AGENT](group)" operator="=" value="[x](group)" />
+		</PreConditions>
+		<Effects>
+		</Effects>
+	</Action>
+
+
+	
+</DomainActions>

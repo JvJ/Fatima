@@ -1,0 +1,18 @@
+<GoalLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="./schemas/GoalLibrary.xsd">
+
+    <ActivePursuitGoal name="Eat([target])">
+		<PreConditions>
+			<Property name="[target](eatable)" operator="=" value="True" />
+			<Property name="SELF(has,[target])" operator="=" value="True" />
+		</PreConditions>
+		<SuccessConditions>
+			<NewEvent occurred="True" subject="SELF" action="Eat" target="[target]"/>
+		</SuccessConditions>
+		<FailureConditions>
+		</FailureConditions>
+		<ExpectedEffects>
+			<OnSelect drive="Energy" target="[SELF]" value="+3"/>
+		</ExpectedEffects>	
+	</ActivePursuitGoal>
+</GoalLibrary>

@@ -1,0 +1,33 @@
+<GoalLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="./schemas/GoalLibrary.xsd">
+
+	 <ActivePursuitGoal name="Know-Direction([location])">
+			<PreConditions>
+				<Property name="[location](isLocation)" operator="=" value="True" />	
+				<Property name="[SELF](knowsDirection,[location])" operator="=" value="False" />
+			</PreConditions>
+	
+			<SuccessConditions>
+				<Property name="[SELF](knowsDirection,[location])" operator="=" value="True" />
+			</SuccessConditions>
+		
+			<ExpectedEffects>
+			</ExpectedEffects>	
+	</ActivePursuitGoal>	
+
+	<ActivePursuitGoal name="Go-To([location])">
+			<PreConditions>
+				<Property name="[SELF](knowsDirection,[location])" operator="=" value="True" />
+				<Property name="[location](isLocation)" operator="=" value="True" />	
+			</PreConditions>
+	
+			<SuccessConditions>
+				<Property name="[SELF](isIn,[location])" operator="=" value="True" />
+			</SuccessConditions>
+		
+			<ExpectedEffects>
+			</ExpectedEffects>	
+	</ActivePursuitGoal>		
+	
+	
+</GoalLibrary>

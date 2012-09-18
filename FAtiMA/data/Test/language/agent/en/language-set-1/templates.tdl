@@ -1,0 +1,104 @@
+absOrder: pre1, pre2, default#, post0, post1, post2, post3
+
+# global variables
+
+#pre1: $T=Type() not(bully())
+#-> $T bully(value:Luke)
+
+#pre2: $T=Type() not(victim())
+#-> $T victim(value:John)
+
+# 		insulting another agent
+Type(value:insult) sex(value:$S)
+-> preInsult() theInsult(gender:$S) Utterance(value:"!") 
+
+Type(value:insult) sex(value:$S)
+-> Utterance(value: "You suck, ") theInsult(gender:$S) Utterance(value:"!")
+
+
+Type(value:greeting)
+-> Utterance(value: "Hi, how are you?")
+
+Type(value:welcome)
+-> Utterance(value: "Nice to see you.")
+
+Type(value:welcome)
+-> Utterance(value: "Good to have you here.")
+
+Type(value:apple)
+-> Utterance(value: "Would you like an apple?")
+
+Type(value:orange)
+-> Utterance(value: "Do you want to have an orange?")
+
+Type(value:banana)
+-> Utterance(value: "Fancy a banana?")
+
+Type(value:cake)
+-> Utterance(value: "Do you want to have a piece of cake?")
+
+Type(value:askPreference)
+-> Utterance(value: "Which other fruit do you prefer?")
+
+Type(value:acknowledge)
+-> Utterance(value: "OK. I will remember that for next time.")
+
+Type(value:swearSecrecy) it(value:$O)
+-> Utterance(value: ("OK. I will keep that secret from ",$O,"."))
+
+Type(value:swearSecrecy) it(value:$O)
+-> Utterance(value: ("I won't tell ",$O," about that. Thanks for sharing it with me!"))
+
+Type(value:party) it(value:$O)
+-> Utterance(value: ($O," was drunk at the party last night."))
+
+Type(value:newJob) it(value:$O)
+-> Utterance(value: ("Oh... yes, ",$O," is going to get a new job."))
+
+Type(value:hideInfo)
+-> Utterance(value: "I am afraid I don't know anything about that.")
+
+Type(value:dontTell)
+-> Utterance(value: "I suggest you ask him later.")
+
+Type(value:goodbye) it(value:$O)
+-> Utterance(value: ("Talk to you again soon. Enjoy your ",$O,"."))
+
+Type(value:goodbye) it(value:$O)
+-> Utterance(value: ("Hope you enjoy the ",$O,". Bye for now!"))
+
+Type(value:rejectsupport) 
+-> Utterance(value: "like I care.")
+
+Type(value:rejectsupport) 
+-> Utterance(value: "boring!")
+
+Type(value:rejectsupport) 
+-> Utterance(value: "yada, yada, yada, shut up already.")
+
+Type(value:rejectsupport) 
+-> Utterance(value: "couldn't care less.")
+
+Type(value:showsupport) it(value:DISTRESS)
+-> Utterance(value: "I'm so sorry")
+
+Type(value:showsupport) it(value:DISTRESS)
+-> Utterance(value: "Geez, thanks for sharing it with me")
+
+######################################
+# Internals
+preInsult()
+-> Utterance(value: "You are a ")
+
+preInsult()
+-> Utterance(value: "You are such a ")
+
+preInsult()
+-> Utterance(value: "")
+
+
+theInsult(gender:$S)
+-> Utterance(value: Synonym(semCat:idiot,type:$S))
+
+theInsult(gender:$S)
+-> Utterance(value: (Synonym(semCat:stupid,type:$S), " ", Synonym(semCat:idiot,type:$S)))

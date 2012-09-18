@@ -1,0 +1,5 @@
+<InterpersonalRelations>
+
+	<Relation subject="Guilhas" target="User" like="3" respect="2"/>
+		
+</InterpersonalRelations>

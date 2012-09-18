@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:include schemaLocation="Types.xsd" />
+<xs:include schemaLocation="Conditions.xsd" />
+
+
+
+<xs:element name="DomainActions">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="DialogPair" minOccurs="0" maxOccurs="unbounded" >
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="PreConditions" type="Preconditions" minOccurs="0" maxOccurs="1" />
+						<xs:element name="InitiationAct" type="DialogueAct" minOccurs="1" maxOccurs="1" />
+						<xs:element name="ReactiveAct" type="DialogueAct" minOccurs="1" maxOccurs="1" />
+						<xs:element name="Effects" type="Effects" minOccurs="0" maxOccurs="1" />
+						<xs:element name="EffectsOnDrives" type="EffectsOnDrives" minOccurs="0" maxOccurs="1" />
+					</xs:sequence>
+					<xs:attribute name="name" type="Name" use="required"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Action" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="PreConditions" type="Preconditions" minOccurs="0" maxOccurs="1" />
+						<xs:element name="Effects" type="Effects" minOccurs="0" maxOccurs="1" />
+						<xs:element name="EffectsOnDrives" type="EffectsOnDrives" minOccurs="0" maxOccurs="1" />
+					</xs:sequence>
+					<xs:attribute name="name" type="ActionName" use="required"/>
+					<xs:attribute name="probability" type="xs:double" use="optional"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:complexType name="Preconditions">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+		<xs:element name="Property" type="PropertyCondition" />
+		<xs:element name="RecentEvent" type="EventCondition"/>
+		<xs:element name="NewEvent" type="EventCondition"/>
+		<xs:element name="PastEvent" type="EventCondition"/>
+		<xs:element name="EmotionalEvent" type="EmotionalEventCondition"/>
+		<xs:element name="EmotionCondition" type="EmotionCondition"/>
+		<xs:element name="MoodCondition" type="MoodCondition"/>
+		<xs:element name="SACondition" type="SACondition"/>
+		<xs:element name="LikeCondition" type="SocialCondition"/>
+		<xs:element name="SICondition" type="SocialCondition"/>
+		<xs:element name="SAKnown" type="SAKnown"/>
+		<xs:element name="Predicate" type="PredicateCondition" />
+		<xs:element name="Equation" type="EquationCondition" />
+		<xs:element name="EmotionalEpisodeCondition" type="EmotionalEpisodeCondition" />
+	</xs:choice>
+</xs:complexType>
+
+<xs:complexType name="Effects">
+	<xs:sequence>
+		<xs:element name="Effect" minOccurs="0" maxOccurs="unbounded" >
+			<xs:complexType>
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="Property" type="EqualPropertyCondition" />
+					<xs:element name="Predicate" type="PredicateCondition" />
+				</xs:choice>
+				<xs:attribute name="probability" type="xs:double" use="required"/>
+			</xs:complexType>
+		</xs:element>
+	</xs:sequence>    
+</xs:complexType>
+
+<xs:complexType name="EffectsOnDrives">
+	<xs:sequence>
+		<xs:element name="Motivator" minOccurs="0" maxOccurs="unbounded">
+			<xs:complexType>
+				<xs:attribute name="drive" type="externalMotivatorsType" use="required"/>
+				<xs:attribute name="target" type="Symbol" use="required"/>
+				<xs:attribute name="value" type="FloatOrVariable" use="required"/>
+			</xs:complexType>
+		</xs:element>
+	</xs:sequence>
+</xs:complexType>
+	
+<xs:complexType name="DialogueAct">
+	<xs:attribute name="name" type="Symbol" use="required"/>
+</xs:complexType>
+
+
+</xs:schema>

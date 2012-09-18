@@ -1,0 +1,35 @@
+<Scenarios>
+	
+- 
+	<Scenario name="DialogueScenario">
+		<WorldSimulator port="46874" scenery="Office" actionsFile="CompositeActions.xml" 
+						agentLanguageFile="/language/agent/en/language-set-1"
+						userLanguageFile="/language/user/en/language-set-1" 
+						userOptionsFile="UserOptions"	
+						simplifiedVersion="True">		
+			<Objects>
+				<Object name="User"/>
+			</Objects>
+		</WorldSimulator>	
+		
+		<Agent name="Sam" displayName="Sam" role="Sam" platform="worldsim" host="localhost" 
+			   port="46874" displayMode="True" sex="M" actionsFile="CompositeActions" 
+			   goalsFile="CompositeGoalLibrary">
+			<Properties>				
+				<Property name="location" value="Office"/>
+				<Property name="time" value="Morning"/>
+				<Property name="isPerson" value="True"/>
+			</Properties>	
+		</Agent>
+		
+		<Agent name="John" displayName="John" role="John" platform="worldsim" host="localhost" 
+			   port="46874" displayMode="True" sex="M" actionsFile="CompositeActions" 
+			   goalsFile="CompositeGoalLibrary">
+			<Properties>				
+				<Property name="location" value="Office"/>
+				<Property name="time" value="Morning"/>
+				<Property name="isPerson" value="True"/>
+			</Properties>	
+		</Agent>
+	</Scenario>
+</Scenarios>

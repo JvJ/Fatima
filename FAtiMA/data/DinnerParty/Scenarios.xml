@@ -1,0 +1,107 @@
+<Scenarios>	
+	
+	<Scenario name="DinnerParty">
+		<WorldSimulator port="46874" scenery="Forest" actionsFile="data/characters/minds/Actions-DinnerParty.xml" 
+						agentLanguageFile="data/characters/minds/language/agent/en/language-set-1" 
+						userOptionsFile="UserOptions.txt">
+			<Objects>
+			</Objects>
+		</WorldSimulator>	
+		
+		<Agent name="Yoda" displayName="Yoda" role="Blank" platform="worldsim" host="localhost" 
+			   port="46874" displayMode="True" sex="M" actionsFile="Actions-DinnerParty" 
+			   goalsFile="GoalLibrary-DinnerParty" cultureName="HighPowerCulture">
+			<Properties>				
+				<Property name="place" value="party-spot"/>
+				<Property name="type" value="character"/>
+				<Property name="isPerson" value="True"/>
+				<Property name="power" value="10"/>
+				<Property name="time" value="noon"/>
+
+			   	<Property name="host" value="False"/>
+			    <Property name="hasInvitation" value="False"/>
+			    <Property name="pose" value="standing"/>
+			    <Property name="onScene" value="True"/>
+			    <Property name="isSeated" value="False"/>
+			</Properties>		
+		</Agent>
+		
+		<Agent name="ObiWan" displayName="ObiWan" role="Blank" platform="worldsim" host="localhost" 
+			   port="46874" displayMode="True" sex="M" actionsFile="Actions-DinnerParty" 
+			   goalsFile="GoalLibrary-DinnerParty" cultureName="HighPowerCulture">
+			<Properties>				
+				<Property name="place" value="party-spot"/>			
+				<Property name="type" value="character"/>
+				<Property name="isPerson" value="True"/>			
+				<Property name="power" value="7"/>
+				<Property name="time" value="noon"/>
+				<Property name="likesGifts" value="True"/>
+				<Property name="dislikesSmallGifts" value="True"/>			
+			
+				<Property name="host" value="True"/>
+				<Property name="hasInvitation" value="False"/>
+				<Property name="pose" value="standing"/>
+				<Property name="onScene" value="True"/>
+				<Property name="isSeated" value="False"/>	
+			</Properties>		
+		</Agent>
+		
+		<Agent name="QuiGon" displayName="QuiGon" role="Blank" platform="worldsim" host="localhost" 
+			   port="46874" displayMode="True" sex="M" actionsFile="Actions-DinnerParty" 
+			   goalsFile="GoalLibrary-DinnerParty" cultureName="HighPowerCulture">
+			<Properties>		
+				<Property name="place" value="meeting-spot"/>
+			    <Property name="type" value="character"/>
+			    <Property name="isPerson" value="True"/>
+			    <Property name="power" value="7"/>			      
+			    <Property name="time" value="morning"/>
+					
+				<Property name="hasSmallGift" value="True"/>	
+				<Property name="hasMoney" value="True"/>
+				<Property name="host" value="False"/>
+				<Property name="hasInvitation" value="True"/>
+				<Property name="pose" value="standing"/>
+				<Property name="onScene" value="True"/>
+				<Property name="isSeated" value="False"/>	
+			</Properties>		
+		</Agent>
+		
+		<Agent name="Sam" displayName="Sam" role="Blank" platform="worldsim" host="localhost" 
+			   port="46874" displayMode="True" sex="M" actionsFile="Actions-DinnerParty" 
+			   goalsFile="GoalLibrary-DinnerParty" cultureName="HighPowerCulture">
+			<Properties>		      	
+				<Property name="place" value="meeting-spot"/>	    
+      			<Property name="type" value="character" />
+      			<Property name="isPerson" value="True"/>     
+      			<Property name="power" value="4"/>
+      			<Property name="time" value="morning"/>  
+			
+		      	<Property name="hasMoney" value="False"/>
+		     	<Property name="host" value="False"/>
+		      	<Property name="hasInvitation" value="True"/>
+		      	<Property name="pose" value="standing"/>
+		      	<Property name="onScene" value="True"/>	
+		      	<Property name="isSeated" value="False"/>
+			</Properties>
+		</Agent>	
+		
+		<Agent name="John" displayName="John" role="Blank" platform="worldsim" host="localhost" 
+			   port="46874" displayMode="True" sex="M" actionsFile="Actions-DinnerParty" 
+			   goalsFile="GoalLibrary-DinnerParty" cultureName="HighPowerCulture">
+			<Properties>					
+				<Property name="place" value="meeting-spot"/>
+				<Property name="type" value="character" />
+				<Property name="isPerson" value="True"/>
+				<Property name="likesToTellJokes" value="True"/>			
+				<Property name="power" value="4"/>
+				<Property name="time" value="morning"/> 
+			
+				<Property name="host" value="False"/>
+				<Property name="hasInvitation" value="True"/>
+				<Property name="pose" value="standing"/>
+				<Property name="onScene" value="True"/>
+				<Property name="isSeated" value="False"/>
+			</Properties>
+		</Agent>
+	</Scenario>
+</Scenarios>

@@ -1,0 +1,80 @@
+<GoalLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="./schemas/GoalLibrary.xsd">
+
+	<ActivePursuitGoal name="logBookReminder([target])">
+		<PreConditions>
+			<Property name="[target](isUser)" operator="=" value="True" />	
+			<Property name="[target](present)" operator="=" value="True" />				
+			<RecentEvent occurred="False" subject="[SELF]" action="logBookReminder" target="[target]" />
+		</PreConditions>
+		<SucessConditions>
+			<RecentEvent occurred="True" subject="[SELF]" action="logBookReminder" target="[target]" />
+		</SucessConditions>
+		<ExpectedEffects>
+			<OnSelect drive="Affiliation" target="[SELF]" value="+1.6"/>
+			<OnSelect drive="Integrity" target="[SELF]" value="0"/>			
+			<OnSelect drive="Energy" target="[SELF]" value="-0.2"/>			
+		</ExpectedEffects>		
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="makeRemark([target],[remark])">
+		<PreConditions>
+			<Property name="[target]" operator="!=" value="[SELF]" />
+			<Property name="[remark](isRemark)" operator="=" value="True" />
+			<Property name="[target](isUser)" operator="=" value="True" />
+			<Property name="[target](present)" operator="=" value="True" />
+			<Property name="[target](madeRemark)" operator="=" value="False" />
+			<PastEvent occurred="False" subject="[SELF]" action="makeRemark" target="[target]" parameters="[remark]" />
+			<RecentEvent occurred="False" subject="[SELF]" action="makeRemark" target="[target]" parameters="[remark]" />
+			<RecentEvent occurred="True" subject="[target]" action="Break" />
+		</PreConditions>
+		<SucessConditions>
+			<RecentEvent occurred="True" subject="[SELF]" action="makeRemark" target="[target]" parameters="[remark]" />
+		</SucessConditions>
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="respondYesRecentPast([target],[person],[task],[item])">
+		<PreConditions>
+			<NewEvent occurred="True" subject="[target]" action="ask" target="[SELF]" parameters="[person],[task],[item]" />
+			<RecentEvent occurred="True" subject="[person]" action="[task]" target="[item]" />
+			<PastEvent occurred="True" subject="[person]" action="[task]" target="[item]" />
+		</PreConditions>
+		<SucessConditions>
+			<NewEvent occurred="True" subject="[SELF]" action="respondYes" target="[target]" parameters="[person],[task],[item]" />
+		</SucessConditions>
+	</ActivePursuitGoal>
+
+	<ActivePursuitGoal name="respondYesRecent([target],[person],[task],[item])">
+		<PreConditions> 
+			<NewEvent occurred="True" subject="[target]" action="ask" target="[SELF]" parameters="[person],[task],[item]" />
+			<RecentEvent occurred="True" subject="[person]" action="[task]" target="[item]" />
+			<PastEvent occurred="False" subject="[person]" action="[task]" target="[item]" />
+		</PreConditions>
+		<SucessConditions>
+			<NewEvent occurred="True" subject="[SELF]" action="respondYes" target="[target]" parameters="[person],[task],[item]" />
+		</SucessConditions>
+	</ActivePursuitGoal>
+
+	<ActivePursuitGoal name="respondYesPast([target],[person],[task],[item])">
+		<PreConditions>
+			<NewEvent occurred="True" subject="[target]" action="ask" target="[SELF]" parameters="[person],[task],[item]" />
+			<RecentEvent occurred="False" subject="[person]" action="[task]" target="[item]" />
+			<PastEvent occurred="True" subject="[person]" action="[task]" target="[item]" />
+		</PreConditions>
+		<SucessConditions>
+			<NewEvent occurred="True" subject="[SELF]" action="respondYes" target="[target]" parameters="[person],[task],[item]" />
+		</SucessConditions>
+	</ActivePursuitGoal>
+
+	<ActivePursuitGoal name="respondNo([target],[person],[task],[item])">
+		<PreConditions>
+			<NewEvent occurred="True" subject="[target]" action="ask" target="[SELF]" parameters="[person],[task],[item]" />
+			<RecentEvent occurred="False" subject="[person]" action="[task]" target="[item]" />
+			<PastEvent occurred="False" subject="[person]" action="[task]" target="[item]" />
+		</PreConditions>
+		<SucessConditions>
+			<NewEvent occurred="True" subject="[SELF]" action="respondNo" target="[target]" parameters="[person],[task],[item]" />
+		</SucessConditions>
+	</ActivePursuitGoal>
+
+</GoalLibrary>

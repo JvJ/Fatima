@@ -1,0 +1,15 @@
+<InterpersonalRelations>
+
+	<Relation subject="Jonas" target="Montolio" like="-3" respect="2"/>
+	<Relation subject="Jonas" target="Varsuvius" like="+3" respect="2"/>
+	<Relation subject="Jonas" target="Uthgard" like="+5" respect="2"/>
+	
+	<Relation subject="Varsuvius" target="Jonas" like="3" respect="2"/>
+	<Relation subject="Varsuvius" target="Montolio" like="0" respect="2"/>
+	<Relation subject="Varsuvius" target="Uthgard" like="+6" respect="2"/>
+	
+	<Relation subject="Montolio" target="Jonas" like="-3" respect="2"/>
+	<Relation subject="Montolio" target="Varsuvius" like="0" respect="2"/>
+	<Relation subject="Montolio" target="Uthgard" like="-5" respect="2"/>
+		
+</InterpersonalRelations>

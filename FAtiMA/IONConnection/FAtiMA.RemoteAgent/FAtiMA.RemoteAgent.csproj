@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3F239C00-138C-43DA-A0A6-0038C5332935}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FAtiMA.RemoteAgent</RootNamespace>
+    <AssemblyName>FAtiMA.RemoteAgent</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationLogger.cs" />
+    <Compile Include="EmotionalState.cs" />
+    <Compile Include="EmotionalStateParser.cs" />
+    <Compile Include="LanguageEngineMaster.cs" />
+    <Compile Include="LookAT.cs" />
+    <Compile Include="RemoteAgentLoader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relation.cs" />
+    <Compile Include="RelationSet.cs" />
+    <Compile Include="RelationsParser.cs" />
+    <Compile Include="RemoteMind.cs" />
+    <Compile Include="XmlParser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ion_cs3.5\Core\ION.Core.csproj">
+      <Project>{597BC0F1-D3D3-48A6-9528-79F18C2B7AAF}</Project>
+      <Name>ION.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ion_cs3.5\Meta\ION.Meta.csproj">
+      <Project>{7FABFECC-F980-4533-B566-95C01780F75C}</Project>
+      <Name>ION.Meta</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ION.Core.Extensions\ION.Core.Extensions.csproj">
+      <Project>{AA8A4307-92D1-4DE9-92AA-1617EB7A1A00}</Project>
+      <Name>ION.Core.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NWN.Realizer\NWN.Realizer.csproj">
+      <Project>{82BFB94A-A32C-4293-965A-B8A062F6D56B}</Project>
+      <Name>NWN.Realizer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

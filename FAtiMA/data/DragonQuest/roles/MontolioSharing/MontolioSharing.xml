@@ -1,0 +1,98 @@
+<Character role="MontolioSharing">
+	
+	<EmotionalThresholds>
+		<EmotionalThreshold emotion="Love" threshold="1" decay="5"/>
+		<EmotionalThreshold emotion="Hate" threshold="1" decay="5"/>
+		<EmotionalThreshold emotion="Hope" threshold="1" decay="5"/>
+		<EmotionalThreshold emotion="Fear" threshold="1" decay="5"/>
+		<EmotionalThreshold emotion="Satisfaction" threshold="0" decay="5"/>
+		<EmotionalThreshold emotion="Relief" threshold="0" decay="5"/>
+		<EmotionalThreshold emotion="Fears-Confirmed" threshold="0" decay="5"/>
+		<EmotionalThreshold emotion="Disappointment" threshold="0" decay="5"/>
+		<EmotionalThreshold emotion="Joy" threshold="0" decay="5"/>
+		<EmotionalThreshold emotion="Distress" threshold="0" decay="5"/>
+		<EmotionalThreshold emotion="Happy-For" threshold="0" decay="5"/>
+		<EmotionalThreshold emotion="Pitty" threshold="0" decay="5"/>
+		<EmotionalThreshold emotion="Resentment" threshold="0" decay="5"/>
+		<EmotionalThreshold emotion="Gloating" threshold="0" decay="5"/>
+		<EmotionalThreshold emotion="Pride" threshold="0" decay="5"/>
+		<EmotionalThreshold emotion="Shame" threshold="0" decay="5"/>
+		<EmotionalThreshold emotion="Gratification" threshold="0" decay="5"/>
+		<EmotionalThreshold emotion="Remorse" threshold="0" decay="5"/>
+		<EmotionalThreshold emotion="Admiration" threshold="0" decay="5"/>
+		<EmotionalThreshold emotion="Reproach" threshold="0" decay="5"/>
+		<EmotionalThreshold emotion="Gratitude" threshold="0" decay="5"/>
+		<EmotionalThreshold emotion="Anger" threshold="0" decay="5"/>						   
+	</EmotionalThresholds>
+
+	
+	<MotivationalParameters>
+		<MotivationalParameter motivator="Affiliation" decayFactor="1.5" weight="0.425" intensity="8" update="internal"/>
+		<MotivationalParameter motivator="Integrity" decayFactor="0" weight="1.5" intensity="10" update="external"/>
+		<MotivationalParameter motivator="Energy" decayFactor="0" weight="0.7" intensity="10" update="external"/>
+		<MotivationalParameter motivator="Certainty" decayFactor="1.5" weight="0.365" intensity="5"/>
+		<MotivationalParameter motivator="Competence" decayFactor="1.5" weight="0.825" intensity="5"/>
+		<MotivationalParameter motivator="Score" type="Linear" decayFactor="0" weight ="1" intensity="0" update="external" />
+		<MotivationalParameter motivator="Equipment" type="Linear" decayFactor="0" weight ="1" intensity="0" update="internal" />
+	</MotivationalParameters>
+	
+	<Goals>
+		<Goal name="Attack([target])" />
+		<Goal name="RunAway([target])" />
+		<Goal name="UsePotion()" />
+		<Goal name="RegulateDistress([target])" />
+		<Goal name="IncreaseRelation([target])" />
+		<Goal name="EmotionSharing([target])"/>
+	</Goals>
+	
+	<EventReactions>
+		<EmotionalReaction desirability="+10" praiseworthiness="+5">
+			<Event subject="Dragon44" action="Die"/>
+		</EmotionalReaction>
+	</EventReactions>
+	
+	<ActionTendencies>
+	
+		<ActionTendency action="FacialExpression(intense_sadness)">
+			<Preconditions>
+			</Preconditions>
+			<ElicitingEmotion type="Distress" minIntensity="3">
+				<CauseEvent subject="*" action="*" target="*" />
+			</ElicitingEmotion>
+		</ActionTendency>
+		
+		<ActionTendency action="FacialExpression(low_sadness)">
+			<Preconditions>
+			</Preconditions>
+			<ElicitingEmotion type="Distress" minIntensity="1">
+				<CauseEvent subject="*" action="*" target="*" />
+			</ElicitingEmotion>
+		</ActionTendency>
+		
+		<ActionTendency action="FacialExpression(huge_joy)">
+			<Preconditions>
+			</Preconditions>
+			<ElicitingEmotion type="Joy" minIntensity="7">
+				<CauseEvent subject="*" action="*" target="*" />
+			</ElicitingEmotion>
+		</ActionTendency>
+			
+		<ActionTendency action="FacialExpression(intense_joy)">
+			<Preconditions>
+			</Preconditions>
+			<ElicitingEmotion type="Joy" minIntensity="3">
+				<CauseEvent subject="*" action="*" target="*" />
+			</ElicitingEmotion>
+		</ActionTendency>
+		
+		<ActionTendency action="FacialExpression(low_joy)">
+			<Preconditions>
+			</Preconditions>
+			<ElicitingEmotion type="Joy" minIntensity="1">
+				<CauseEvent subject="*" action="*" target="*" />
+			</ElicitingEmotion>
+		</ActionTendency>
+		
+				
+	</ActionTendencies>
+</Character>

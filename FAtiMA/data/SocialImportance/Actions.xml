@@ -1,0 +1,76 @@
+<DomainActions >
+	
+	<Action name="Ask-Direction([target],[location])">
+		<PreConditions>
+			
+		 	<Property name="[location](isLocation)" operator="=" value="True"/>
+			<Property name="[AGENT](knowsDirection,[location])" operator="=" value="False"/>
+			<Property name="[target]" operator="!=" value="[AGENT]"/>
+		</PreConditions>
+	</Action>	
+	
+	<Action name="Ask-To-Accompany([target],[location])">
+		<PreConditions>	
+			<Property name="[AGENT](knowsDirection,[location])" operator="=" value="False"/>
+			<Property name="[target]" operator="!=" value="[AGENT]"/>
+		</PreConditions>
+	</Action>	
+	
+	
+	<Action name="Tell-Direction-Neutral([target],[location])" probability="0.9">
+		<PreConditions>
+			<Property name="[AGENT](knowsDirection,[location])" operator="=" value="True"/>
+			<Property name="[target](knowsDirection,[location])" operator="=" value="False"/>
+			<RecentEvent subject="[target]" action="Ask-Direction" target="[AGENT]" parameters="[location]"/>
+			<RecentEvent occurred="False" subject="[target]" action="Tell-Direction-Nicely" target="[AGENT]" parameters="[location]"/>
+	
+		</PreConditions>
+		<Effects>
+			<Effect probability="1.0">
+				 <Property name="[target](knowsDirection,[location])" operator="=" value="True"/>
+			</Effect>
+		</Effects>
+		<EffectsOnDrives>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="Tell-Direction-Nicely([target],[location])" probability="0.9">
+		<PreConditions>
+			<Property name="[AGENT](knowsDirection,[location])" operator="=" value="True"/>
+			<RecentEvent subject="[target]" action="Ask-Direction" target="[AGENT]" parameters="[location]"/>
+			<RecentEvent occurred="False" subject="[AGENT]" action="Tell-Direction-Neutral" target="[target]" parameters="[location]"/>
+		</PreConditions>
+		<Effects>
+			<Effect probability="1.0">
+				 <Property name="[target](knowsDirection,[location])" operator="=" value="True"/>
+			</Effect>
+		</Effects>
+		<EffectsOnDrives>
+		</EffectsOnDrives>
+	</Action>
+	
+
+	<Action name="Accompany-To-Destination([target],[location])" probability="0.90">
+		<PreConditions>
+			<Property name="[AGENT](isIn,[location])" operator="=" value="False"/>
+			<Property name="[target](isIn,[location])" operator="=" value="False"/>
+			<Property name="[AGENT](knowsDirection,[location])" operator="=" value="True"/>
+			<RecentEvent subject="[target]" action="Ask-To-Accompany" target="[AGENT]" parameters="[location]"/>
+			
+		</PreConditions>
+		<Effects>
+			<Effect probability="1.0">
+				<Property name="[AGENT](isIn,[location])" operator="=" value="True"/>
+				<Property name="[AGENT](isIn,[location])" operator="=" value="False"/>
+			</Effect>
+		</Effects>
+		<EffectsOnDrives>
+		</EffectsOnDrives>
+	</Action>
+	
+	
+	
+	
+	
+
+</DomainActions>

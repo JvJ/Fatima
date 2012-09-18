@@ -1,0 +1,21 @@
+<Culture name="Culture">
+	<Symbols>
+	</Symbols>
+	
+	<SIAttributionRule target="[target]" value="10">
+		<Preconditions>
+			<Property name="[target](isPerson)" operator="=" value="True"/>
+			<Property name="[target]" operator="!=" value="SELF"/>
+		</Preconditions>		
+	</SIAttributionRule>
+	
+	<SIClaims>
+		<SIClaim action="Ask-Direction" parameters="*" value="10"/>	
+	</SIClaims>
+	
+	<SIConferrals>	
+		<SIConferral action="Tell-Direction-Neutral" parameters="" value="5"/>		
+		<SIConferral action="Tell-Direction-Nicely" parameters="" value="10"/>		
+	</SIConferrals>
+	
+</Culture>

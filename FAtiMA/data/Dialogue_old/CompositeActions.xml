@@ -1,0 +1,62 @@
+<DomainActions>
+	
+	<DialogPair name="LameJoke([target])">
+		<PreConditions>
+			<Property name="[target](isPerson)" operator="=" value="True"/>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+		</PreConditions>				
+		
+		<InitiationAct name="Joke"/>
+	    <ReactiveAct name="Mock"/>
+	
+		<Effects>
+			<Effect probability="1.0">
+				<Property name="[AGENT](toldJoke)" operator="=" value="True"/>
+				<Property name="[target](heardJoke)" operator="=" value="True"/>
+			</Effect>
+		</Effects>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[AGENT]" value="-4"/>
+		</EffectsOnDrives>
+	</DialogPair>
+	
+	<DialogPair name="SuccesfulJoke([target])">
+		<PreConditions>
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+		</PreConditions>			
+		<InitiationAct name="Joke"/>
+	    <ReactiveAct name="Laugh"/>
+		<Effects>	
+			<Effect probability="1.0">
+				<Property name="[AGENT](toldJoke)" operator="=" value="True"/>
+				<Property name="[target](heardJoke)" operator="=" value="True"/>
+			</Effect>
+		</Effects>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[AGENT]" value="+4"/>
+		</EffectsOnDrives>
+	</DialogPair>	
+	
+	<Action name="SpeechAct([target],[type])">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+		</PreConditions>
+		<Effects>	
+		</Effects>
+	</Action>
+	
+	
+	<Action name="Eat([target])">
+		<PreConditions>
+			<Property name="[target](eatable)" operator="=" value="True" />
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+
+		</PreConditions>
+		<Effects>	
+			<Effect probability="1.0">
+				<Property name="[AGENT](has,[target])" operator="=" value="False" />
+			</Effect>
+		</Effects>
+	</Action>
+</DomainActions>

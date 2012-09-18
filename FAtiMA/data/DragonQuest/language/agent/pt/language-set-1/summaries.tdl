@@ -1,0 +1,768 @@
+# Episode summarys
+absOrder: e1_0, e1_1, default, e3_1, e3_2
+
+
+######################################
+# some technical stuff: pre-processing for events
+
+# add dummy location
+e1_0: $E=Event(not(location:))
+-> $E(location:" ")
+
+# set order of main phrase constituents: subject, verb, object, additional parameters, adverbials (location + time)
+#e1_1: $E=Event(subject:$SB,action:$AC,%$T=target:,%$P=param:,gender:$G) 
+#-> Summary(value:($SB," ")) Action(value:$AC,gender:$G,$T,$P) $E
+
+e1_1: $E=Event($S=subject:$SB=not(I,me),sameSubject:%$SS,action:$AC,%$T=target:,%$P=param:,%$ST=status:,gender:$G)
+-> Summary(value:("o ",$SB," ")) Action(value:$AC,gender:$G,$T,$P,$ST) $E
+
+e1_1: $E=Event(subject:$SB=I,sameSubject:%$SS,action:$AC,%$T=target:,%$P=param:,%$ST=status:,gender:$G)
+-> Action(value:$AC,gender:$G,$T,$P,$ST) $E
+
+e1_1: $E=Event(subject:$SB=I,sameSubject:%$SS,intention:$I,%$T=target:,%$P=param:,%$ST=status:,gender:$G)
+-> Intention(value:$I,gender:$G,$T,$P,$ST) $E
+
+e1_1: $E=Event(subject:$SB=I,sameSubject:%$SS,action:$AC,%$T=target:,%$P=param:,%$ST=status:,gender:$G)
+-> Summary(value: "eu ") Action(value:$AC,gender:$G,$T,$P,$ST) $E
+
+e1_1: $E=Event(subject:$SB=I,sameSubject:%$SS,intention:$I,%$T=target:,%$P=param:,%$ST=status:,gender:$G)
+-> Summary(value: "eu ") Intention(value:$I,gender:$G,$T,$P,$ST) $E
+
+e1_1: $E=Event($SS=sameSubject:yes,$S=subject:$SB=not(I,me),action:$AC,%$T=target:,%$P=param:,gender:$G)
+-> Summary(value:(Lex(semCat:ppn_3,number:sg,gender:$G,case:nom)," ")) Action(value:$AC,gender:$G,$T,$P) $E
+
+e1_1: $E=Event(time:$T,location:$L,not(action:))
+-> Location(value:$L) $T $E
+
+#e1_1: $E=Event(time:$T,location:$L,action:$A)
+#-> $T Summary(value:",") $E(location:$L,action:$A)
+
+e1_1: $E=Event(time:$T,location:$L,action:$A)
+-> $T Summary(value:",") $E(action:$A)
+
+e1_1: $E=Event(location:$L,not(time:),not(action:))
+-> Location(value:$L) $E
+
+
+######################################
+# add, edit and remove constituent values here
+
+# transitional phrases
+
+Connection() 
+-> Summary(value:". A seguir ")
+
+Connection() 
+-> Summary(value:"e ")
+
+Connection() 
+-> Summary(value:"e a seguir ")
+
+Connection() 
+-> Summary(value:". Depois ")
+
+Connection() 
+-> Summary(value:". No momento seguinte, ")
+
+Connection() 
+-> Summary(value:", de seguida ")
+
+Connection() 
+-> Summary(value:", logo de seguida ")
+
+#Connection() 
+#-> Summary(value:". Sabes, ")
+
+#Connection() 
+#-> Summary(value:". Imagina só, ")
+
+#Connection() 
+#-> Summary(value:". Nao vais acreditar, ")
+
+#Connection() 
+#-> Summary(value:". Já viste, ")
+
+Connection() 
+-> Summary(value:", ")
+
+Connection() 
+-> Summary(value:". ")
+
+Connection() 
+-> Summary(value:". Tu viste aquilo? ")
+
+Connection() 
+-> Summary(value:". Reparaste? ")
+
+
+###
+# list of all actions
+
+# Intentions
+Intention(status:activate,value:$G,target:%$T)
+-> Summary(value:"queria ") @if($T,goal2text(value:$G,target:$T),goal2text(value:$G)) Summary(value:" ")
+
+Intention(status:activate,value:$G,target:%$T)
+-> Summary(value:"estava a pensar ") @if($P,goal2text(value:$G,target:$T),goal2text(value:$G)) Summary(value:" ")
+
+Intention(status:activate,value:$G,target:%$T)
+-> Summary(value:"pretendia ") @if($P,goal2text(value:$G,target:$T),goal2text(value:$G)) Summary(value:" ")
+
+Intention(status:fail,value:$G,target:%$T)
+-> Summary(value:"falhei o meu objectivo de ") @if($T,goal2text(value:$G,target:$T),goal2text(value:$G)) Summary(value:" ")
+
+Intention(value:fail,value:$G,target:%$T)
+-> Summary(value:"nao consegui ") @if($T,goal2text(value:$G,target:$T),goal2text(value:$G)) Summary(value:" ")
+
+Intention(status:succeed,value:$G,target:%$T)
+-> Summary(value:"consegui ") @if($T,goal2text(value:$G,target:$T),goal2text(value:$G)) Summary(value:" ")
+
+Intention(status:succeed,value:$G,target:%$T)
+-> Summary(value:"fui bem sucedido em ") @if($T,goal2text(value:$G,target:$T),goal2text(value:$G)) Summary(value:" ")
+
+
+#regular actions
+
+Action(value:look-at,target:you)
+-> Summary(value:"olhei para ti ")
+
+Action(value:look-at,target:you)
+-> Summary(value:"olhei e vi quem eras ")
+
+Action(value:look-at,target:you)
+-> Summary(value:"observei-te ")
+
+Action(value:look-at,target:$T=not(or(you,me)))
+-> Summary(value:("olhei para o ",$T," "))
+
+Action(value:look-at,target:$T=not(or(you,me)))
+-> Summary(value:("vi o ",$T," "))
+
+Action(value:Attack,target:$T=not(or(you,me)))
+-> Summary(value:("atacou o ",$T," "))
+
+Action(value:Attack,target:you)
+-> Summary(value:"atacou-te ")
+
+Action(value:Attack,target:me)
+-> Summary(value:"atacou-me ")
+
+Action(value:Die,target:me)
+-> Summary(value:"morreu às minhas maos ")
+
+Action(value:Die,target:me)
+-> Summary(value:"foi morto por mim ")
+
+Action(value:Die,target:$T=not(or(you,me)))
+-> Summary(value:("foi morto pelo ",$T," "))
+
+Action(value:Die,target:you)
+-> Summary(value:"foi morto por ti ")
+
+Action(value:GiveItem,target:me)
+-> Summary(value:"deu-me uma arma muito forte ")
+
+Action(value:GiveItem,target:me)
+-> Summary(value:"deu-me uma arma mágica ")
+
+Action(value:GiveItem,target:$T=not(or(you,me)))
+-> Summary(value:("deu uma arma mágica ao ",$T," "))
+
+Action(value:UsePotion)
+-> Summary(value:"usei uma pocao de cura ")
+
+Action(value:UsePotion)
+-> Summary(value:"usei uma pocao mágica para me curar ")
+
+Action(value:RunAway,target:$T)
+-> Summary(value:"fugi a sete pés ")
+
+Action(value:RunAway,target:$T)
+-> Summary(value:("fugi do ",$T," "))
+
+Action(value:FacialExpression,target:intense_sadness)
+-> Summary(value:"fiquei com uma cara de chateado ")
+
+Action(value:FacialExpression,target:intense_sadness)
+-> Summary(value:"até chorei de tristeza")
+
+Action(value:ElectricLoop,target:$T)
+-> Summary(value:"lançei um feitiço de corrente eléctrica ")
+
+Action(value:ElectricLoop,target:$T)
+-> Summary(value:("enviei uma corrente eléctrica ao ",$T," "))
+
+Action(value:ElectricLoop,target:$T)
+-> Summary(value:("ataquei o ",$T," com electricidade "))
+
+Action(value:LightningBolt,target:$T)
+-> Summary(value:("ataquei o ",$T," com um relâmpago "))
+
+Action(value:LightningBolt,target:$T)
+-> Summary(value:("acertei no ",$T," com um relâmpago "))
+
+Action(value:LightningBolt,target:$T)
+-> Summary(value:("lançei o meu feitiço mais forte no ",$T," "))
+
+Action(value:MagicMissile,target:$T)
+-> Summary(value:("lançei um projéctil mágico no ",$T," "))
+
+Action(value:MagicMissile,target:$T)
+-> Summary(value:("ataquei o ",$T," com um projéctil mágico "))
+
+Action(value:RayOfFrost,target:$T)
+-> Summary(value:("lançei um raio de gelo ao ",$T," "))
+
+Action(value:RayOfFrost,target:$T)
+-> Summary(value:("ataquei o ",$T," com um raio gelado "))
+
+
+#SpeechActs here
+
+Action(value:compliment,target:me)
+-> Summary(value:"elogiou-me ")
+
+Action(value:compliment,target:me)
+-> Summary(value:"falou bem de mim ")
+
+Action(value:compliment,target:$T=not(or(you,me)))
+-> Summary(value:("elogiou o ",$T," "))
+
+Action(value:valuing,target:me)
+-> Summary(value:"disse-me que gostava de mim ")
+
+Action(value:valuing,target:me)
+-> Summary(value:"disse que era meu amigo ")
+
+Action(value:valuing,target:$T=not(or(you,me)))
+-> Summary(value:("disse que gostava do ",$T," "))
+
+Action(value:buydrink,target:me)
+-> Summary(value:"convidou-me para uns copos ")
+
+Action(value:buydrink,target:$T=not(or(you,me)))
+-> Summary(value:("convidou o ",$T," para uns copos "))
+
+Action(value:advice,target:me)
+-> Summary(value:"deu-me conselhos ")
+
+Action(value:advice,target:me)
+-> Summary(value:"aconselhou-me ")
+
+Action(value:advice,target:$T=not(or(you,me)))
+-> Summary(value:("aconselhou o ",$T," "))
+
+
+
+
+
+Action(value:confrontationhelperdeny,target:$T,gender:$G)
+-> Summary(value:("denied that ",Lex(semCat:ppn_3,number:sg,gender:$G,case:nom)," is bullying me "))
+
+Action(value:confrontationagressivequestionning)
+-> Summary(value:("asked me very rudely where I was going "))
+
+Action(value:confrontationagressivequestionningpositiveanswer,target:$T)
+-> Summary(value:("told ",$T," where I was going "))
+
+Action(value:confrontationagressivequestionningnegativeanswer,target:$T)
+-> Summary(value:("told ",$T," to leave me alone "))
+
+Action(value:confrontationappology)
+-> Summary(value:("apologized for bullying me all the time "))
+
+Action(value:confrontationappologypositiveanswer,target:$T)
+-> Summary(value:("accepted the apology from ",$T," "))
+
+Action(value:confrontationappologynegativeanswer,target:$T)
+-> Summary(value:("couldn't accept the apology from ",$T," "))
+
+Action(value:confrontationaskwhy,target:$T,gender:$G)
+-> Summary(value:("asked ",$T," why ",Lex(semCat:ppn_3,number:sg,gender:$G,case:nom)," is bullying me all the time "))
+
+Action(value:confrontationaskwhypositiveanswer,target:$T)
+-> Summary(value:("insulted ",$T," "))
+
+Action(value:confrontationaskwhynegativeanswer,target:$T,gender:$G)
+-> Summary(value:("threatened ",$T," "))
+
+Action(value:confrontationbeg,target:$T)
+-> Summary(value:("asked ",$T," to stop bullying me "))
+
+Action(value:confrontationbeg,target:$T)
+-> Summary(value:("begged ",$T," to stop bullying me "))
+
+Action(value:confrontationleave,target:$T)
+-> Summary(value:("told ",$T," that I was going to leave "))
+
+Action(value:confrontationleavenegativeanswer,target:$T)
+-> Summary(value:("asked ",$T," to stay "))
+
+Action(value:confrontationleavepositiveanswer,target:$T)
+-> Summary(value:("told ",$T," to get lost "))
+
+Action(value:confrontationstruggle)
+-> Summary(value:("said ouch "))
+
+Action(value:confrontationletgo,target:$T)
+-> Summary(value:("let ",$T," go "))
+
+Action(value:confrontationtoldteacher)
+-> Summary(value:("complained that I went to the teacher "))
+
+Action(value:confrontationbullyassistant,target:$T,gender:$G)
+-> Summary(value:("asked ",$T," why ",Lex(semCat:ppn_3,number:sg,gender:$G,case:nom)," helps bullying me "))
+
+Action(value:confrontationbullyassistantpositiveanswer,target:$T,gender:$G)
+-> Summary(value:("said sorry, but ",Lex(semCat:ppn_3,number:sg,gender:$G,case:nom)," couldn't help me "))
+
+
+
+
+# Goal descriptions
+
+
+goal2text(value:EmotionSharing,target:$T=not(you))
+-> Summary(value:("partilhar isto com o ",$T))
+
+goal2text(value:EmotionSharing,target:you)
+-> Summary(value:"partilhar isto contigo")
+
+goal2text(value:IncreaseRelation, target:$T=not(you))
+-> Summary(value:("ser amigo do ",$T))
+
+goal2text(value:IncreaseRelation, target:$T=not(you))
+-> Summary(value:("tornar-me amigo do ",$T))
+
+goal2text(value:IncreaseRelation, target:$T=not(you))
+-> Summary(value:("que o ",$T," gostasse de mim"))
+
+goal2text(value:IncreaseRelation, target:you)
+-> Summary(value:"que gostasses de mim")
+
+goal2text(value:IncreaseRelation, target:you)
+-> Summary(value:"ser teu amigo")
+
+goal2text(value:IncreaseRelation, target:you)
+-> Summary(value:"fosses meu amigo")
+
+goal2text(value:AreaElectricLoop, target:$T)
+-> Summary(value:"apanhar vários inimigos com a corrente eléctrica")
+
+goal2text(value:AreaElectricLoop, target:$T)
+-> Summary(value:("apanhar o ",$T," com a corrente eléctrica"))
+
+goal2text(value:AreaElectricLoop, target:$T)
+-> Summary(value:"atingir vários inimigos com o meu feitiço de electricidade")
+
+goal2text(value:MagicMissile, target:$T)
+-> Summary(value:("atacar o ",$T," com um projéctil mágico"))
+
+goal2text(value:RayOfFrost, target:$T)
+-> Summary(value:("atacar o ",$T," com um raio de gelo"))
+
+goal2text(value:ElectricLoop, target:$T)
+-> Summary(value:("atacar o ",$T," com uma corrente eléctrica"))
+
+goal2text(value:LightningBolt, target:$T)
+-> Summary(value:("atacar o ",$T," com um relâmpago"))
+
+goal2text(value:RunAway,target:$T)
+-> Summary(value:("fugir do ",$T))
+
+goal2text(value:RunAway,target:$T)
+-> Summary(value:("fugir do ",$T))
+
+goal2text(value:UsePotion)
+-> Summary(value:"beber uma poçao para curar-me")
+
+goal2text(value:UsePotion)
+-> Summary(value:"beber uma poçao de cura")
+
+goal2text(value:UsePotion)
+-> Summary(value:"beber uma poçao para recuperar energia")
+
+goal2text(value:UsePotion)
+-> Summary(value:"beber uma poçao para recuperar energia")
+
+goal2text(value:RegulateDistress,target:$T=not(you))
+-> Summary(value:("ajudar o ",$T," a nao se sentir mal"))
+
+goal2text(value:RegulateDistress,target:$T=not(you))
+-> Summary(value:("fazer o ",$T," sentir-se melhor"))
+
+goal2text(value:RegulateDistress,target:you)
+-> Summary(value:("ajudar-te a nao te sentires mal"))
+
+goal2text(value:RegulateDistress,target:you)
+-> Summary(value:("animar-te"))
+
+goal2text(value:RegulateDistress,target:you)
+-> Summary(value:("fazer-te sentir melhor"))
+
+# location: translate them as is?
+Location(value:" ")
+-> Summary(value:" ")
+
+Location(value:office)
+-> Summary(value:"no escritório ")
+
+Location(value:palace)
+-> Summary(value:"no palácio ")
+
+Location(value:palace)
+-> Summary(value:"na Sala do Trono ")
+
+Location(value:outsidecity)
+-> Summary(value:"à saida da cidade ")
+
+Location(value:outsidecity)
+-> Summary(value:"logo à saida da cidade ")
+
+Location(value:valley)
+-> Summary(value:"no vale montanhoso ")
+
+Location(value:valley)
+-> Summary(value:"no vale ")
+
+Location(value:city)
+-> Summary(value:"na cidade ")
+
+Location(value:blacksmith)
+-> Summary(value:"na loja do ferreiro ")
+
+Location(value:blacksmith)
+-> Summary(value:"à do ferreiro ")
+
+Location(value:beach)
+-> Summary(value:"na praia ")
+
+Location(value:beach)
+-> Summary(value:"na praia da península ")
+
+Location(value:village)
+-> Summary(value:"na vila ")
+
+Location(value:village)
+-> Summary(value:"na vila do Rio")
+
+Location(value:cave)
+-> Summary(value:"na gruta perto da praia ")
+
+Location(value:cave)
+-> Summary(value:"na gruta ")
+
+Location(value:cave)
+-> Summary(value:"na caverna ")
+
+Location(value:farm)
+-> Summary(value:"na quinta ")
+
+Location(value:farm)
+-> Summary(value:"na quinta onde encontrámos os agricultores ")
+
+
+# different expressions for points in time
+#Time(count:1,value:$U=or(month,week))
+#-> Summary(value:("last ",$U," "))
+
+Time(count:1,value:month)
+-> Summary(value:"um mês atrás ")
+
+Time(count:$C=not(1),value:month)
+-> Quantity(count:$C) Summary(value:"há varios meses ")
+
+Time(count:1,value:week)
+-> Summary(value:"na semana passada ")
+
+Time(count:$C=not(1),value:week)
+-> Quantity(count:$C) Summary(value:"várias semanas atrás ")
+
+Time(count:1,value:day)
+-> Summary(value:"ontem ")
+
+Time(count:$C=not(1),value:day)
+-> Quantity(count:$C) Summary(value:" dias atrás ")
+
+Time(count:0,value:minute)
+-> Summary(value:"ainda agora ")
+
+Time(count:not(0,1,2,3),value:minute)
+-> Summary(value:"à bocado ")
+
+Time(count:not(0,1,2,3),value:minute)
+-> Summary(value:"à bocadinho ")
+
+Time(count:$C=or(2,3),value:minute)
+-> Summary(value:"à uns minutos ")
+
+Time(count:0,value:minute)
+-> Summary(value:"mesmo agora ")
+
+Time(count:0,value:minute)
+-> Summary(value:"agora mesmo ")
+
+Time(count:1,value:hour)
+-> Summary(value:("à cerca de uma hora "))
+
+Time(count:$C=or(2,3),value:hour)
+-> Quantity(count:$C) Summary(value:"horas atrás ")
+
+Time(count:not(0,1,2,3),value:hour)
+-> Summary(value:"hoje ")
+
+
+
+Quantity()
+-> Summary(value:"um par de ")
+
+Quantity()
+-> Summary(value:"alguns ")
+
+Quantity()
+-> Summary(value:"uns poucos ")
+
+Quantity()
+-> Summary(value:"vários ")
+
+Quantity(count:$C)
+-> Summary(value:($C," "))
+
+Quantity(count:$C)
+-> Summary(value:("cerca de ",$C," "))
+
+
+# different expressions for emotions
+$E=Emotion(value:$V,intensity:$I,%$D=direction:)
+-> EConnector(pos:adj) EIntensity(value:$I,pos:adj) EWord(value:$V,pos:adj,$D)
+
+$E=Emotion(value:$V,intensity:$I,%$D=direction:)
+-> EConnector(pos:noun) EIntensity(value:$I,pos:noun) EWord(value:$V,pos:noun,$D)
+
+$E=Emotion(value:$V,intensity:$I,%$D=direction:)
+-> EConnector(pos:verb) EWord(value:$V,pos:verb,$D) 
+
+
+
+EConnector(pos:verb)
+-> Summary(value:". Eu ")
+
+EConnector(pos:verb)
+-> Summary(value:"e ")
+
+EConnector(pos:adj)
+-> Summary(value:". Fiquei ")
+
+#EConnector(pos:adj)
+#-> Summary(value:". Estava a sentir-me ")
+
+EConnector(pos:adj)
+-> Summary(value:", o que me deixou ")
+
+EConnector(pos:adj)
+-> Summary(value:"o que me fez sentir ")
+
+EConnector(pos:adj)
+-> Summary(value:". Senti-me ")
+
+EConnector(pos:noun)
+-> Summary(value:". Senti ")
+
+EConnector(pos:noun)
+-> Summary(value:". Fiquei a sentir ")
+
+
+EIntensity(pos:adj,value:little)
+-> Summary(value:"um pouco ")
+
+EIntensity(pos:noun,value:little)
+-> Summary(value:"um pouco de ")
+
+EIntensity(pos:adj,value:little)
+-> Summary(value:"ligeiramente ")
+
+EIntensity(pos:noun,value:little)
+-> Summary(value:"uma ligeira ")
+
+EIntensity(value:normal)
+-> Summary(value:"")
+
+EIntensity(pos:adj,value:high)
+-> Summary(value:"muito ")
+
+EIntensity(pos:adj,value:high)
+-> Summary(value:"tao ")
+
+EIntensity(pos:or(adj,verb),value:high)
+-> Summary(value:"realmente ")
+
+EIntensity(pos:verb,value:high)
+-> Summary(value:"extremamente ")
+
+EIntensity(pos:noun,value:high)
+-> Summary(value:"tao intensa ")
+
+EWord(pos:verb,value:LOVE,direction:$D=not(you))
+-> Summary(value:("gostei logo do ",$D," "))
+
+EWord(pos:verb,value:LOVE,direction:$D=not(you))
+-> Summary(value:("simpatizei com o ",$D," "))
+
+EWord(pos:verb,value:LOVE,direction:you)
+-> Summary(value:"simpatizei contigo ")
+
+EWord(pos:verb,value:HATE,direction:$D=not(you))
+-> Summary(value:("detesto o ",$D," "))
+
+EWord(pos:verb,value:HATE,direction:$D=not(you))
+-> Summary(value:("nao gosto do ",$D," "))
+
+EWord(pos:verb,value:HATE,direction:you)
+-> Summary(value:"nao gosto de ti ")
+
+EWord(pos:verb,value:HATE,direction:you)
+-> Summary(value:"nao simpatizei contigo ")
+
+EWord(pos:adj,value:HOPE)
+-> Summary(value:"esperançoso ")
+
+EWord(pos:noun,value:HOPE)
+-> Summary(value:"esperança ")
+
+EWord(pos:adj,value:FEAR)
+-> Summary(value:"assustado ")
+
+EWord(pos:adj,value:FEAR)
+-> Summary(value:"com medo ")
+
+EWord(pos:adj,value:FEAR)
+-> Summary(value:"ansioso ")
+
+EWord(pos:adj,value:SATISFACTION)
+-> Summary(value:"satisfeito ")
+
+EWord(pos:adj,value:SATISFACTION)
+-> Summary(value:"realizado ")
+
+EWord(pos:noun,value:SATISFACTION)
+-> Summary(value:"satisfaçao ")
+
+EWord(pos:adj,value:RELIEF)
+-> Summary(value:"alíviado ")
+
+EWord(pos:noun,value:RELIEF)
+-> Summary(value:"alívio ")
+
+EWord(pos:noun,value:FEARS-CONFIRMED)
+-> Summary(value:"os meus medos confirmados ")
+
+EWord(pos:noun,value:FEARS-CONFIRMED)
+-> Summary(value:"os meus medos concretizados ")
+
+EWord(pos:adj,value:DISAPPOINTMENT)
+-> Summary(value:"desiludido ")
+
+EWord(pos:noun,value:DISAPPOINTMENT)
+-> Summary(value:"desapontamento ")
+
+EWord(pos:adj,value:JOY)
+-> Summary(value:"feliz ")
+
+EWord(pos:adj,value:JOY)
+-> Summary(value:"contente ")
+
+EWord(pos:noun,value:JOY)
+-> Summary(value:"alegre ")
+
+EWord(pos:adj,value:DISTRESS)
+-> Summary(value:"aborrecido ")
+
+EWord(pos:adj,value:DISTRESS)
+-> Summary(value:"triste ")
+
+EWord(pos:adj,value:DISTRESS)
+-> Summary(value:"perturbado ")
+
+EWord(pos:adj,value:HAPPY-FOR,direction:$D)
+-> Summary(value:("contente pelo ",$D," "))
+
+EWord(pos:verb,value:PITTY,direction:$D)
+-> Summary(value:("tive pena do ",$D," "))
+
+EWord(pos:verb,value:PITTY,direction:$D)
+-> Summary(value:("senti pena do ",$D," "))
+
+EWord(pos:noun,value:PITTY,direction:$D)
+-> Summary(value:("pena pelo ",$D," "))
+
+EWord(pos:verb,value:RESENTMENT,direction:$D)
+-> Summary(value:("nao gosto do ",$D," "))
+
+EWord(pos:verb,value:RESENTMENT,direction:$D)
+-> Summary(value:("estou ressentido com o ",$D," "))
+
+EWord(pos:verb,value:GLOATING,direction:$D)
+-> Summary(value:("gozar com o ",$D," "))
+
+EWord(pos:adj,value:PRIDE)
+-> Summary(value:"orgulhoso ")
+
+EWord(pos:noun,value:PRIDE)
+-> Summary(value:"orgulho ")
+
+EWord(pos:adj,value:SHAME)
+-> Summary(value:"envergonhado ")
+
+EWord(pos:noun,value:SHAME)
+-> Summary(value:"vergonha ")
+
+# what is the difference to satisfaction?
+EWord(pos:noun,value:GRATIFICATION)
+-> Summary(value:"gratificaçao ")
+
+EWord(pos:verb,value:REMORSE)
+-> Summary(value:"fiquei com remorsos ")
+
+EWord(pos:verb,value:REMORSE)
+-> Summary(value:"fiquei com a consciência pesada ")
+
+EWord(pos:verb,value:ADMIRATION,direction:$D)
+-> Summary(value:("admiro o ",$D," "))
+
+EWord(pos:noun,value:ADMIRATION,direction:$D)
+-> Summary(value:("admiraçao pelo ",$D," "))
+
+EWord(pos:verb,value:REPROACH)
+-> Summary(value:"reproached ")
+
+EWord(pos:adj,value:GRATITUDE,direction:$D)
+-> Summary(value:("grateful towards ",$D," "))
+
+EWord(pos:adj,value:GRATITUDE,direction:$D)
+-> Summary(value:("thankful towards ",$D," "))
+
+EWord(pos:noun,value:GRATITUDE,direction:$D)
+-> Summary(value:("gratitude towards ",$D," "))
+
+EWord(pos:adj,value:ANGER,direction:$D)
+-> Summary(value:("angry at ",$D," "))
+
+EWord(pos:adj,value:ANGER,direction:$D)
+-> Summary(value:("mad at ",$D," "))
+
+EWord(pos:adj,value:ANGER,direction:$D)
+-> Summary(value:("upset because of ",$D," "))
+
+
+######################################
+#technical stuff: post-processing
+
+# add up all text constituents
+e3_1: [Summary(value:+$S1) Summary(value:+$S2)]
+-> Summary(value:$S1,value:$S2)
+
+e3_2: Summary(value:+$S)
+-> FinalSummary(value:$S)
+
+
+

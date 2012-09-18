@@ -1,0 +1,4 @@
+isPerson True
+group A
+
+

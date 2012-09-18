@@ -1,0 +1,52 @@
+<DomainActions>
+	<Action name="SelectBox()">
+		<PreConditions>
+		</PreConditions>
+		<Effects>
+			<Effect probability="0.5">
+				<Predicate name="BoxA(Selected)"/>
+			</Effect>
+			<Effect probability="0.5">
+				<Predicate name="BoxB(Selected)"/>
+			</Effect>
+		</Effects> 
+		<EffectsOnDrives>
+		</EffectsOnDrives>
+	</Action>
+	<Action name="Open([target])" probability="0.8">
+		<PreConditions>
+			<Predicate name="[target](OnTable)"/> 
+			<Predicate name="[AGENT](isPerson)"/>
+			<Property name="[SELF]" operator="!=" value="[AGENT]"/>
+		</PreConditions>
+		<Effects>
+			<Effect probability="1.0">
+				<Predicate name="![target](Contains,coin)"/>
+			</Effect>
+		</Effects>
+		<EffectsOnDrives>
+		</EffectsOnDrives>
+	</Action>
+	<Action name="Inform([target],[p],[x],[y])">
+		<PreConditions>
+			<Property name="[target]" operator="!=" value="[AGENT]"/>
+			<Property name="[SELF]" operator="=" value="[AGENT]"/>
+		</PreConditions>
+		<Effects>
+		</Effects> 
+		<EffectsOnDrives>
+		</EffectsOnDrives>
+	</Action>
+	<Action name="Put([x],[box])">
+		<PreConditions>
+			<Predicate name="[box](OnTable)"/>
+		</PreConditions>
+		<Effects>
+			<Effect probability="1.0">
+				<Predicate name="[box](Contains,[x])"/>
+			</Effect>
+		</Effects> 
+		<EffectsOnDrives>
+		</EffectsOnDrives>
+	</Action>
+</DomainActions>

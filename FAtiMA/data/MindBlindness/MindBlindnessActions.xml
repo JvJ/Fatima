@@ -1,0 +1,126 @@
+<DomainActions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="../schemas/Actions.xsd">
+	<Action name="Open([target])" probability="0.8">
+		<PreConditions>
+			<Predicate name="[target](OnTable)"/>
+			<Predicate name="[AGENT](isPerson)"/>
+			<Property name="[AGENT]" operator="!=" value="SELF" />
+			<Predicate ToM="SELF" name="![target](Contains,coin)"/>
+			<Predicate ToM="[AGENT]:SELF" name="[target](Contains,coin)"/>
+		</PreConditions>
+		<Effects>
+			<!--<Effect probability="1.0">
+				<Predicate name="![target](Contains,coin)"/>
+			</Effect>-->
+			<Effect probability="1.0">
+				<Predicate name="SELF(has,coin)"/>
+			</Effect>
+		</Effects> 
+		<EffectsOnDrives>
+		</EffectsOnDrives>
+	</Action>
+	<!--<Action name="Inform([target],[p],Contains,coin)">
+		<PreConditions>
+			<Property name="[target]" operator="!=" value="[AGENT]"/>
+			<Property name="SELF" operator="=" value="[AGENT]"/>
+		</PreConditions>
+		<Effects>
+			<Effect probability="1">
+				<Predicate ToM="[target]" name="[p](Contains,coin)"/>
+			</Effect>
+		</Effects> 
+		<EffectsOnDrives>
+		</EffectsOnDrives>
+	</Action>-->
+	<Action name="Put([x],[box])">
+		<PreConditions>
+			<Predicate name="[box](OnTable)"/>
+		</PreConditions>
+		<Effects>
+			<Effect probability="1.0">
+				<Predicate name="[box](Contains,[x])"/>
+			</Effect>
+		</Effects> 
+		<EffectsOnDrives>
+		</EffectsOnDrives>
+	</Action>
+	<Action name="PutHidden([x],[boxA],[boxB])">
+		<PreConditions>
+			<Property name="[boxA](type)" operator="=" value="Box"/>
+			<Property name="[boxB](type)" operator="=" value="Box"/>
+			<Property name="[boxA]" operator="!=" value="[boxB]"/>
+			<Predicate name="[AGENT](has,[boxA])"/>
+			<Predicate name="[AGENT](has,[boxB])"/>
+		</PreConditions>
+		<Effects>
+			<Effect probability="1.0">
+				<Predicate ToM="[ag1]" name="[boxA](Contains,[x])"/>
+			</Effect>
+		</Effects> 
+		<EffectsOnDrives>
+		</EffectsOnDrives>
+	</Action>
+	<Action name="TakeFromTable([x])">
+		<PreConditions>
+			<Predicate name="[x](OnTable)"/>
+			<Property name="[x](type)" operator="=" value="Box"/>
+		</PreConditions>
+		<Effects>
+			<Effect probability="1.0">
+			  <Predicate name="[AGENT](has,[x])"/>
+			  <Predicate name="![x](OnTable)" />
+			</Effect>
+		</Effects> 
+		<EffectsOnDrives>
+		</EffectsOnDrives>
+	</Action>
+	<Action name="PutOnTable([x])">
+		<PreConditions>
+			<Predicate name="[AGENT](has,[x])"/>
+			<Property name="[x](type)" operator="=" value="Box"/>	
+		</PreConditions>
+		<Effects>
+			<Effect probability="1.0">
+			  <Predicate name="![AGENT](has,[x])"/>
+			  <Predicate name="[x](OnTable)" />
+			</Effect>
+		</Effects> 
+		<EffectsOnDrives>
+		</EffectsOnDrives>
+	</Action>
+	<Action name="Inform([target],[p],Contains,coin)">
+  <PreConditions>
+   <Property name="[target]" operator="!=" value="[AGENT]"/>
+   <Property name="SELF" operator="=" value="[AGENT]"/>
+  </PreConditions>
+  <Effects>
+   <Effect probability="1">
+    <Predicate ToM="[target]" name="[p](Contains,coin)"/>
+   </Effect>
+  </Effects> 
+  <EffectsOnDrives>
+  </EffectsOnDrives>
+	</Action>
+	<Action name="InferenceInform(SELF,[target],[p],Contains,coin)">
+		<PreConditions>
+			<NewEvent occurred="True" subject="SELF" target="[target]" action="Inform" parameters="[p],Contains,coin"/>
+			<Property name="[target]" operator="!=" value="SELF"/>
+		</PreConditions>
+		<Effects>	
+			<Effect probability="1">
+				<Predicate ToM="[target]:SELF" name="[p](Contains,coin)"/>
+			</Effect>
+		</Effects>
+	</Action>
+	<Action name="Inference-IKnowWhoIAm([subject],[nature])" probability="0.0"> 
+		<PreConditions>
+			<RecentEvent occurred="True" action="Iam" subject="[subject]" target="[nature]"/>
+			<Property name="[nature]" operator="!=" value="Wolf"/>
+		</PreConditions>
+		<Effects>
+			<Effect probability="1">
+				<Property ToM="[subject]" name="[subject](trueNature)" operator="=" value="[nature]"/>
+			</Effect>	
+		</Effects>
+	</Action>	
+</DomainActions>

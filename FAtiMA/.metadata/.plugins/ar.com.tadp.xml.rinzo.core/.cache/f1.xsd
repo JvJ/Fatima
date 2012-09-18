@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:simpleType name="externalMotivatorsType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Affiliation"/>
+    <xs:enumeration value="Energy"/>
+    <xs:enumeration value="Integrity"/>
+	<xs:enumeration value="Score"/>
+	<xs:enumeration value="Equipment"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="allMotivatorsType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Affiliation"/>
+    <xs:enumeration value="Energy"/>
+    <xs:enumeration value="Integrity"/>
+    <xs:enumeration value="Certainty"/>
+    <xs:enumeration value="Competence"/>
+	<xs:enumeration value="Score"/>
+	<xs:enumeration value="Equipment"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="motivatorType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="linear"/>
+    <xs:enumeration value="quadratic"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="motivatorUpdateType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="external"/>
+    <xs:enumeration value="internal"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="operatorType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="="/>
+    <xs:enumeration value="!="/>
+    <xs:enumeration value="GreaterThan"/>
+    <xs:enumeration value="LesserThan"/>
+    <xs:enumeration value="GreaterEqual"/>
+    <xs:enumeration value="LesserEqual"/>            
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="equalOperatorType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="="/>            
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="platform">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="ION"/>
+	<xs:enumeration value="ion"/>
+	<xs:enumeration value="worldsim"/>
+	<xs:enumeration value="WorldSim"/>
+	<xs:enumeration value="WORLDSIM"/>	
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="basicOperator">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="*"/>
+    <xs:enumeration value="/"/>
+    <xs:enumeration value="+"/>
+    <xs:enumeration value="-"/>           
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="booleanType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="True"/>
+    <xs:enumeration value="False"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="emotionType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Joy"/>
+    <xs:enumeration value="Distress"/>
+    <xs:enumeration value="Love"/>
+    <xs:enumeration value="Hate"/>
+    <xs:enumeration value="Happy-For"/>
+    <xs:enumeration value="Resentment"/>
+    <xs:enumeration value="Gloating"/>
+    <xs:enumeration value="Pitty"/>
+    <xs:enumeration value="Pride"/>
+    <xs:enumeration value="Shame"/>
+    <xs:enumeration value="Admiration"/>
+    <xs:enumeration value="Reproach"/>
+    <xs:enumeration value="Hope"/>
+    <xs:enumeration value="Fear"/>
+    <xs:enumeration value="Satisfaction"/>
+    <xs:enumeration value="Disappointment"/>
+    <xs:enumeration value="Relief"/>
+    <xs:enumeration value="Fears-Confirmed"/>
+    <xs:enumeration value="Gratification"/>
+    <xs:enumeration value="Remorse"/>
+    <xs:enumeration value="Gratitude"/>
+    <xs:enumeration value="Anger"/>        
+  </xs:restriction>
+</xs:simpleType>
+
+ <xs:simpleType name="Symbol">
+	<xs:restriction base="xs:string">
+      <xs:pattern value="([a-zA-Z0-9\.\-_])+|\[([a-zA-Z0-9\.\-_])+\]"/>
+    </xs:restriction>
+ </xs:simpleType>
+ 
+ <xs:simpleType name="GroundedSymbol">
+	<xs:restriction base="xs:string">
+      <xs:pattern value="([a-zA-Z0-9\.\-_])+"/>
+    </xs:restriction>
+ </xs:simpleType>
+ 
+ <xs:simpleType name="FloatOrVariable">
+	<xs:restriction base="xs:string">
+      <xs:pattern value="(\-|\+)?[0-9]+(\.[0-9]+)?|\[([a-zA-Z0-9\.\-_])+\]"/>
+    </xs:restriction>
+ </xs:simpleType>
+ 
+ <xs:simpleType name="IntOrVariable">
+	<xs:restriction base="xs:string">
+      <xs:pattern value="(\-|\+)?[0-9]+|\[([a-zA-Z0-9\.\-_])+\]"/>
+    </xs:restriction>
+ </xs:simpleType>
+ 
+ <xs:simpleType name="ToMList">
+	<xs:restriction base="xs:string">
+      <xs:pattern value="(([a-zA-Z0-9\.\-_])+|(\[([a-zA-Z0-9\.\-_])+\])|\*)(:(([a-zA-Z0-9\.\-_])+|(\[([a-zA-Z0-9\.\-_])+\])|\*))*"/>
+    </xs:restriction>
+ </xs:simpleType>
+ 
+ <xs:simpleType name="SymbolList">
+	<xs:restriction base="xs:string">
+      <xs:pattern value="(([a-zA-Z0-9\.\-_])+|(\[([a-zA-Z0-9\.\-_])+\])|\*)(,(([a-zA-Z0-9\.\-_])+|(\[([a-zA-Z0-9\.\-_])+\])|\*))*"/>
+    </xs:restriction>
+ </xs:simpleType>
+ 
+ <xs:simpleType name="GroundedSymbolList">
+	<xs:restriction base="xs:string">
+      <xs:pattern value="([a-zA-Z0-9\.\-_])+(,([a-zA-Z0-9\.\-_]))*"/>
+    </xs:restriction>
+ </xs:simpleType>
+ 
+ <xs:simpleType name="Name">
+	<xs:restriction base="xs:string">
+      <xs:pattern value="(([a-zA-Z0-9\.\-_])+|\[([a-zA-Z0-9\.\-_])+\])(\((([a-zA-Z0-9\.\-_])+|\[([a-zA-Z0-9\.\-_])+\])(,(([a-zA-Z0-9\.\-_])+|\[([a-zA-Z0-9\.\-_])+\]))*\))?"/>
+    </xs:restriction>
+ </xs:simpleType>
+ 
+ <xs:simpleType name="PredicateName">
+	<xs:restriction base="xs:string">
+      <xs:pattern value="!?(([a-zA-Z0-9\.\-_])+|\[([a-zA-Z0-9\.\-_])+\])(\((([a-zA-Z0-9\.\-_])+|\[([a-zA-Z0-9\.\-_])+\])(,(([a-zA-Z0-9\.\-_])+|\[([a-zA-Z0-9\.\-_])+\]))*\))"/>
+    </xs:restriction>
+ </xs:simpleType>
+ 
+ <xs:simpleType name="ActionName">
+	<xs:restriction base="xs:string">
+      <xs:pattern value="(([a-zA-Z0-9\.\-_])+|\[([a-zA-Z0-9\.\-_])+\])((\(\))|(\((([a-zA-Z0-9\.\-_])+|\[([a-zA-Z0-9\.\-_])+\])(,(([a-zA-Z0-9\.\-_])+|\[([a-zA-Z0-9\.\-_])+\]))*\)))"/>
+    </xs:restriction>
+ </xs:simpleType>
+
+</xs:schema>

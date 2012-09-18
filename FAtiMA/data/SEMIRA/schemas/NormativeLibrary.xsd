@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:include schemaLocation="Conditions.xsd" />
+
+<xs:element name="NormativeLibrary">
+  <xs:complexType>
+    <xs:sequence>
+	  <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Obligation" type="Obligation" />
+        <xs:element name="Prohibition" type="Prohibition" />
+      </xs:choice>
+	</xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:complexType name="Obligation">
+  <xs:sequence>
+    <xs:element name="Targets" type="Targets" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="ActivationConditions" type="ActivationConditions" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="ExpirationConditions" type="ExpirationConditions" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="ExceptionConditions" type="ExceptionConditions" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="NormativeConditions" type="NormativeConditions" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="Rewards" type="Rewards" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="Punishments" type="Punishments" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="Beneficiaries" type="Beneficiaries" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="Issuers" type="Issuers" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="Enforcers" type="Enforcers" minOccurs="0" maxOccurs="1"/>
+  </xs:sequence>
+  <xs:attribute name="name" type="xs:string" use="required"/>
+  <xs:attribute name="baseSalience" type="xs:float" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="Prohibition">
+  <xs:sequence>
+    <xs:element name="Targets" type="Targets" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="ActivationConditions" type="ActivationConditions" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="ExpirationConditions" type="ExpirationConditions" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="ExceptionConditions" type="ExceptionConditions" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="NormativeConditions" type="NormativeConditions" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="Rewards" type="Rewards" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="Punishments" type="Punishments" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="Beneficiaries" type="Beneficiaries" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="Issuers" type="Issuers" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="Enforcers" type="Enforcers" minOccurs="0" maxOccurs="1"/>
+  </xs:sequence>
+  <xs:attribute name="name" type="xs:string" use="required"/>
+  <xs:attribute name="baseSalience" type="xs:float" use="required"/>
+</xs:complexType>
+
+
+<xs:complexType name="Role">
+  <xs:attribute name="name" type="xs:string" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="Targets">
+  <xs:sequence minOccurs="0" maxOccurs="unbounded">
+    <xs:element name="Role" type="Role" />
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ActivationConditions">
+  <xs:choice minOccurs="0" maxOccurs="unbounded">
+    <xs:element name="Property" type="PropertyCondition" />
+    <xs:element name="Predicate" type="PredicateCondition" />
+    <xs:element name="RecentEvent" type="EventCondition"/>
+    <xs:element name="PastEvent" type="EventCondition"/>
+    <xs:element name="NewEvent" type="EventCondition"/>
+    <xs:element name="RitualCondition" type="RitualCondition"/>
+    <xs:element name="EmotionCondition" type="EmotionCondition"/>
+    <xs:element name="MoodCondition" type="EmotionCondition"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="ExpirationConditions">
+  <xs:choice minOccurs="0" maxOccurs="unbounded">
+    <xs:element name="Property" type="PropertyCondition" />
+    <xs:element name="Predicate" type="PredicateCondition" />
+    <xs:element name="RecentEvent" type="EventCondition"/>
+    <xs:element name="PastEvent" type="EventCondition"/>
+    <xs:element name="NewEvent" type="EventCondition"/>
+    <xs:element name="RitualCondition" type="RitualCondition"/>
+    <xs:element name="EmotionCondition" type="EmotionCondition"/>
+    <xs:element name="MoodCondition" type="EmotionCondition"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="ExceptionConditions">
+  <xs:choice minOccurs="0" maxOccurs="unbounded">
+    <xs:element name="Property" type="PropertyCondition" />
+    <xs:element name="Predicate" type="PredicateCondition" />
+    <xs:element name="RecentEvent" type="EventCondition"/>
+    <xs:element name="PastEvent" type="EventCondition"/>
+    <xs:element name="NewEvent" type="EventCondition"/>
+    <xs:element name="RitualCondition" type="RitualCondition"/>
+    <xs:element name="EmotionCondition" type="EmotionCondition"/>
+    <xs:element name="MoodCondition" type="EmotionCondition"/>
+  </xs:choice>
+</xs:complexType>    
+
+<xs:complexType name="NormativeConditions">
+  <xs:choice minOccurs="1" maxOccurs="unbounded">
+    <xs:element name="Property" type="PropertyCondition" />
+    <xs:element name="Predicate" type="PredicateCondition" />
+    <xs:element name="RecentEvent" type="EventCondition"/>
+    <xs:element name="PastEvent" type="EventCondition"/>
+    <xs:element name="NewEvent" type="EventCondition"/>
+    <xs:element name="RitualCondition" type="RitualCondition"/>
+    <xs:element name="EmotionCondition" type="EmotionCondition"/>
+    <xs:element name="MoodCondition" type="EmotionCondition"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="Rewards">
+  <xs:choice minOccurs="0" maxOccurs="unbounded">
+    <xs:element name="Property" type="PropertyCondition" />
+    <xs:element name="Predicate" type="PredicateCondition" />
+    <xs:element name="RecentEvent" type="EventCondition"/>
+    <xs:element name="PastEvent" type="EventCondition"/>
+    <xs:element name="NewEvent" type="EventCondition"/>
+    <xs:element name="RitualCondition" type="RitualCondition"/>
+    <xs:element name="EmotionCondition" type="EmotionCondition"/>
+    <xs:element name="MoodCondition" type="EmotionCondition"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="Punishments">
+  <xs:choice minOccurs="0" maxOccurs="unbounded">
+    <xs:element name="Property" type="PropertyCondition" />
+    <xs:element name="Predicate" type="PredicateCondition" />
+    <xs:element name="RecentEvent" type="EventCondition"/>
+    <xs:element name="PastEvent" type="EventCondition"/>
+    <xs:element name="NewEvent" type="EventCondition"/>
+    <xs:element name="RitualCondition" type="RitualCondition"/>
+    <xs:element name="EmotionCondition" type="EmotionCondition"/>
+    <xs:element name="MoodCondition" type="EmotionCondition"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="Beneficiaries">
+  <xs:sequence minOccurs="0" maxOccurs="unbounded">
+    <xs:element name="Role" type="Role" />
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Issuers">
+  <xs:sequence minOccurs="0" maxOccurs="unbounded">
+    <xs:element name="Role" type="Role" />
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Enforcers">
+  <xs:sequence minOccurs="0" maxOccurs="unbounded">
+    <xs:element name="Role" type="Role" />
+  </xs:sequence>
+</xs:complexType>
+
+</xs:schema>

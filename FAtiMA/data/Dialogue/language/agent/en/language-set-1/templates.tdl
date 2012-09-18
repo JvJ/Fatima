@@ -1,0 +1,44 @@
+# global variables
+
+Type(value:Joke)
+-> Utterance(value: "A termite walks into a barroom and asks: Is the bar tender here?")
+
+Type(value:Joke)
+-> Utterance(value: "What did the apple say to the orange? Nothing stupid, apples don't talk.")
+
+Type(value:Joke)
+-> Utterance(value: "Have you ever seen an elephant hiding behind a flower? That's because he hides well.")
+
+Type(value:Joke)
+-> Utterance(value: "Which day of the week is most hated by fish? Fry Day.")
+
+Type(value:Joke)
+-> Utterance(value: "Why do they always use sterilised needles when giving lethal injections?")
+
+Type(value:Laugh)
+-> Utterance(value: "Ahah! Nice Joke!")
+
+Type(value:Laugh)
+-> Utterance(value: "Ahah! Cool Joke!")
+
+Type(value:Laugh)
+-> Utterance(value: "That is funny!")
+
+Type(value:Laugh)
+-> Utterance(value: "That is the best joke ever!")
+
+Type(value:Laugh)
+-> Utterance(value: "You always crack me up!")
+
+Type(value:Mock)
+-> Utterance(value: "That is the worst joke ever!")
+
+Type(value:Mock)
+-> Utterance(value: "That is so lame!")
+
+Type(value:Mock)
+-> Utterance(value: "Is that supposed to make me laugh?!")
+
+Type(value:Mock)
+-> Utterance(value: "That was a sorry excuse of a joke!")
+

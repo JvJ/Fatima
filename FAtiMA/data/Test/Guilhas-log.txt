@@ -1,0 +1,144 @@
+
+Connecting to localhost:46874
+
+LOADING Needs: 
+
+Guilhas: Processing message: AGENTS Guilhas apple chocolate User
+
+Sending Look-AT: Guilhas
+
+Perceiving Entities: [Guilhas, apple, chocolate, User]
+
+Guilhas: Processing message: LOOK-AT Guilhas sex:M time:Morning location:Office name:Guilhas role:Guilhas isPerson:True 
+
+Look-At:Guilhas sex M
+
+Look-At:Guilhas time Morning
+
+Look-At:Guilhas location Office
+
+Look-At:Guilhas name Guilhas
+
+Look-At:Guilhas role Guilhas
+
+Look-At:Guilhas isPerson True
+
+Sending Look-AT: apple
+
+Guilhas: Processing message: ACTION-FINISHED Guilhas look-at Guilhas
+
+can act now!
+
+Guilhas: Processing message: LOOK-AT apple isFruit:True eatable:True type:object 
+
+Look-At:apple isFruit True
+
+Look-At:apple eatable True
+
+Look-At:apple type object
+
+Sending Look-AT: chocolate
+
+Guilhas: Processing message: ACTION-FINISHED Guilhas look-at apple
+
+can act now!
+
+PropertyChanged: [*] SELF(sex) M
+
+PropertyChanged: [*] SELF(time) Morning
+
+PropertyChanged: [*] SELF(location) Office
+
+PropertyChanged: [*] SELF(name) SELF
+
+PropertyChanged: [*] SELF(role) SELF
+
+PropertyChanged: [*] SELF(isPerson) True
+
+PropertyChanged: [*] apple(isFruit) True
+
+PropertyChanged: [*] apple(eatable) True
+
+PropertyChanged: [*] apple(type) object
+
+appraising event: EVENT(SELF,look-at,SELF)
+
+appraising event: EVENT(SELF,look-at,apple)
+
+Guilhas: Processing message: LOOK-AT chocolate isFruit:False isChocolate:True eatable:True type:object 
+
+Look-At:chocolate isFruit False
+
+Look-At:chocolate isChocolate True
+
+Look-At:chocolate eatable True
+
+Look-At:chocolate type object
+
+Sending Look-AT: User
+
+Guilhas: Processing message: ACTION-FINISHED Guilhas look-at chocolate
+
+can act now!
+
+PropertyChanged: [*] chocolate(isFruit) False
+
+PropertyChanged: [*] chocolate(isChocolate) True
+
+PropertyChanged: [*] chocolate(eatable) True
+
+PropertyChanged: [*] chocolate(type) object
+
+appraising event: EVENT(SELF,look-at,chocolate)
+
+Guilhas: Processing message: LOOK-AT User isPerson:True has,chocolate:True power:5 facial-exp:HAPPY 
+
+Look-At:User isPerson True
+
+Look-At:User has,chocolate True
+
+Look-At:User power 5
+
+Look-At:User facial-exp HAPPY
+
+Guilhas: Processing message: ACTION-FINISHED Guilhas look-at User
+
+can act now!
+
+PropertyChanged: [*] User(isPerson) True
+
+PropertyChanged: [*] User(has,chocolate) True
+
+PropertyChanged: [*] User(power) 5
+
+PropertyChanged: [*] User(facial-exp) HAPPY
+
+appraising event: EVENT(SELF,look-at,User)
+
+Guilhas: Processing message: PROPERTY-CHANGED [*] apple(onfloor) True
+
+Guilhas: Processing message: PROPERTY-CHANGED [*] User(has,apple) False
+
+Guilhas: Processing message: ACTION-FINISHED User Drop apple
+
+can act now!
+
+PropertyChanged: [[*]] apple(onfloor) True
+
+PropertyChanged: [[*]] User(has,apple) False
+
+appraising event: EVENT(User,Drop,apple)
+
+Guilhas: Processing message: PROPERTY-CHANGED [*] chocolate(onfloor) True
+
+Guilhas: Processing message: PROPERTY-CHANGED [*] User(has,chocolate) False
+
+Guilhas: Processing message: ACTION-FINISHED User Drop chocolate
+
+can act now!
+
+PropertyChanged: [[*]] chocolate(onfloor) True
+
+PropertyChanged: [[*]] User(has,chocolate) False
+
+appraising event: EVENT(User,Drop,chocolate)

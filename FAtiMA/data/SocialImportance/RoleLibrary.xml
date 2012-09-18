@@ -1,0 +1,13 @@
+<RoleLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="./schemas/RoleLibrary.xsd">
+
+  <Role name="Person">
+    <ActivationConditions>
+      <Property name="[AGENT](isPerson)" operator="=" value="True"/>
+    </ActivationConditions>
+    <ExpirationConditions>
+	  <Property name="[AGENT](isPerson)" operator="=" value="False"/> 
+    </ExpirationConditions>
+  </Role>
+   
+</RoleLibrary>

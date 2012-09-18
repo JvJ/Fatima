@@ -1,0 +1,246 @@
+absOrder: pre1, pre2, default#, post0, post1, post2, post3
+
+# global variables
+
+#pre1: $T=Type() not(bully())
+#-> $T bully(value:Luke)
+
+#pre2: $T=Type() not(victim())
+#-> $T victim(value:John)
+
+
+#### action tendencies first
+
+Type(value:weaknegative) 
+-> Utterance(value: "bolas...")
+
+Type(value:weaknegative) 
+-> Utterance(value: "porra!")
+
+Type(value:mediumnegative) 
+-> Utterance(value: "mas que merda!")
+
+Type(value:mediumnegative) 
+-> Utterance(value: "cena foleira.")
+
+Type(value:strongnegative) you(value:$Y) 
+-> Utterance(value: ("vai-te lixar ",$Y))
+
+Type(value:strongnegative) you(value:$Y) sex(value:$S) 
+-> Utterance(value: "és mesmo ") theInsult(gender:$S) Utterance(value:($Y))
+
+Type(value:weakpositive)
+-> Utterance(value: "fixe!")
+
+Type(value:weakpositive)
+-> Utterance(value: "porreiro.")
+
+Type(value:mediumpositive)
+-> Utterance(value: "eh eh, bués de fixe!")
+
+Type(value:mediumpositive)
+-> Utterance(value: "brutal!")
+
+Type(value:strongpositive) you(value:$Y)
+-> Utterance(value: "obrigadão!")
+
+Type(value:strongpositive) you(value:$Y)
+-> Utterance(value: ("epá, nem sei como te agradecer ",$Y,"!"))
+
+# that was amazing
+
+## bragging action
+Type(value:bragging) topic(value:SpeechAct) you(value:$Y) it1(value:Compliment) 
+-> Utterance(value: ("É tão chato estar a receber elogios a toda a hora ",$Y,"."))
+
+Type(value:bragging) topic(value:SpeechAct) you(value:$Y) it1(value:Compliment) 
+-> Utterance(value: ($Y," estou sempre a receber elogios!"))
+
+Type(value:bragging) topic(value:SpeechAct) you(value:$Y) it1(value:Valuing) 
+-> Utterance(value: ("Já viste ",$Y,", toda a gente gosta de mim."))
+
+Type(value:bragging) topic(value:SpeechAct) you(value:$Y) it1(value:Valuing) 
+-> Utterance(value: ("Sou um gajo muito porreiro ",$Y,", é fácil gostar de mim."))
+
+Type(value:bragging) topic(value:SpeechAct) you(value:$Y) it1(value:advice) 
+-> Utterance(value: ("Viste como ele se preocupa comigo ",$Y))
+
+Type(value:bragging) topic(value:SpeechAct) you(value:$Y) it1(value:buydrink) 
+-> Utterance(value: ("Ainda não conheci ninguém que consiga aguentar melhor a bebida que eu ",$Y))
+
+Type(value:bragging) topic(value:Attack) you(value:$Y) 
+-> Utterance(value: ($Y," já viste como sou poderoso?"))
+
+Type(value:bragging) topic(value:Attack) you(value:$Y) 
+-> Utterance(value: ("Mais um para a minha conta ",$Y,", quantos já mataste tu?"))
+
+Type(value:bragging) topic(value:Die) you(value:$Y) 
+-> Utterance(value: ("Caem que nem moscas às minhas mãos ",$Y))
+
+Type(value:bragging) topic(value:Cure) you(value:$Y) 
+-> Utterance(value: ("Com tanta cura sou imortal ",$Y))
+
+Type(value:bragging) topic(value:Cure) you(value:$Y) 
+-> Utterance(value: ("Com tanta cura nínguem me para ",$Y))
+
+### play down other's achievements
+
+## bragging action
+Type(value:playdown) topic(value:SpeechAct) you(value:$Y) it1(value:Compliment) 
+-> Utterance(value: ("Disseram isso só para ficares contente ",$Y,"."))
+
+Type(value:playdown) topic(value:SpeechAct) you(value:$Y) it1(value:Compliment) 
+-> Utterance(value: ("Bah... isso não é nada, havias de ver o que disseram de mim ",$Y))
+
+Type(value:playdown) topic(value:SpeechAct) you(value:$Y) it1(value:Valuing) 
+-> Utterance(value: ("Realmente, gostos não se discutem ",$Y))
+
+Type(value:playdown) topic(value:SpeechAct) you(value:$Y) it1(value:Valuing) 
+-> Utterance(value: ("Esse gajo também gosta de qualquer um ",$Y))
+
+Type(value:playdown) topic(value:SpeechAct) you(value:$Y) it1(value:advice) 
+-> Utterance(value: ($Y," só te dão maus conselhos.))
+
+Type(value:playdown) topic(value:SpeechAct) you(value:$Y) it1(value:buydrink) 
+-> Utterance(value: ("Ele combinou contigo mas de certeza que não vai aparecer ",$Y))
+
+Type(value:playdown) topic(value:Attack) you(value:$Y) 
+-> Utterance(value: ("milagre ",$Y,"! Conseguiste fazer um ataque de jeito"))
+
+Type(value:playdown) topic(value:Attack) you(value:$Y) 
+-> Utterance(value: ("Nem sabes como é que mataste esse ",$Y))
+
+Type(value:playdown) topic(value:Die) you(value:$Y) 
+-> Utterance(value: ("Que sorte que tiveste ",$Y))
+
+Type(value:playdown) topic(value:Cure) you(value:$Y) 
+-> Utterance(value: ("chamas a isso cura ",$Y),"? Que fraquinho)
+
+
+
+# 		insulting another agent
+Type(value:insult) sex(value:$S)
+-> preInsult() theInsult(gender:$S) Utterance(value:"!") 
+
+Type(value:valuing) you(value:$Y)
+-> Utterance(value: ($Y," és um bom amigo, podes sempre contar comigo."))
+
+Type(value:valuing) you(value:$Y)
+-> Utterance(value: ($Y,", vou sempre considerar-te meu amigo."))
+
+Type(value:valuing) you(value:$Y)
+-> Utterance(value: ("És um amigo muito importante para mim ",$Y))
+
+Type(value:compliment) you(value:$Y)
+-> Utterance(value: ("És mesmo forte ",$Y,", não gostaria de ter de lutar contigo."))
+
+Type(value:compliment) you(value:$Y)
+-> Utterance(value: ("As tuas habilidades são muito impressionantes ",$Y))
+
+Type(value:compliment) you(value:$Y)
+-> Utterance(value: ("Ouvi falar muito bem de ti ",$Y))
+
+Type(value:compliment) you(value:$Y)
+-> Utterance(value: ("Mal posso acreditar que estou a lutar ao teu lado ",$Y))
+
+Type(value:compliment) you(value:Jonas)
+-> Utterance(value: "Jonas, pareces ser um guerreiro formidável")
+
+Type(value:compliment) you(value:Jonas)
+-> Utterance(value: "Gostava de conseguir curar como tu o fazes Jonas.")
+
+Type(value:compliment) you(value:Montolio)
+-> Utterance(value: "Montolio, és uma máquina de matar com esse arco")
+
+Type(value:compliment) you(value:Montolio)
+-> Utterance(value: "Ouvi dizer que a tua pontaria com o arco é legendária Montolio")
+
+Type(value:compliment) you(value:Varsuvius)
+-> Utterance(value: "Varsuvius, o teu poder mágico é impressionante")
+
+Type(value:compliment) you(value:Uthgard)
+-> Utterance(value: "Tens uma armadura muito fixe Uthgard")
+
+Type(value:compliment) you(value:Uthgard)
+-> Utterance(value: "wow, deitas tudo abaixo com essa espada Uthgard")
+
+Type(value:welcome)
+-> Utterance(value: "Nice to see you.")
+
+Type(value:welcome)
+-> Utterance(value: "Good to have you here.")
+
+Type(value:apple)
+-> Utterance(value: "Would you like an apple?")
+
+Type(value:orange)
+-> Utterance(value: "Do you want to have an orange?")
+
+Type(value:banana)
+-> Utterance(value: "Fancy a banana?")
+
+Type(value:cake)
+-> Utterance(value: "Do you want to have a piece of cake?")
+
+Type(value:askPreference)
+-> Utterance(value: "Which other fruit do you prefer?")
+
+Type(value:acknowledge)
+-> Utterance(value: "OK. I will remember that for next time.")
+
+Type(value:swearSecrecy) it(value:$O)
+-> Utterance(value: ("OK. I will keep that secret from ",$O,"."))
+
+Type(value:swearSecrecy) it(value:$O)
+-> Utterance(value: ("I won't tell ",$O," about that. Thanks for sharing it with me!"))
+
+Type(value:party) it(value:$O)
+-> Utterance(value: ($O," was drunk at the party last night."))
+
+Type(value:newJob) it(value:$O)
+-> Utterance(value: ("Oh... yes, ",$O," is going to get a new job."))
+
+Type(value:hideInfo)
+-> Utterance(value: "I am afraid I don't know anything about that.")
+
+Type(value:dontTell)
+-> Utterance(value: "I suggest you ask him later.")
+
+Type(value:goodbye) it(value:$O)
+-> Utterance(value: ("Talk to you again soon. Enjoy your ",$O,"."))
+
+Type(value:goodbye) it(value:$O)
+-> Utterance(value: ("Hope you enjoy the ",$O,". Bye for now!"))
+
+Type(value:rejectsupport) 
+-> Utterance(value: "like I care.")
+
+Type(value:rejectsupport) 
+-> Utterance(value: "boring!")
+
+Type(value:rejectsupport) 
+-> Utterance(value: "yada, yada, yada, shut up already.")
+
+Type(value:rejectsupport) 
+-> Utterance(value: "couldn't care less.")
+
+Type(value:showsupport) it(value:DISTRESS)
+-> Utterance(value: "I'm so sorry")
+
+Type(value:showsupport) it(value:DISTRESS)
+-> Utterance(value: "Geez, thanks for sharing it with me")
+
+######################################
+# Internals
+preInsult()
+-> Utterance(value: "És mesmo ")
+
+preInsult()
+-> Utterance(value: "Epá, és mesmo um grande ")
+
+preInsult()
+-> Utterance(value: "")
+
+
+theInsult(gender:$S)
+-> Utterance(value: Synonym(semCat:idiot,type:$S))

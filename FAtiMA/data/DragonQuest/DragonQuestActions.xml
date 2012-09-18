@@ -1,0 +1,373 @@
+<DomainActions>
+	
+	<!--<Action name="Cure([target],CureMinorWounds)">
+		<PreConditions>
+			<Property name="[target](isAlive)" operator="=" value="True" />
+			<Property name="[AGENT](hasSpell,CureMinorWounds)" operator="=" value="True" />
+		</PreConditions>
+		<Effects>	
+		</Effects>
+		<EffectsOnDrives>
+			<Motivator drive="Integrity" target="[target]" value="+1"/>
+			<Motivator drive="Energy" target="[AGENT]" value="-0.3"/>
+		</EffectsOnDrives>
+	</Action>
+
+	
+	<Action name="Cure([target],CureLightWounds)">
+		<PreConditions>
+			<Property name="[target](isAlive)" operator="=" value="True" />
+			<Property name="[AGENT](hasSpell,CureLightWounds)" operator="=" value="True" />
+		</PreConditions>
+		<Effects>	
+		</Effects>
+		<EffectsOnDrives>
+			<Motivator drive="Integrity" target="[target]" value="+2"/>
+			<Motivator drive="Energy" target="[AGENT]" value="-0.6"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="Cure([target],CureModerateWounds)">
+		<PreConditions>
+			<Property name="[target](isAlive)" operator="=" value="True" />
+			<Property name="[AGENT](hasSpell,CureModerateWounds)" operator="=" value="True" />
+		</PreConditions>
+		<Effects>	
+		</Effects>
+		<EffectsOnDrives>
+			<Motivator drive="Integrity" target="[target]" value="+3"/>
+			<Motivator drive="Energy" target="[AGENT]" value="-0.9"/>
+		</EffectsOnDrives>
+	</Action>
+	-->
+	
+	<Action name="UsePotion()" >
+		<PreConditions>
+			<Property name="[AGENT](has,Potions)" operator="=" value="True" />
+		</PreConditions>
+		<Effects>	
+		</Effects>
+		<EffectsOnDrives>
+			<Motivator drive="Integrity" target="[AGENT]" value="+3"/>
+			<!--<Motivator drive="Equipment" target="[AGENT]" value="-3"/>-->
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="GiveItem([target],Potion)">
+		<PreConditions>
+			<Property name="[AGENT](has,Potions)" operator="=" value="True" />
+		</PreConditions>
+		<Effects>
+			<Effect probability="1.0">
+				<Property name="[target](has,Potions)" operator="=" value="True" />
+			</Effect>
+		</Effects>
+		<EffectsOnDrives>
+			<Motivator drive="Integrity" target="[target]" value="+3"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="Give([target],MagicWeapon)">
+		<PreConditions>
+			<Property name="[AGENT](has,MagicWeapon)" operator="=" value="True" />
+		</PreConditions>
+		<Effects>
+		</Effects>
+		<EffectsOnDrives>
+			<!--<Motivator drive="Equipment" target="[target]" value="+8"/>-->
+		</EffectsOnDrives>
+	</Action>
+	
+	
+	<!--<Action name="Cure([target],CureSeriousWounds)">
+		<PreConditions>
+			<Property name="[target](isAlive)" operator="=" value="True" />
+			<Property name="[AGENT](hasSpell,CureSeriousWounds)" operator="=" value="True" />
+		</PreConditions>
+		<Effects>	
+		</Effects>
+		<EffectsOnDrives>
+			<Motivator drive="Integrity" target="[target]" value="+4"/>
+			<Motivator drive="Energy" target="[AGENT]" value="-1.2"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="SummonCompanion()">
+		<PreConditions>
+			<Property name="[AGENT](hasSpell,SummonCompanion)" operator="=" value="True" />
+		</PreConditions>
+		<Effects>	
+		</Effects>
+	</Action>-->
+	
+	<Action name="RayOfFrost([target])">
+		<PreConditions>
+			<Property name="[target](isEnemy)" operator="=" value="True" />
+			<Property name="[target](isAlive)" operator="=" value="True" />
+			<Property name="[AGENT](hasSpell,RayOfFrost)" operator="=" value="True" />
+		</PreConditions>
+		<Effects>	
+		</Effects>
+	</Action>
+	
+	<Action name="MagicMissile([target])">
+		<PreConditions>
+			<Property name="[target](isEnemy)" operator="=" value="True" />
+			<Property name="[target](isAlive)" operator="=" value="True" />
+			<Property name="[AGENT](hasSpell,MagicMissile)" operator="=" value="True" />
+		</PreConditions>
+		<Effects>	
+		</Effects>
+	</Action>
+	
+	<Action name="ElectricLoop([target])">
+		<PreConditions>
+			<Property name="[target](isEnemy)" operator="=" value="True" />
+			<Property name="[target](isAlive)" operator="=" value="True" />
+			<Property name="[AGENT](hasSpell,ElectricLoop)" operator="=" value="True" />
+		</PreConditions>
+		<Effects>	
+		</Effects>
+	</Action>
+	
+	<Action name="LightningBolt([target])">
+		<PreConditions>
+			<Property name="[target](isEnemy)" operator="=" value="True" />
+			<Property name="[target](isAlive)" operator="=" value="True" />
+			<Property name="[AGENT](hasSpell,LightningBolt)" operator="=" value="True" />
+		</PreConditions>
+		<Effects>	
+		</Effects>
+	</Action>
+	
+	<Action name="Attack([target])">
+		<PreConditions>
+			<Property name="[target](isEnemy)" operator="=" value="True" />
+			<Property name="[target](isAlive)" operator="=" value="True" />
+			<Property name="[AGENT](has,Sword)" operator="=" value="True" />
+		</PreConditions>
+		<Effects>
+			<Effect probability="1.0">
+				<Property name="[target](isAlive)" operator="=" value="False" />
+			</Effect>
+		</Effects>
+	</Action>
+	
+	<Action name="Attack([target])">
+		<PreConditions>
+			<Property name="[target](isEnemy)" operator="=" value="True" />
+			<Property name="[target](isAlive)" operator="=" value="True" />
+			<Property name="[AGENT](has,Bow)" operator="=" value="True" />
+			<Property name="[AGENT](has,Arrows)" operator="=" value="True" />
+		</PreConditions>
+		<Effects>
+			<Effect probability="1.0">
+				<Property name="[target](isAlive)" operator="=" value="False" />
+			</Effect>
+		</Effects>
+	</Action>
+	
+	<Action name="Reload()">
+		<PreConditions>
+		</PreConditions>
+		<Effects>
+			<Effect probability="1.0">
+				<Property name="[AGENT](hasArrows)" operator="=" value="True" />
+			</Effect>
+		</Effects>
+	</Action>
+	
+	<Action name="Die([killer])" probability="1.0">
+		<PreConditions>
+			<Property name="[AGENT](dummyPrecondition)" operator="=" value="True" />
+		</PreConditions>
+		<Effects>
+		</Effects>
+		<EffectsOnDrives>
+			<Motivator drive="Score" target="[killer]" value="+4"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="RunAway([target])">
+		<PreConditions>
+		</PreConditions>
+		<Effects>	
+		</Effects>
+	</Action>
+
+	<Action name="SpeechAct([target],valuing)">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<LikeCondition ToM="[AGENT]" target="[target]" operator="GreaterThan" value="4" />
+			<RecentEvent occurred="False" subject="[AGENT]" action="SpeechAct" target="[target]" parameters="valuing"/>
+		</PreConditions>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[target]" value="+3"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="SpeechAct([target],advice,[action],[p1])">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<RecentEvent ToM="[target]" action="[action]" parameters="[p1]" emotion="Distress" />
+			<RecentEvent occurred="False" subject="[AGENT]" action="SpeechAct" target="[target]" parameters="advice,[action],[p1]"/>
+		</PreConditions>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[target]" value="+2"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="SpeechAct([target],advice,[action])">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<RecentEvent ToM="[target]" action="[action]" emotion="Distress" />
+			<RecentEvent occurred="False" subject="[AGENT]" action="SpeechAct" target="[target]" parameters="advice,[action]"/>
+		</PreConditions>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[target]" value="+2"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="SpeechAct([target],praise,[action],[p1])">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<RecentEvent ToM="[target]" action="[action]" parameters="[p1]" emotion="Joy" />
+			<RecentEvent occurred="False" subject="[AGENT]" action="SpeechAct" target="[target]" parameters="praise,[action],[p1]"/>			
+		</PreConditions>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[target]" value="+2.5"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="SpeechAct([target],praise,[action])">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<RecentEvent ToM="[target]" action="[action]" emotion="Joy" />
+			<RecentEvent occurred="False" subject="[AGENT]" action="SpeechAct" target="[target]" parameters="praise,[action]"/>			
+		</PreConditions>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[target]" value="+2.5"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="SpeechAct([target],compliment)">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<RecentEvent occurred="False" subject="[AGENT]" action="SpeechAct" target="[target]" parameters="compliment"/>
+		</PreConditions>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[target]" value="+2"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="SpeechAct([target],buydrink)">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<RecentEvent occurred="False" subject="[AGENT]" action="SpeechAct" target="[target]" parameters="buydrink"/>
+			<PastEvent occurred="False" subject="[AGENT]" action="SpeechAct" target="[target]" parameters="buydrink"/>
+			<LikeCondition ToM="[AGENT]" target="[target]" operator="GreaterThan" value="4" />
+		</PreConditions>
+		<Effects>
+		</Effects>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[target]" value="+3"/>
+		</EffectsOnDrives>
+	</Action>
+		
+	<!-- gloat won't work without remaking the Emotional event 	
+	<Action name="SpeechAct([target],gloat,[action])">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<EmotionalEvent agent="[target]" emotion="Distress" min-intensity="1" action="[action]" /> 
+		</PreConditions>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[target]" value="-2"/>
+		</EffectsOnDrives>
+	</Action>
+	-->
+	
+	<!-- criticize won't work without remaking the Emotional Event
+	<Action name="SpeechAct([target],criticize,[action])">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<EmotionalEvent agent="[target]" emotion="Distress" min-intensity="1" subject="[target]" action="[action]" /> 
+		</PreConditions>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[target]" value="-2.5"/>
+		</EffectsOnDrives>
+	</Action>
+	-->
+	<Action name="SpeechAct([target],playdown,[action],[p1])">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<EmotionalEvent ToM="[target]" emotion="Joy" min-intensity="1" action="[action]" parameters="[p1]" />
+		</PreConditions>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[target]" value="-2"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="SpeechAct([target],bragging,[action],[p1])">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<EmotionalEvent ToM="[AGENT]" emotion="Joy" min-intensity="1" action="[action]" parameters="[p1]" />			
+		</PreConditions>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[target]" value="-1.5"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="SpeechAct([target],insult,[action],[p1])">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<EmotionalEvent ToM="[AGENT]" emotion="Distress" min-intensity="1" subject="[target]" action="[action]" parameters="[p1]" />
+			<LikeCondition ToM="[AGENT]" target="[target]" operator="LesserThan" value="-5" />
+		</PreConditions>
+		<EffectsOnDrives>    
+			<Motivator drive="Affiliation" target="[target]" value="-3"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="SpeechAct([target],episodesummary,[episode],[emotion])">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+		</PreConditions>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[AGENT]" value="+3"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<!--<Action name="SpeechAct([target],rejectsupport)">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+		</PreConditions>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[target]" value="-2"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="SpeechAct([target],showsupport,[emotion])" probability="0.5">
+		<PreConditions>
+			<RecentEvent occurred="True" subject="[target]" action="SpeechAct" target="[AGENT]" parameters="episodesummary,[episode],[emotion]"/>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+		</PreConditions>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[target]" value="+4"/>
+		</EffectsOnDrives>
+	</Action>-->
+	
+
+
+</DomainActions>

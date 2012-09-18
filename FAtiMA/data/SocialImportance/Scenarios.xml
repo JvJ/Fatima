@@ -1,0 +1,34 @@
+<Scenarios>	
+	
+	<Scenario name="SocialImportance">
+		<WorldSimulator port="46874" scenery="Bar" actionsFile="Actions" 
+						agentLanguageFile="language/agent/en/language-set-1" 
+						userOptionsFile="UserOptions"
+						simplifiedVersion="True">	
+			<Objects>
+				<Object name="User"/>	
+				<Object name="Castle"/>	
+			</Objects>
+		</WorldSimulator>	
+	
+	<Agent name="Jacob" displayName="Jacob" role="Jacob" platform="worldsim" host="localhost" 
+		   port="46874" debugMode="True" sex="M" actionsFile="Actions" 
+		   goalsFile="GoalLibrary" cultureName="Culture">
+		<Properties>					
+			<Property name="knowsDirection,Castle" value="False"/>
+			<Property name="isPerson" value="True"/>			
+		</Properties>	
+	</Agent>
+		
+	<Agent name="Marc" displayName="Marc" role="Marc" platform="worldsim" host="localhost" 
+		   port="46874" debugMode="True" sex="M" actionsFile="Actions" 
+		   goalsFile="GoalLibrary" cultureName="Culture">
+		<Properties>				
+			<Property name="knowsDirection,Castle" value="True"/>
+			<Property name="isPerson" value="True"/>		
+		</Properties>	
+	</Agent>
+ </Scenario>
+
+	
+</Scenarios>

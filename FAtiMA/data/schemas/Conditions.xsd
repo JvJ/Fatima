@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:include schemaLocation="Types.xsd" />
+
+<xs:complexType name="PropertyCondition">
+  <xs:attribute name="ToM" type="ToMList" use="optional" />
+  <xs:attribute name="name" type="Name" use="required"/>
+  <xs:attribute name="operator" type="operatorType" use ="required" />
+  <xs:attribute name="value" type="Symbol" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="EqualPropertyCondition">
+  <xs:attribute name="ToM" type="ToMList" use="optional" />
+  <xs:attribute name="name" type="Name" use="required"/>
+  <xs:attribute name="operator" type="equalOperatorType" use ="required" />
+  <xs:attribute name="value" type="Symbol" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="EventCondition">
+  <xs:attribute name="ToM" type="ToMList" use="optional" />
+  <xs:attribute name="occurred" type="booleanType" use="optional"/>
+  <xs:attribute name="subject" type="Symbol" use ="optional" />
+  <xs:attribute name="action" type="Symbol" use="required"/>
+  <xs:attribute name="target" type="Symbol" use="optional"/>
+  <xs:attribute name="parameters" type="SymbolList" use="optional"/>
+  <xs:attribute name="emotion" type="Symbol" use="optional"/>
+</xs:complexType>
+
+<xs:complexType name="EmotionalEventCondition">
+  <xs:attribute name="ToM" type="ToMList" use="optional" />
+  <xs:attribute name="active" type="booleanType" use="optional"/>
+  <xs:attribute name="subject" type="Symbol" use ="optional" />
+  <xs:attribute name="action" type="Symbol" use="optional"/>
+  <xs:attribute name="target" type="Symbol" use="optional"/>
+  <xs:attribute name="parameters" type="SymbolList" use="optional"/>
+  <xs:attribute name="emotion" type="Symbol" use="required"/>
+  <xs:attribute name="min-intensity" type="FloatOrVariable" use="optional"/>
+</xs:complexType>
+
+<xs:complexType name="RitualCondition">
+  <xs:attribute name="ToM" type="ToMList" use="optional" />
+  <xs:attribute name="name" type="xs:string" use ="required" />
+  <xs:attribute name="roles" type="xs:string" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="EmotionCondition">
+ <xs:attribute name="ToM" type="ToMList" use="optional" />
+ <xs:attribute name="emotion" type="emotionType" use="required"/>
+ <xs:attribute name="active" type="booleanType" use="optional"/> 
+ <xs:attribute name="min-intensity" type="FloatOrVariable" use="optional"/>
+ <xs:attribute name="target" type="Symbol" use="optional"/>
+</xs:complexType>
+
+<xs:complexType name="EmotionalEpisodeCondition">
+ <xs:attribute name="ToM" type="ToMList" use="optional" />
+ <xs:attribute name="episode" type="IntOrVariable" use="required" />
+ <xs:attribute name="emotion" type="Symbol" use="required"/>
+ <xs:attribute name="min-intensity" type="FloatOrVariable" use="optional"/>
+</xs:complexType>
+
+<xs:complexType name="MoodCondition">
+ <xs:attribute name="ToM" type="ToMList" use="optional" />
+ <xs:attribute name="value" type="xs:double" use="required"/>
+ <xs:attribute name="operator" type="operatorType" use ="required" />
+</xs:complexType>
+
+<xs:complexType name="PredicateCondition">
+ <xs:attribute name="name" type="PredicateName" use="required"/>
+ <xs:attribute name="ToM" type="ToMList" use="optional"/>
+</xs:complexType>
+
+<xs:complexType name="EquationCondition">
+ <xs:attribute name="ToM" type="ToMList" use="optional"/>
+ <xs:attribute name="result" type="FloatOrVariable" use="required"/>
+ <xs:attribute name="operand1" type="FloatOrVariable" use="required"/>
+ <xs:attribute name="operand2" type="FloatOrVariable" use="required"/>
+ <xs:attribute name="operator" type="basicOperator" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="SocialCondition">
+  <xs:attribute name="ToM" type="ToMList" use="optional" />
+  <xs:attribute name="target" type="Symbol" use="required"/>
+  <xs:attribute name="operator" type="operatorType" use ="required" />
+  <xs:attribute name="value" type="FloatOrVariable" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="SACondition">
+  <xs:attribute name="ToM" type="ToMList" use="optional" />
+  <xs:attribute name="query" type="Symbol" use="required"/>
+  <xs:attribute name="value" type="Symbol" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="SAKnown">
+  <xs:attribute name="ToM" type="ToMList" use="optional" />
+  <xs:attribute name="name" type="Symbol" use="required"/>
+  <xs:attribute name="value" type="Symbol" use="required"/>
+</xs:complexType>
+
+</xs:schema>

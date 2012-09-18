@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="FAtiMA.RemoteAgent">
+</Property><Property Name="Solution File" Value="D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\FAtiMA.RemoteAgent.sln">
+</Property><Property Name="Date" Value="quinta-feira, 8 de Abril de 2010">
+</Property><Property Name="Time" Value="15:50:11">
+</Property></Properties><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="FAtiMA.RemoteAgent.csproj" Description="Project file successfully backed up as D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\Backup\FAtiMA.RemoteAgent.csproj">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="AwakeRemoteCharacterAction.cs" Description="File successfully backed up as D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\Backup\AwakeRemoteCharacterAction.cs">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="Emotion.cs" Description="File successfully backed up as D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\Backup\Emotion.cs">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="EmotionalState.cs" Description="File successfully backed up as D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\Backup\EmotionalState.cs">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="EmotionalStateParser.cs" Description="File successfully backed up as D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\Backup\EmotionalStateParser.cs">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="GSDummy.cs" Description="File successfully backed up as D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\Backup\GSDummy.cs">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="LanguageEngineMaster.cs" Description="File successfully backed up as D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\Backup\LanguageEngineMaster.cs">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="LoadLanguageEngine.cs" Description="File successfully backed up as D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\Backup\LoadLanguageEngine.cs">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="LoadRemoteAgentAction.cs" Description="File successfully backed up as D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\Backup\LoadRemoteAgentAction.cs">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="PutToSleepRemoteCharacterAction.cs" Description="File successfully backed up as D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\Backup\PutToSleepRemoteCharacterAction.cs">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="Relation.cs" Description="File successfully backed up as D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\Backup\Relation.cs">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="RelationSet.cs" Description="File successfully backed up as D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\Backup\RelationSet.cs">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="RelationsParser.cs" Description="File successfully backed up as D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\Backup\RelationsParser.cs">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="RemoteAction.cs" Description="File successfully backed up as D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\Backup\RemoteAction.cs">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="RemoteActionParser.cs" Description="File successfully backed up as D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\Backup\RemoteActionParser.cs">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="RemoteCharacter.cs" Description="File successfully backed up as D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\Backup\RemoteCharacter.cs">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="SpeechAct.cs" Description="File successfully backed up as D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\Backup\SpeechAct.cs">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="SpeechActParser.cs" Description="File successfully backed up as D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\Backup\SpeechActParser.cs">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="XmlParser.cs" Description="File successfully backed up as D:\Doutoramento\cenario\ion\cs4\MindBlindness\FAtiMA.RemoteAgent\Backup\XmlParser.cs">
+</Event><Event ErrorLevel="1" Project="FAtiMA.RemoteAgent" Source="FAtiMA.RemoteAgent.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="FAtiMA.RemoteAgent.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="FAtiMA.RemoteAgent" Source="FAtiMA.RemoteAgent.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="FAtiMA.RemoteAgent" Source="FAtiMA.RemoteAgent.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

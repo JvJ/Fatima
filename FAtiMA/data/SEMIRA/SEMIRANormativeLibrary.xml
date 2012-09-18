@@ -1,0 +1,65 @@
+<NormativeLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="./schemas/NormativeLibrary.xsd">
+
+<Prohibition name="DeonticDoNotSmokeInsideBars" baseSalience="1">
+  <Targets>
+    <Role name="Customer"/>
+  </Targets>
+  <ActivationConditions>
+    <NewEvent occurred="True" subject="[AGENT]" action="RemoveCigarretteFromPocket"/>
+  </ActivationConditions>
+  <ExpirationConditions>
+    <NewEvent occurred="True" subject="[AGENT]" action="Smoke"/>
+  </ExpirationConditions>
+  <NormativeConditions>
+    <NewEvent occurred="False" subject="[AGENT]" action="Smoke"/>
+  </NormativeConditions>
+</Prohibition>
+
+<Prohibition name="DoNotSmokeInsideBarsWithoutPermission" baseSalience="9.5">
+  <Targets>
+    <Role name="Customer"/>
+  </Targets>
+  <ActivationConditions>
+    <NewEvent occurred="True" subject="[any]" action="DenyPermissionToSmoke" target="[AGENT]"/>
+  </ActivationConditions>
+  <ExpirationConditions>
+    <NewEvent occurred="True" subject="[AGENT]" action="Smoke"/>
+  </ExpirationConditions>
+  <NormativeConditions>
+    <NewEvent occurred="False" subject="[AGENT]" action="Smoke"/>
+  </NormativeConditions>
+</Prohibition>
+
+<Obligation name="AskPermissionBeforeSmoking" baseSalience="7.5">
+  <Targets>
+    <Role name="Customer"/>
+  </Targets>
+  <ActivationConditions>
+    <NewEvent occurred="True" subject="[AGENT]" action="RemoveCigarretteFromPocket"/>
+  </ActivationConditions>
+  <ExpirationConditions>
+    <NewEvent occurred="True" subject="[AGENT]" action="Smoke"/>
+    <Property name="[AGENT](location)" operator="=" value="Outside"/> 
+  </ExpirationConditions>
+  <NormativeConditions>
+  	<Property name="[AGENT](hasAskedPermission)" operator="=" value="True" />
+  </NormativeConditions>
+</Obligation>
+
+<Obligation name="StayWithFriend" baseSalience="3">
+  <Targets>
+    <Role name="Person"/>
+  </Targets>
+  <ActivationConditions>
+    <NewEvent occurred="True" action="Move" subject="[target]" target="[location]"/>
+    <Property name="[AGENT](location)" operator="!=" value="[location]"/>
+  </ActivationConditions>
+  <ExpirationConditions> 
+  </ExpirationConditions>
+  <NormativeConditions>
+  	<Property name="[AGENT](location)" operator="=" value="[location]"/>
+  </NormativeConditions>
+</Obligation>
+
+</NormativeLibrary>

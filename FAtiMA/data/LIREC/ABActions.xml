@@ -1,0 +1,92 @@
+<DomainActions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="./schemas/Actions.xsd">
+
+	<Action name="makeRemark([target],[remark])">
+		<PreConditions>
+		</PreConditions>
+		<Effects>		
+			<Effect probability="1.0">
+				<Property name="[target](madeRemark)" operator="=" value="True" />
+			</Effect>
+		</Effects>
+		<EffectsOnDrives>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="logBookReminder([target])">
+		<PreConditions>
+			<!--Property name="[target](exitTimeKnown)" operator="=" value="True" />
+			<Property name="[target](exitTime)" operator="=" value="[AGENT](time)" /-->
+			<!--Property name="[target](exitTime)" operator="!=" value="Unknown" /-->			
+			<Property name="[target](exitTime)" operator="=" value="[time]" />	
+			<Property name="[time]" operator="!=" value="Unknown" />
+			<Property name="[AGENT](time)" operator="=" value="[time]" />		
+			<!--Property name="[AGENT](time)" operator="=" value="[time]" /-->
+			<!--Property name="[exitTime]" operator="=" value="[time]" /-->		
+		</PreConditions>
+		<Effects>		
+			<Effect probability="1.0">
+				<Property name="[target](reminded)" operator="=" value="True" />
+			</Effect>
+		</Effects>
+		<EffectsOnDrives>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="SA([target],time)">
+		<PreConditions>
+			<Property name="[target](exitTimeKnown)" operator="!=" value="True" />
+			<SACondition query="time" value="[time]"/>
+			<SAKnown name="subject" value="[target]" />
+			<SAKnown name="action" value="Exit" />
+			<Ontology name="timeOntology" value="3" />
+		</PreConditions>
+		<Effects>
+			<Effect probability="1.0">
+				<Property name="[target](exitTime)" operator="=" value="[time]" />
+				<Property name="[target](exitTimeKnown)" operator="=" value="True" />
+			</Effect>
+		</Effects>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[AGENT]" value="+4"/>
+			<Motivator drive="Affiliation" target="[target]" value="+2"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="reset()">
+		<PreConditions>
+		</PreConditions>
+		<Effects>		
+			<Effect probability="1.0">
+				<Property name="[SELF](madeRemark)" operator="=" value="False" />
+			</Effect>
+		</Effects>
+		<EffectsOnDrives>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="read([person],[item])">
+	</Action>
+
+	<Action name="watch([person],[item])">
+	</Action>
+
+	<Action name="listen([person],[item])">
+	</Action>
+
+	<Action name="clean([person],[item])">
+	</Action>
+
+	<Action name="write([person],[item])">
+	</Action>
+
+	<Action name="ask([target],[person],[task],[item])">
+	</Action>
+
+	<Action name="respondYes([target],[person],[task],[item])">
+	</Action>
+
+	<Action name="respondNo([target],[person],[task],[item])">
+	</Action>
+
+</DomainActions>

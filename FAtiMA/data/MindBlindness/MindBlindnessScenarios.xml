@@ -1,0 +1,45 @@
+<Scenarios>
+	<Scenario name="MindBlindness">
+		<WorldSimulator port="46874" scenery="AmyHouse" actionsFile="MindBlindnessActionsB"
+						simplifiedVersion="True"
+						agentLanguageFile="language/agent/en/language-set-1" 
+						userOptionsFile="MindBlindnessOptions">		
+			<Objects>
+				<Object name="BoxA"/>
+				<Object name="BoxB"/>
+				<Object name="User"/>
+			</Objects>
+		</WorldSimulator>	
+		<Agent name="Tim" displayName="Tim" role="Child" platform="worldsim" host="localhost" 
+			   port="46874" debugMode="True" sex="M" actionsFile="MindBlindnessActions" 
+			   goalsFile="MindBlindnessGoalLibrary" cultureName="NoCulture">
+			<Properties>				 
+				<Property name="location" value="LivingRoom"/>
+				<Property name="time" value="Morning"/>
+				<Property name="isPerson" value="True"/> 
+			</Properties>	
+		</Agent>
+	</Scenario>
+	<Scenario name="MindBlindnessNoModel">
+		<WorldSimulator port="46874" scenery="AmyHouse" actionsFile="MindBlindnessActionsB" 
+						simplifiedVersion="True"
+						agentLanguageFile="language/agent/en/language-set-1" 
+						userOptionsFile="MindBlindnessOptions">		
+			<Objects>
+				<Object name="BoxA"/>
+				<Object name="BoxB"/>
+				<Object name="User"/>
+			</Objects>
+	
+		</WorldSimulator>	
+		<Agent name="Tim" displayName="Tim" role="Child" platform="worldsim" host="localhost" 
+			   port="46874" debugMode="True" sex="M" actionsFile="MindBlindnessActionsNoModel" 
+			   goalsFile="MindBlindnessGoalLibraryNoModel" cultureName="NoCulture">
+			<Properties>				
+				<Property name="location" value="LivingRoom"/>
+				<Property name="time" value="Morning"/>
+				<Property name="isPerson" value="True"/>
+			</Properties>	
+		</Agent>
+	</Scenario>	
+</Scenarios>

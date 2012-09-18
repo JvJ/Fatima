@@ -1,0 +1,104 @@
+<GoalLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="./schemas/GoalLibrary.xsd">
+	
+	<ActivePursuitGoal name="ArriveAtBar()">
+		<PreConditions>
+			<RecentEvent occurred="True" subject="User" action="StartSimulation"/>
+			<Property name="[SELF](location)" operator="=" value="Outside"/>
+		</PreConditions>
+		<SucessConditions>
+			<RecentEvent occurred="True" subject="[SELF]" action="Move" target="InsideBar"/>
+		</SucessConditions>
+		<FailureConditions>
+		</FailureConditions>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="SmallTalk()">
+		<PreConditions>
+			<RecentEvent occurred="True" subject="User" action="StartSimulation"/>
+		</PreConditions>
+		<SucessConditions>
+			<RecentEvent occurred="True" subject="[SELF]" action="SmallTalk"/>
+		</SucessConditions>
+		<FailureConditions>
+		</FailureConditions>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="LightCigarette()">
+		<PreConditions>
+			<Property name="[SELF](location)" operator="=" value="InsideBar"/>
+		</PreConditions>
+		<SucessConditions>
+			<RecentEvent occurred="True" subject="[SELF]" action="LightCigarette"/>
+		</SucessConditions>
+		<FailureConditions>
+		</FailureConditions>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="DiscussAboutSmoker([target])">
+		<PreConditions>	
+			<RecentEvent occurred="True" subject="[any]" action="LightCigarette"/>
+		</PreConditions>
+		<SucessConditions>
+			<RecentEvent occurred="True" subject="[SELF]" target="[target]" action="DiscussAboutSmoker"/>
+		</SucessConditions>
+		<FailureConditions>
+		</FailureConditions>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="SuggestLeave()">
+		<PreConditions>
+			<RecentEvent occurred="True" subject="[any]" action="LightCigarette" />
+		</PreConditions>
+		<SucessConditions>
+			<RecentEvent occurred="True" subject="[SELF]" action="SuggestLeave" />
+		</SucessConditions>
+		<FailureConditions>
+		</FailureConditions>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="AskSmokerToStop([target])">
+		<PreConditions>
+			<RecentEvent occurred="True" subject="[target]" action="LightCigarette" />
+		</PreConditions>
+		<SucessConditions>
+			<RecentEvent occurred="True" subject="[SELF]" action="AskSmokerToStop" target="[target]"/>
+		</SucessConditions>
+		<FailureConditions>
+		</FailureConditions>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="Ignore()">
+		<PreConditions>
+			<RecentEvent occurred="True" subject="[any]" action="LightCigarette" />
+		</PreConditions>
+		<SucessConditions>
+			<RecentEvent occurred="True" subject="[SELF]" action="Ignore" />
+		</SucessConditions>
+		<FailureConditions>
+		</FailureConditions>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="AgreeToLeave()">
+		<PreConditions>
+			<RecentEvent occurred="True" subject="[any]" action="SuggestLeave" />
+		</PreConditions>
+		<SucessConditions>
+			<RecentEvent occurred="True" subject="[SELF]" action="AgreeToLeave" />
+		</SucessConditions>
+		<FailureConditions>
+		</FailureConditions>	
+	</ActivePursuitGoal>
+	
+	<ActivePursuitGoal name="PutOutCigarette()">
+		<PreConditions>
+			<RecentEvent occurred="True" subject="[any]" action="AskSmokerToStop" target="[SELF]" />
+		</PreConditions>
+		<SucessConditions>
+			<RecentEvent occurred="True" subject="[SELF]" action="PutOutCigarette" />
+		</SucessConditions>
+		<FailureConditions>
+		</FailureConditions>	
+	</ActivePursuitGoal>
+	
+</GoalLibrary>

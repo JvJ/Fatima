@@ -1,0 +1,175 @@
+<DomainActions>
+	<Action name="Drop([target])">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[AGENT](has,[target])" operator="=" value="True" />
+		</PreConditions>
+		<Effects>	
+			<Effect probability="1.0">
+				<Property name="[target](onfloor)" operator="=" value="True"/>
+			</Effect>
+		</Effects>
+	</Action>
+	
+	<Action name="Pick([target])">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[target](onfloor)" operator="=" value="True"/>
+		</PreConditions>
+		<Effects>	
+			<Effect probability="1.0">
+				<Property name="[target](onfloor)" operator="=" value="False"/>
+			</Effect>
+			<Effect probability="1.0">
+				<Property name="[AGENT](has,[target])" operator="=" value="True" />
+			</Effect>
+		</Effects>
+	</Action>
+	
+	<Action name="Buy([target])">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[AGENT](location)" operator="=" value="SuperMarket"/>
+		</PreConditions>
+		<Effects>	
+			<Effect probability="1.0">
+				<Property name="[AGENT](has,[target])" operator="=" value="True" />
+			</Effect>
+		</Effects>
+	</Action>
+	
+	<Action name="MoveTo([target])">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[AGENT](location)" operator="!=" value="[target]"/>
+		</PreConditions>
+		<Effects>	
+			<Effect probability="1.0">
+				<Property name="[AGENT](location)" operator="=" value="[target]" />
+			</Effect>
+		</Effects>
+	</Action>
+	
+	<Action name="Give([target],[object])">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[AGENT](has,[object])" operator="=" value="True" />
+		</PreConditions>
+		<Effects>	
+			<Effect probability="1.0">
+				<Property name="[target](has,[object])" operator="=" value="True" />
+			</Effect>
+			<Effect probability="1.0">
+				<Property name="[AGENT](has,[object])" operator="=" value="False" />
+			</Effect>
+		</Effects>
+		<EffectsOnDrives>
+			<Motivator drive="Energy" target="[target]" value="+3"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="TakeFrom([target],[object])">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[target](has,[object])" operator="=" value="True" />
+		</PreConditions>
+		<Effects>	
+			<Effect probability="1.0">
+				<Property name="[target](has,[object])" operator="=" value="False" />
+			</Effect>
+			<Effect probability="1.0">
+				<Property name="[AGENT](has,[object])" operator="=" value="True" />
+			</Effect>
+		</Effects>
+		<EffectsOnDrives>
+			<Motivator drive="Energy" target="[target]" value="-3"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	
+	<Action name="Eat([target])">
+		<PreConditions>
+			<Property name="[target](eatable)" operator="=" value="True" />
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[AGENT](has,[target])" operator="=" value="True"/>
+		</PreConditions>
+		<Effects>	
+			<Effect probability="1.0">
+				<Property name="[AGENT](has,[target])" operator="=" value="False" />
+			</Effect>
+		</Effects>
+		<EffectsOnDrives>
+			<Motivator drive="Energy" target="[AGENT]" value="+3"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	
+	<Action name="Rests()">
+		<PreConditions>
+		</PreConditions>
+		<EffectsOnDrives>
+			<Motivator drive="Integrity" target="[AGENT]" value="+2"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="Kick([target])">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+		</PreConditions>
+		<EffectsOnDrives>
+			<Motivator drive="Integrity" target="[target]" value="-3"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="Heal([target])">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+		</PreConditions>
+		<EffectsOnDrives>
+			<Motivator drive="Integrity" target="[target]" value="+3"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="SpeechAct([target],compliment)">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+		</PreConditions>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[target]" value="+3"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="Hug([target])">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+		</PreConditions>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[target]" value="+4"/>
+		</EffectsOnDrives>
+	</Action>
+		
+	<Action name="SpeechAct([target],gloat)">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+		</PreConditions>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[target]" value="-3"/>
+			<Motivator drive="Affiliation" target="[AGENT]" value="+2"/>
+		</EffectsOnDrives>
+	</Action>
+	
+	<Action name="SpeechAct([target],insult)">
+		<PreConditions>
+			<Property name="[AGENT]" operator="!=" value="[target]" />
+			<Property name="[target](isPerson)" operator="=" value="True" />
+		</PreConditions>
+		<EffectsOnDrives>
+			<Motivator drive="Affiliation" target="[target]" value="-4"/>
+		</EffectsOnDrives>
+	</Action>
+</DomainActions>

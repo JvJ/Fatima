@@ -1,0 +1,71 @@
+<Scenarios>
+	<Scenario name="DragonQuestNoModel">
+		<WorldSimulator port="46874" scenery="AmyHouse" actionsFile="DragonQuestActions" 
+						agentLanguageFile="language/agent/pt/language-set-1"
+						userLanguageFile="language/agent/pt/language-set-1" 
+						userOptionsFile="LIRECOptions">		
+		</WorldSimulator>
+		<Agent name="Jonas" displayName="Jonas" role="Jonas" platform="ION" host="localhost" 
+			   port="46874" debugMode="True" sex="M" actionsFile="DragonQuestActions" 
+			   goalsFile="DragonQuestGoalLibrary" cultureName="SimpleCulture">
+			<Properties>				
+				<Property name="time" value="Morning"/>
+				<Property name="isPerson" value="True"/>
+			</Properties>	
+		</Agent>
+		<Agent name="Montolio" displayName="Montolio" role="Montolio" platform="ION" host="localhost" 
+			   port="46875" debugMode="True" sex="M" actionsFile="DragonQuestActions" 
+			   goalsFile="DragonQuestGoalLibrary" cultureName="SimpleCulture">
+			<Properties>				
+				<Property name="time" value="Morning"/>
+				<Property name="isPerson" value="True"/>
+			</Properties>	
+		</Agent>
+		<Agent name="Varsuvius" displayName="Varsuvius" role="Varsuvius" platform="ION" host="localhost" 
+			   port="46876" debugMode="True" sex="M" actionsFile="DragonQuestActions" 
+			   goalsFile="DragonQuestGoalLibrary" cultureName="SimpleCulture">
+			<Properties>				
+				<Property name="time" value="Morning"/>
+				<Property name="isPerson" value="True"/>
+			</Properties>	
+		</Agent>
+	</Scenario>
+	<Scenario name="DragonQuestModel">
+		<WorldSimulator port="46874" scenery="AmyHouse" actionsFile="DragonQuestActions" 
+						agentLanguageFile="language/agent/pt/language-set-1"
+						userLanguageFile="language/agent/pt/language-set-1" 
+						userOptionsFile="LIRECOptions">		
+		</WorldSimulator>
+		<Agent name="Jonas" displayName="Jonas" role="JonasModel" platform="ION" host="localhost" 
+			   port="46874" debugMode="True" sex="M" actionsFile="DragonQuestActions" 
+			   goalsFile="DragonQuestGoalLibrary" cultureName="SimpleCulture">
+		</Agent>
+		<Agent name="Montolio" displayName="Montolio" role="MontolioModel" platform="ION" host="localhost" 
+			   port="46875" debugMode="True" sex="M" actionsFile="DragonQuestActions" 
+			   goalsFile="DragonQuestGoalLibrary" cultureName="SimpleCulture">
+		</Agent>
+		<Agent name="Varsuvius" displayName="Varsuvius" role="VarsuviusModel" platform="WorldSim" host="localhost" 
+			   port="46874" debugMode="True" sex="M" actionsFile="DragonQuestActions" 
+			   goalsFile="DragonQuestGoalLibrary" cultureName="SimpleCulture">
+		</Agent>
+	</Scenario>
+	<Scenario name="DragonQuestSharing">
+		<WorldSimulator port="46874" scenery="AmyHouse" actionsFile="DragonQuestActions" 
+						agentLanguageFile="language/agent/pt/language-set-1"
+						userLanguageFile="language/agent/pt/language-set-1" 
+						userOptionsFile="LIRECOptions">		
+		</WorldSimulator>
+		<Agent name="Jonas" displayName="Jonas" role="JonasSharing" platform="ION" host="localhost" 
+			   port="46874" debugMode="True" sex="M" actionsFile="DragonQuestActions" 
+			   goalsFile="DragonQuestGoalLibrary" cultureName="SimpleCulture">
+		</Agent>
+		<Agent name="Montolio" displayName="Montolio" role="MontolioSharing" platform="ION" host="localhost" 
+			   port="46875" debugMode="True" sex="M" actionsFile="DragonQuestActions" 
+			   goalsFile="DragonQuestGoalLibrary" cultureName="SimpleCulture">
+		</Agent>
+		<Agent name="Varsuvius" displayName="Varsuvius" role="VarsuviusSharing" platform="ION" host="localhost" 
+			   port="46876" debugMode="True" sex="M" actionsFile="DragonQuestActions" 
+			   goalsFile="DragonQuestGoalLibrary" cultureName="SimpleCulture">
+		</Agent>
+	</Scenario>
+</Scenarios>

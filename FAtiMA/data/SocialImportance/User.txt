@@ -1,0 +1,3 @@
+isPerson True
+knowsDirection,Castle True
+

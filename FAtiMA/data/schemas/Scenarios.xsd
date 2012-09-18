@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:include schemaLocation="Types.xsd" />
+
+<xs:element name="Scenarios">
+  <xs:complexType>
+	<xs:sequence>
+      <xs:element name="Scenario" minOccurs="1" maxOccurs="unbounded">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="WorldSimulator" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Objects" minOccurs="0" maxOccurs="1">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="Object" minOccurs="0" maxOccurs="unbounded">
+												<xs:complexType>
+													<xs:attribute name="name" type="xs:string" use="required"/>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="port" type="xs:int" use="required"/>
+						<xs:attribute name="scenery" type="xs:string" use="required"/>
+						<xs:attribute name="actionsFile" type="xs:string" use="required"/>
+						<xs:attribute name="agentLanguageFile" type="xs:string" use="required"/>
+						<xs:attribute name="userLanguageFile" type="xs:string" use="optional"/>
+						<xs:attribute name="userOptionsFile" type="xs:string" use="required"/>
+						<xs:attribute name="simplifiedVersion" type="booleanType" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Agent" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Properties" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Property" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="name" type="xs:string" use="required"/>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="host" type="xs:string" use="required"/>
+						<xs:attribute name="port" type="xs:int" use="required"/>
+						<xs:attribute name="actionsFile" type="xs:string" use="required"/>
+						<xs:attribute name="goalsFile" type="xs:string" use="required"/>
+						<xs:attribute name="name" type="xs:string" use="required"/>
+						<xs:attribute name="displayName" type="xs:string" use="required"/>
+						<xs:attribute name="role" type="xs:string" use="required"/>
+						<xs:attribute name="platform" type="platform" use="required"/>
+						<xs:attribute name="debugMode" type="booleanType" use="optional"/>
+						<xs:attribute name="saveDirectory" type="xs:string" use="optional"/>
+						<xs:attribute name="sex" type="xs:string" use="required"/>
+						<xs:attribute name="cultureName" type="xs:string" use="optional"/>
+						<xs:attribute name="agentLoad" type="xs:string" use="optional"/>
+						<xs:attribute name="memoryLoad" type="xs:string" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+		</xs:complexType>
+	  </xs:element>
+	</xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>
+							

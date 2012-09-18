@@ -1,0 +1,62 @@
+<Scenarios>
+	<Scenario name="SimpleScenario">
+		<WorldSimulator port="46874" scenery="Office"
+						actionsFile="SimpleActions" 
+						agentLanguageFile="language/agent/en/language-set-1"
+						userLanguageFile="language/user/en/language-set-1" 
+						userOptionsFile="OptionsSimpleScenario"
+						simplifiedVersion="True">							
+			<Objects>
+				<Object name="apple"/>
+				<Object name="chocolate"/>
+				<Object name="User"/>	
+			</Objects>	
+		</WorldSimulator>	
+		
+		<Agent name="Guilhas" displayName="Guilhas" role="Guilhas" platform="WorldSim" host="localhost" 
+			   port="46874" debugMode="True" sex="M" actionsFile="SimpleActions" 
+			   goalsFile="SimpleGoalLibrary" cultureName="SimpleCulture">
+			<Properties>				
+				<Property name="location" value="Office"/>
+				<Property name="time" value="Morning"/>
+				<Property name="isPerson" value="True"/>
+			</Properties>	
+		</Agent>
+		
+		<Agent name="Pierre" displayName="Guilhas" role="Guilhas" platform="worldsim" host="localhost" 
+			   port="46874" debugMode="True" sex="M" actionsFile="SimpleActions" 
+			   goalsFile="SimpleGoalLibrary" cultureName="SimpleCulture">
+			<Properties>				
+				<Property name="location" value="Office"/>
+				<Property name="time" value="Morning"/>
+				<Property name="isPerson" value="True"/>
+			</Properties>	
+		</Agent>
+	</Scenario>
+	
+	<Scenario name="ScenarioWithDrives">
+		<WorldSimulator port="46874" scenery="Office" 
+						actionsFile="SimpleActionsWithDrives" 
+						agentLanguageFile="language/agent/en/language-set-1"
+						userLanguageFile="language/user/en/language-set-1" 
+						userOptionsFile="OptionsSimpleScenario"
+						simplifiedVersion="True">		
+			<Objects>
+				<Object name="apple"/>
+				<Object name="chocolate"/>
+				<Object name="User"/>	
+			</Objects>
+		</WorldSimulator>	
+		
+		<Agent name="Guilhas" displayName="Guilhas" role="GuilhasDrives" platform="worldsim" host="localhost" 
+			   port="46874" debugMode="True" sex="M" actionsFile="SimpleActionsWithDrives" 
+			   goalsFile="SimpleGoalLibraryWithDrives" cultureName="SimpleCulture" agentLoad="False">
+			<Properties>				
+				<Property name="location" value="Office"/>
+				<Property name="time" value="Morning"/>
+				<Property name="isPerson" value="True"/>
+				<Property name="has,chocolate" value="True"/>
+			</Properties>	
+		</Agent>
+	</Scenario>	
+</Scenarios>

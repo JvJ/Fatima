@@ -1,0 +1,13 @@
+<GoalLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./schemas/GoalLibrary.xsd">
+	<ActivePursuitGoal name="Eat([target])">
+		<PreConditions>
+			<Property name="[target](eatable)" operator="=" value="True" />
+			<Property name="[target](onfloor)" operator="=" value="True" />	
+		</PreConditions>
+		<SuccessConditions>
+			<NewEvent occurred="True" subject="SELF" action="Eat" target="[target]" />
+		</SuccessConditions>
+		<FailureConditions>
+		</FailureConditions>	
+	</ActivePursuitGoal>
+</GoalLibrary>

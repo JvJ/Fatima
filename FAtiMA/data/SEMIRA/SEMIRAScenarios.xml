@@ -1,0 +1,48 @@
+<Scenarios>
+	<Scenario name="SEMIRAScenario">
+		<WorldSimulator port="46874" scenery="Bar" actionsFile="SEMIRAActions.xml" 
+					 	agentLanguageFile="language/agent/en/language-set-1"
+						userOptionsFile="UserOptions"	
+						simplifiedVersion="True">		
+			<Objects>
+				<Object name="User"/>	
+			</Objects>
+		</WorldSimulator>	
+		
+		
+		<Agent name="Nick" displayName="Nick" role="SEMIRASmoker" platform="worldsim" host="localhost" 
+			   port="46874" displayMode="True" sex="M" actionsFile="SEMIRAActions" 
+			   goalsFile="SEMIRAGoalLibrary" cultureName="SimpleCulture">
+			<Properties>				
+				<Property name="location" value="Outside"/>
+				<Property name="isPerson" value="True"/>
+				<Property name="hasLitCigarette" value="False"/>
+				<Property name="group" value="B"/>
+			</Properties>	
+		</Agent>
+		
+		<Agent name="John" displayName="John" role="SEMIRANonSmoker" platform="worldsim" host="localhost" 
+			   port="46874" displayMode="True" sex="M" actionsFile="SEMIRAActions" 
+			   goalsFile="SEMIRAGoalLibrary" cultureName="SimpleCulture">
+			<Properties>				
+				<Property name="location" value="InsideBar"/>
+				<Property name="isPerson" value="True"/>
+				<Property name="hasLitCigarette" value="False"/>
+				<Property name="group" value="A"/>
+			</Properties>	
+		</Agent>
+		
+		<Agent name="Bartender" displayName="Bartender" role="SEMIRABartender" platform="worldsim" host="localhost" 
+			   port="46874" displayMode="False" sex="M" actionsFile="SEMIRAActions" 
+			   goalsFile="SEMIRAGoalLibrary" cultureName="SimpleCulture">
+			<Properties>				
+				<Property name="location" value="InsideBar"/>
+				<Property name="isPerson" value="True"/>
+				<Property name="hasLitCigarette" value="False"/>
+				<Property name="group" value="C"/>
+			</Properties>	
+		</Agent>
+		
+	</Scenario>
+	
+</Scenarios>
