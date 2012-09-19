@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.5)  17 SEP 2012 15:22
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.5.9)  18 SEP 2012 22:30
 entering extended mode
 **\nonstopmode\input newproposal.tex
-(c:\Users\kwheel3\Documents\proposal\newproposal.tex
+(c:\Users\Kaylen\Documents\GitHub\Fatima\proposal\newproposal.tex
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
@@ -19,7 +19,7 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(C:\Users\kwheel3\AppData\Roaming\MiKTeX\2.9\tex\latex\cite\cite.sty
+(C:\Users\Kaylen\AppData\Roaming\MiKTeX\2.9\tex\latex\cite\cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 373.
 Package: cite 2010/09/10  v 5.3
@@ -43,20 +43,13 @@ File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
+File: pdftex.def 2011/01/28 v0.05d Graphics/color for pdfTeX
 \Gread@gobject=\count87
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+(C:\Users\Kaylen\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
 \lst@mode=\count88
 \lst@gtempboxa=\box26
 \lst@token=\toks15
@@ -70,13 +63,13 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \lst@lineno=\count93
 \lst@maxwidth=\dimen108
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+(C:\Users\Kaylen\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 \c@lstnumber=\count94
 \lst@skipnumbers=\count95
 \lst@framebox=\box27
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+(C:\Users\Kaylen\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
 File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
@@ -93,7 +86,7 @@ Package color Info: Redefining color cyan on input line 9.
 Package color Info: Redefining color red on input line 10.
 Package color Info: Redefining color green on input line 12.
 
-(c:\Users\kwheel3\Documents\proposal\newproposal.aux)
+(c:\Users\Kaylen\Documents\GitHub\Fatima\proposal\newproposal.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
@@ -107,7 +100,7 @@ LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(C:\Users\Kaylen\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count96
 \scratchdimen=\dimen109
@@ -118,10 +111,9 @@ LaTeX Font Info:    ... okay on input line 35.
 \MPscratchCnt=\count99
 \MPscratchDim=\dimen110
 \MPnumerator=\count100
-\makeMPintoPDFobject=\count101
 \everyMPtoPDFconversion=\toks17
 )
-\c@lstlisting=\count102
+\c@lstlisting=\count101
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 41.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -135,7 +127,7 @@ LaTeX Warning: Citation `Mateas' on page 1 undefined on input line 89.
 
 [1
 
-{C:/Users/kwheel3/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/Users/Kaylen/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
 LaTeX Warning: Citation `Mascarenhas' on page 2 undefined on input line 98.
 
@@ -176,78 +168,103 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 216.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 216.
- [4]
-
-LaTeX Warning: Citation `Paiva2005' on page 5 undefined on input line 288.
 
 
-LaTeX Warning: Citation `Russell2003' on page 5 undefined on input line 288.
+LaTeX Warning: Reference `example_goals' on page 4 undefined on input line 277.
 
-<Graphics/fatimadiagram.png, id=24, 361.35pt x 271.0125pt>
+
+[4] [5]
+
+LaTeX Warning: Citation `Paiva2005' on page 6 undefined on input line 357.
+
+
+LaTeX Warning: Citation `Russell2003' on page 6 undefined on input line 357.
+
+
+LaTeX Warning: Reference `fatima_arch' on page 6 undefined on input line 375.
+
+
+LaTeX Warning: Citation `Paiva2005' on page 6 undefined on input line 390.
+
+
+LaTeX Warning: Citation `Russell2003' on page 6 undefined on input line 390.
+
+<Graphics/fatimadiagram.png, id=27, 361.35pt x 271.0125pt>
 File: Graphics/fatimadiagram.png Graphic file (type png)
 
 <use Graphics/fatimadiagram.png>
-Package pdftex.def Info: Graphics/fatimadiagram.png used on input line 292.
-(pdftex.def)             Requested size: 361.34912pt x 271.01183pt.
-
-Overfull \hbox (16.34912pt too wide) in paragraph at lines 292--293
+Overfull \hbox (16.34912pt too wide) in paragraph at lines 394--395
 [][] 
  []
 
 
-LaTeX Warning: Citation `Paiva2005' on page 5 undefined on input line 293.
+LaTeX Warning: Citation `Paiva2005' on page 6 undefined on input line 395.
 
-[5 <c:/Users/kwheel3/Documents/proposal/Graphics/fatimadiagram.png>]
-Overfull \hbox (14.09616pt too wide) in paragraph at lines 336--337
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6]
+
+LaTeX Warning: Reference `xml_source_1' on page 7 undefined on input line 409.
+
+[7 <c:/Users/Kaylen/Documents/GitHub/Fatima/proposal/Graphics/fatimadiagram.png
+ (PNG copy)>]
+Overfull \hbox (14.09616pt too wide) in paragraph at lines 438--439
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (19.34612pt too wide) in paragraph at lines 337--338
+Overfull \hbox (19.34612pt too wide) in paragraph at lines 439--440
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (56.0958pt too wide) in paragraph at lines 338--339
+Overfull \hbox (56.0958pt too wide) in paragraph at lines 440--441
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (66.5957pt too wide) in paragraph at lines 367--368
+LaTeX Warning: Reference `xml_source_2' on page 8 undefined on input line 455.
+
+
+LaTeX Warning: Reference `xml_source_1' on page 8 undefined on input line 460.
+
+
+Overfull \hbox (66.5957pt too wide) in paragraph at lines 469--470
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (19.34612pt too wide) in paragraph at lines 368--369
+Overfull \hbox (19.34612pt too wide) in paragraph at lines 470--471
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (19.34612pt too wide) in paragraph at lines 374--375
+Overfull \hbox (19.34612pt too wide) in paragraph at lines 476--477
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (50.84584pt too wide) in paragraph at lines 375--376
+Overfull \hbox (50.84584pt too wide) in paragraph at lines 477--478
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (24.59607pt too wide) in paragraph at lines 383--384
+Overfull \hbox (24.59607pt too wide) in paragraph at lines 485--486
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][] 
  []
 
-[6]
+[8] [9]
 No file newproposal.bbl.
-[7] [8] (c:\Users\kwheel3\Documents\proposal\newproposal.aux)
+[10] (c:\Users\Kaylen\Documents\GitHub\Fatima\proposal\newproposal.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -256,13 +273,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 2533 strings out of 494045
- 35455 string characters out of 3145964
- 108935 words of memory out of 3000000
- 5841 multiletter control sequences out of 15000+200000
+ 2376 strings out of 494053
+ 33173 string characters out of 3146183
+ 105546 words of memory out of 3000000
+ 5687 multiletter control sequences out of 15000+200000
  9016 words of font info for 32 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 27i,6n,40p,263b,1087s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 26i,6n,40p,589b,1087s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/P
@@ -274,9 +291,9 @@ s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x
 86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on newproposal.pdf (8 pages, 223186 bytes).
+Output written on newproposal.pdf (10 pages, 237186 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
+ 80 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

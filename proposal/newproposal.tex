@@ -266,6 +266,108 @@ This is not necessary in the implementation, but may be included if
 time allows in order to demonstrate how natural language could further
 improve believability.
 
+\subsection{Illustrative Example}
+
+To understand the differences between authoring and generating
+dialogue actions, an example will be provided.  This represents a
+hypothetical scenario involving two characters -- Good Guy and Bad
+Guy, who complement and insult one another.  Three main components are
+defined for each character -- goals, action tendenceies, and
+actions.  These defined in pseudocode, visible in figure
+~\ref{example_goals}.
+
+\begin{figure}[h!]
+  
+  \begin{center}
+    \large{Good Guy}
+  \end{center}
+  
+  Goals:
+  \[
+  isHappy(target)
+  \]
+
+  Action Tendencies:
+  \[
+  \lambda x.(knows(self, mother(x,self) \wedge thin(x)) \mapsto isHappy(self))
+  \]
+  \[
+  \lambda x.(knows(self, mother(x,self) \wedge \neg thin(x)) \mapsto \neg isHappy(self))
+  \]
+
+  Actions:
+  \[
+  complement(target) \mapsto knows(target, isHandsome(target))
+  \]
+
+  \[\]
+
+  \begin{center}
+    \large{Bad Guy}
+  \end{center}
+  
+  Goals:
+  \[
+  \neg isHappy(target)
+  \]
+
+  Action Tendencies:
+  \[
+  knows(self, isHandsome(self)) \mapsto isHappy(self)
+  \]
+
+  Actions:
+  \[
+  \lambda x.(insultMother(target) \mapsto knows(target, mother(x, target) \wedge
+  \neg thin(x))) 
+  \]
+
+  \caption{An example of goal, action tendency, and action
+    specification for two agents.  The left side of the $\mapsto$ symbol
+    represents the preconditions in the case of action tendencies and
+    action definitions in the case of actions.  The right side
+    represents the effect.  The variables \emph{self} and
+    \emph{target} are references to the agent's self and another in
+    the environment.  Unbiound variables are introduced with $\lambda$-notation.}
+  \label{example_goals}
+
+\end{figure}
+
+Goals represent states that the agents are striving to achieve.  In
+the case of good guy, his goal is that \emph{target}(i.e. Bad Guy)
+should be happy.  Bad guy's goal, on the other hand, is that
+\emph{target}(i.e. Good Guy) should not be happy.
+
+Action tendencies represent how agents act when faced with certain
+situations.  The particular situations illustrated here involve
+knowledge, and are defined with the \emph{knows} predicate.  (At the
+moment, FAtiMA supports action tendencies in response to events.  To
+support this dialogue system, it will need to be extended to analyze
+changes in knowledge bases.)  For Good Guy's action tendencies, an
+unbound variable \emph{x} is introduced, which unifies with
+\emph{self}'s mother and being thin or not thin.  The results (after
+the $\mapsto$ symbol) are either happiness or uhnappiness.  Thus, the
+action tendencies for Good Guy can be described as ``If I know my
+mother is thin, I am happy.'' and ``If I know my mother is not thin, I
+am not happy.''.  Similarly, Bad Guy's action tendency is ``If I know
+I am handsome, I am happy.''.
+
+A finite set of actions is defined, representing potential effects
+that agents may have on the world.  A continuous partial-order planner
+\cite{Paiva2005, Russell2003} is used to construct plans composed of
+sequences of actions that achieve the agent's goals.  However, the
+actions in the sequence may only be selected from a finite,
+pre-defined set of actions.  The goal of this thesis will be to allow
+for actions to be constructed from the goal they are trying to achieve.
+
+\subsubsection{Example Plan with Action Selection}
+
+\begin{figure}[h!]
+  \caption{Bad Guy's plan for insulting Good Guy's mother.}
+\end{figure}
+
+\subsubsection{Example Plan with Action Construction}
+
 \section{Design}
 
 \subsection{Overview of FAtiMA}
