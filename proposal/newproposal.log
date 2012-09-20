@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.5)  19 SEP 2012 16:20
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.5)  20 SEP 2012 10:17
 entering extended mode
 **\nonstopmode\input newproposal.tex
 (c:\Users\kwheel3\Documents\GitHub\Fatima\proposal\newproposal.tex
@@ -175,7 +175,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 216.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 216.
- [4]
+
+
+LaTeX Warning: Reference `example_goals' on page 4 undefined on input line 277.
+
+
+[4]
 
 LaTeX Warning: Float too large for page by 9.66663pt on input line 351.
 
@@ -187,6 +192,22 @@ LaTeX Warning: Citation `Paiva2005' on page 5 undefined on input line 375.
 
 
 LaTeX Warning: Citation `Russell2003' on page 5 undefined on input line 375.
+
+
+LaTeX Warning: Reference `plan_selection' on page 5 undefined on input line 383
+.
+
+
+LaTeX Warning: Reference `plan_construction' on page 5 undefined on input line 
+383.
+
+
+LaTeX Warning: Reference `plan_selection' on page 5 undefined on input line 391
+.
+
+
+LaTeX Warning: Reference `plan_construction' on page 5 undefined on input line 
+401.
 
 [5]
 
@@ -214,89 +235,27 @@ isUgly\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )))
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Citation `Paiva2005' on page 6 undefined on input line 536.
-
-
-LaTeX Warning: Citation `Russell2003' on page 6 undefined on input line 536.
-
-<Graphics/fatimadiagram.png, id=27, 361.35pt x 271.0125pt>
-File: Graphics/fatimadiagram.png Graphic file (type png)
-
-<use Graphics/fatimadiagram.png>
-Package pdftex.def Info: Graphics/fatimadiagram.png used on input line 540.
-(pdftex.def)             Requested size: 361.34912pt x 271.01183pt.
-
-Overfull \hbox (16.34912pt too wide) in paragraph at lines 540--541
-[][] 
- []
-
-
-LaTeX Warning: Citation `Paiva2005' on page 6 undefined on input line 541.
+LaTeX Warning: Citation `Mascarenhas' on page 6 undefined on input line 522.
 
 [6]
-Overfull \hbox (14.09616pt too wide) in paragraph at lines 584--585
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (19.34612pt too wide) in paragraph at lines 585--586
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (56.0958pt too wide) in paragraph at lines 586--587
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (66.5957pt too wide) in paragraph at lines 615--616
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (19.34612pt too wide) in paragraph at lines 616--617
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (19.34612pt too wide) in paragraph at lines 622--623
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (50.84584pt too wide) in paragraph at lines 623--624
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (24.59607pt too wide) in paragraph at lines 631--632
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][] 
- []
-
 No file newproposal.bbl.
-[7] [8] [9] [10] [11 <c:/Users/kwheel3/Documents/GitHub/Fatima/proposal/Graphic
-s/fatimadiagram.png>] [12]
+[7] [8] [9] [10]
 (c:\Users\kwheel3\Documents\GitHub\Fatima\proposal\newproposal.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 2536 strings out of 494045
- 35603 string characters out of 3145964
- 116739 words of memory out of 3000000
- 5844 multiletter control sequences out of 15000+200000
- 9016 words of font info for 32 fonts, out of 3000000 for 9000
+ 2477 strings out of 494045
+ 34807 string characters out of 3145964
+ 96911 words of memory out of 3000000
+ 5789 multiletter control sequences out of 15000+200000
+ 8848 words of font info for 31 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 27i,6n,40p,588b,1087s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,6n,32p,588b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/P
@@ -307,11 +266,10 @@ iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program File
 s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x
 86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on newproposal.pdf (12 pages, 253906 bytes).
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on newproposal.pdf (10 pages, 182364 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
+ 79 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

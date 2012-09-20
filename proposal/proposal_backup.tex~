@@ -518,63 +518,141 @@ dialogue construction for any knowledge-related goals.
 
 \subsection{Overview of FAtiMA}
 
-FAtiMA is an Agent architecture with planning capabilities designed to use emotions
-and personality to influence the agent's behaviour\cite{Mascarenhas}.  FAtiMA consists
-of a core system (FAtiMA.Core) that allows external modules to be used to implement more
-complex behaviour.  However, this section will focus on the core components.
+Figure ~\ref{fatima_arch} shows the high-level architecture of FAtiMA.
+Agents exist in the world and are able to perceive their environments
+with Sensors and change their environments with Effectors.  When an event
+is perceived, it is emotionally appraised.  This appraisal tells the
+agent how the event should be interpreted and how it should affect its
+memory, emotions, intentions, and plans.  After appraisal, the agent begins
+its coping process.  Coping determines how the agent should act given the
+state of its emotion and memories.
 
-In order to better understand descriptions of the system, the core concepts and 
-terminology will be introduced here.
+Both appraisal and coping act on two different levels -- reactive and
+deliberative.  The reactive level deals with instantaneous, reflexive
+actions.  These typically equate to actions that result from instinct,
+such as yelling when hurt.  The Deliberative level deals with long-term
+actions which require more deliberated planning.  The deliberative layers
+make use of continuous planners with partial-order plans in order to
+achieve goals. \cite{Paiva2005, Russell2003}
 
-\begin{description}
+\begin{figure}[htb]
 
-\item[Agent]
-  Agents are the primary actors in FAtiMA.  They represent entities which have emotions
-  and goals, and may take action to affect their surroundings and other agents.
+\includegraphics{Graphics/fatimadiagram.png}
+\caption{FAtiMA's architecture \cite{Paiva2005}.}
+\label{fatima_arch}
+\end{figure}
 
-\item[World]
-  In order for FAtiMA agents to function, they must exist in a world.  A world contains
-  a set of objects and other agents that exist together and can affect one another.
+\subsection{FAtiMA World and Knowledge Representation}
 
-\item[Scenario]
-  A scenario consists of information that is necessary to describe the world.  In
-  FAtiMA, scenarios are specified in XML files listing the agents and objects
-  in the world.
+FAtiMA's planning modules construct plans that affect the world state
+and agents' knowledge states.  In fact, the world state in FAtiMA is
+a special case of agents' knowledge states.  The world state consists
+of all knowledge that is consistent across all agents in the world.
+That is, if all agents believe the same fact, it is true (the potential
+philisophical implications of this view are profound, but I won't get
+into that).
 
-\item[Memory]
-  FAtiMA supports both episodic and semantic memory.  Episodic memory represents 
-  short-term memory relating to events that have taken place, while semantic
-  memory is represented as a knowledge base.
+Figure ~\ref{xml_source_1} shows an example of how actions may be defined
+for agents in FAtiMA.  This particular action is part of a simple scenario
+in which the user guesses which box a coin is hidden in.  The Open action
+is described here.  Its preconditions state that the target (a box) must be
+on the table, another agent ([AGENT]) must be present, and be a person, and
+not equal the original agent (SELF).
 
-\item[Knowledge Base (KB)]
-  Knowledge bases are the primary means of long-term information storage for
-  an agent.  A KB represents the agent's perceived state of the world.  Information
-  is represented through use of predicates representing facts or relations
-  between objects in the world.  The predicates used here are similar to those
-  used in logic programming systems such as Prolog.
-
-\item[Goal]
-  Goals represent states of the world or of a knowledge base that agents want
-  to achieve.  In order to achieve goals, plans are created from actions.
-
-\item[Action]
-  An action represents a single effect that the agent may perform on the world.
-  Each action will affect a change on the state of the world or a knowledge base.
-  Currently, actions are pre-defined, but the aim here is to enable construction
-  of those actions which transmit information (i.e. affect a knowledge base).
-
-\item[Plan]
-  Plans bring all the previously mentioned components together and make them
-  work.  Through planning, agents can determine which sequences of actions (if any)
-  can be used to accomplish their goals.
-
-\end{description}
-
-\subsection{Modifications}
+The next two predicates specify further preconditions relating to individual
+agents.  In general, predicates specify only a name attribute, which allows
+description of general facts about the world.  For instance, [target](OnTable)
+specifies that the target is on the table.  However, a ToM (Theory of Mind)
+attribute may be specified, which restricts the predicate to describe only
+the knowledge of the selected agent.  The fifth precondition specifies ToM
+to be SELF.  Therefore, while ![target](Contains, coin) would usually mean
+``the target does not contains the coin'', the ToM attribute restricts it to mean
+``I think do not think that the target contains the coin''.  Therefore, the
+last two preconditions (which determine the outcome of the game) state that
+the original agent must not think that the box contains the coin, and that
+the other agent must think that it does.  The final result of taking this
+action is that the original agent has the coin.
 
 
+\begin{figure}[hb]
+\lstset{language=XML}
+\begin{lstlisting}
+<Action name="Open([target])" probability="0.8">
+	<PreConditions>
+		<Predicate name="[target](OnTable)"/>
+		<Predicate name="[AGENT](isPerson)"/>
+		<Property name="[AGENT]" operator="!=" value="SELF" />
+		<Predicate ToM="SELF" name="![target](Contains,coin)"/>
+		<Predicate ToM="[AGENT]:SELF" name="[target](Contains,coin)"/>
+	</PreConditions>
+	<Effects>
+		<Effect probability="1.0">
+			<Predicate name="SELF(has,coin)"/>
+		</Effect>
+	</Effects> 
+	<EffectsOnDrives>
+	</EffectsOnDrives>
+</Action>
+\end{lstlisting}
+\caption{Example of an action defined in FAtiMA's XML format.}
+\label{xml_source_1}
+\end{figure}
 
-\section{Summary}
+Figure ~\ref{xml_source_2} shows a specification of a goal in the same XML
+format.  Like the action, the goal specifies a set of preconditions.  However,
+rather than specifying effects directly, it specifies success conditions.
+These success conditions allow the planner to select actions that can accomplish
+the goal.  For instance, the success condition here is SELF(has,coin).  Since
+this matches the effect of the action in figure ~\ref{xml_source_1}, the planner
+will select that action to accomplish this goal (as long as the preconditions match).
+
+\begin{figure}
+\lstset{language=XML}
+\begin{lstlisting}
+
+<ActivePursuitGoal name="Test([target])">
+	<PreConditions>
+		<Property name="[target](isPerson)" operator="=" value="True" />
+		<Property name="[target]" operator="!=" value="SELF" />
+		<RecentEvent ToM="[target]" occurred="True"
+                subject="[target]"
+                action="SpeechAct"
+                target="SELF"
+                parameters="starttest"/>
+		<Property name="[box](type)" operator="=" value="Box"/>
+		<Predicate ToM="[target]:SELF" name="![box](Contains,coin)"/>
+	</PreConditions>
+	<SuccessConditions>
+		<Predicate name="SELF(has,coin)"/>
+	</SuccessConditions>
+	<FailureConditions>
+	</FailureConditions>
+	<ExpectedEffects>
+		<OnSelect drive="Affiliation" target="SELF" value="+2"/>
+	</ExpectedEffects>	
+</ActivePursuitGoal>
+
+\end{lstlisting}
+\caption{Example of a goal defined in FAtiMA's XML format.}
+\label{xml_source_2}
+\end{figure}
+
+\subsection{Action Construction vs. Action Selection}
+
+This thesis aims to enable action construction in this system.  In those
+cases where goals are defined with success conditions that have ToM
+attributes specified (i.e. when they attempt to make another agent
+believe something rather than affecting the world), the planner should
+not have to select from a set of pre-written actions.  Instead, actions
+will be constructed as first-order logic expressions that affect the
+knowledge base.
+
+These expressions will be produced by a sender agent and received by another
+receiver agent.  The receiver will interpret the expression and affect
+its own knowledge base accordingly.
+
+The specific format used for communication of first-order logic expressions,
+as well as the algorithms used for action construction, have yet to be determined.
 
 \section{Timeline}
 

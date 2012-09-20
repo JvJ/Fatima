@@ -114,9 +114,3 @@ Tim: Processing message: ACTION-FINISHED Tim look-at User
 can act now!
 
 appraising event: EVENT(SELF,look-at,User)
-
-Tim: Processing message: ACTION-FINISHED User SpeechAct Tim startgame
-
-can act now!
-
-appraising event: EVENT(User,SpeechAct,SELF,startgame)
