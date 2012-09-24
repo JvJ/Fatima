@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.5)  20 SEP 2012 10:17
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.5)  24 SEP 2012 16:13
 entering extended mode
 **\nonstopmode\input newproposal.tex
 (c:\Users\kwheel3\Documents\GitHub\Fatima\proposal\newproposal.tex
@@ -81,140 +81,293 @@ File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
-Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pstricks\pstricks.sty"
+Package: pstricks 2011/10/31 v0.52 LaTeX wrapper for `PSTricks' (RN,HV)
+
+>>> Loading package auto-pst-pdf <<<
+
+Package pstricks Warning: ************************************ 
+(pstricks)                Option pdf needs a "pdflatex -shell-escape <file>" 
+(pstricks)                or a "pdflatex -enable-write18 <file>" 
+(pstricks)                (if you are using MikTeX) 
+(pstricks)                ************************************.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pstricks\base\pstricks.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\pst-xkey.tex"
+File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+\XKV@toks=\toks16
+\XKV@tempa@toks=\toks17
+\XKV@depth=\count96
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pstricks\base\pst-fp.tex"
+`pst-fp' v0.05, 2010/01/17 (hv)
+\pstFP@xs=\count97
+\pstFP@xia=\count98
+\pstFP@xib=\count99
+\pstFP@xfa=\count100
+\pstFP@xfb=\count101
+\pstFP@rega=\count102
+\pstFP@regb=\count103
+\pstFP@regs=\count104
+\pstFP@times=\count105
+)
+\psLoopIndex=\count106
+
+`PSTricks' v2.27  <2012/03/11> (tvz)
+\pst@dima=\dimen109
+\pst@dimb=\dimen110
+\pst@dimc=\dimen111
+\pst@dimd=\dimen112
+\pst@dimg=\dimen113
+\pst@dimh=\dimen114
+\pst@dimm=\dimen115
+\pst@dimn=\dimen116
+\pst@dimo=\dimen117
+\pst@dimp=\dimen118
+\pst@hbox=\box28
+\pst@ibox=\box29
+\pst@boxg=\box30
+\pst@cnta=\count107
+\pst@cntb=\count108
+\pst@cntc=\count109
+\pst@cntd=\count110
+\pst@cntg=\count111
+\pst@cnth=\count112
+\pst@cntm=\count113
+\pst@cntn=\count114
+\pst@cnto=\count115
+\pst@cntp=\count116
+\@zero=\count117
+\pst@toks=\toks18
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pstricks\base\pstricks.con")
+\psunit=\dimen119
+\psxunit=\dimen120
+\psyunit=\dimen121
+\pst@C@@rType=\count118
+\pslinewidth=\dimen122
+\psk@startLW=\dimen123
+\psk@endLW=\dimen124
+\pst@customdefs=\toks19
+\pslinearc=\dimen125
+\pst@symbolStep=\dimen126
+\pst@symbolWidth=\dimen127
+\pst@symbolLinewidth=\dimen128
+\everypsbox=\toks20
+\psframesep=\dimen129
+\pslabelsep=\dimen130
+\pst@shift=\dimen131
+\theoverlaybox=\box31
+)
+File: pstricks.tex 2012/03/11 v2.27 `PSTricks' (tvz,hv)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pstricks\base\pst-fp.tex")
+File: pst-fp.tex 2012/03/11 v2.27 `PST-fp' (hv)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 130.
-)
-Package color Info: Redefining color cyan on input line 9.
-Package color Info: Redefining color red on input line 10.
-Package color Info: Redefining color green on input line 12.
-
+Package xcolor Info: Package option `pdf' ignored on input line 216.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
 (c:\Users\kwheel3\Documents\GitHub\Fatima\proposal\newproposal.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count96
-\scratchdimen=\dimen109
-\scratchbox=\box28
-\nofMPsegments=\count97
-\nofMParguments=\count98
-\everyMPshowfont=\toks16
-\MPscratchCnt=\count99
-\MPscratchDim=\dimen110
-\MPnumerator=\count100
-\makeMPintoPDFobject=\count101
-\everyMPtoPDFconversion=\toks17
+\scratchcounter=\count119
+\scratchdimen=\dimen132
+\scratchbox=\box32
+\nofMPsegments=\count120
+\nofMParguments=\count121
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count122
+\MPscratchDim=\dimen133
+\MPnumerator=\count123
+\makeMPintoPDFobject=\count124
+\everyMPtoPDFconversion=\toks22
 )
-\c@lstlisting=\count102
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 41.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 41.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 41.
+\c@lstlisting=\count125
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\auto-pst-pdf\auto-pst-pdf.sty"
+Package: auto-pst-pdf 2009/04/26 v0.6 Wrapper for pst-pdf
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ifplatform\ifplatform.sty"
+Package: ifplatform 2010/10/22 v0.4 Testing for the operating system
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\catchfile.sty"
+Package: catchfile 2011/03/01 v1.6 Catch the contents of a file (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+))
+
+Package ifplatform Warning: 
+    shell escape is disabled, so I can only detect \ifwindows.
+
+)
+\c@app@runs=\count126
 
 
-LaTeX Warning: Citation `Mateas' on page 1 undefined on input line 89.
+! Package auto-pst-pdf Error: 
+    "shell escape" (or "write18") is not enabled:
+    auto-pst-pdf will not work!
+.
+
+See the auto-pst-pdf package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.134         Or turn off auto-pst-pdf.}
+                                        %
+You need to run LaTeX with the equivalent of "pdflatex -shell-escape"
+    Or turn off auto-pst-pdf.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pst-pdf\pst-pdf.sty"
+Package: pst-pdf 2008/10/09 v1.1v PS graphics for pdfLaTeX (RN,HjG)
+\c@pspicture=\count127
+Package pst-pdf Info: MODE: 1 (pdfTeX mode) on input line 214.
+\ppf@output=\toks23
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\preview\preview.sty"
+Package: preview 2010/02/14 11.86 (AUCTeX/preview-latex)
+\pr@snippet=\count128
+\pr@box=\box33
+\pr@output=\toks24
+
+Preview: Fontsize 10pt
+Preview: PDFoutput 1
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\dvips.def"
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\environ\environ.sty"
+Package: environ 2008/06/18 v0.2 A new way to define environments
+\@emptytoks=\toks25
+\@envbody=\toks26
+)))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 42.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 42.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 42.
+
+
+LaTeX Warning: Citation `Mateas' on page 1 undefined on input line 90.
 
 [1
 
-{C:/Users/kwheel3/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
-LaTeX Warning: Citation `Mascarenhas' on page 2 undefined on input line 98.
+Non-PDF special ignored!
+Non-PDF special ignored!{C:/Users/kwheel3/AppData/Local/MiKTeX/2.9/pdftex/confi
+g/pdftex.map}]
 
-
-LaTeX Warning: Citation `Acton2009' on page 2 undefined on input line 122.
-
-
-LaTeX Warning: Citation `Mateas' on page 2 undefined on input line 126.
+LaTeX Warning: Citation `Mascarenhas' on page 2 undefined on input line 99.
 
 
-LaTeX Warning: Citation `Mateasa' on page 2 undefined on input line 138.
+LaTeX Warning: Citation `Acton2009' on page 2 undefined on input line 123.
 
 
-LaTeX Warning: Citation `Mccoy2010' on page 2 undefined on input line 143.
+LaTeX Warning: Citation `Mateas' on page 2 undefined on input line 127.
 
 
-LaTeX Warning: Citation `Mccoy2010' on page 2 undefined on input line 145.
+LaTeX Warning: Citation `Mateasa' on page 2 undefined on input line 139.
+
+
+LaTeX Warning: Citation `Mccoy2010' on page 2 undefined on input line 144.
+
+
+LaTeX Warning: Citation `Mccoy2010' on page 2 undefined on input line 146.
 
 [2]
 
-LaTeX Warning: Citation `Mccoy2011' on page 3 undefined on input line 154.
+LaTeX Warning: Citation `Mccoy2011' on page 3 undefined on input line 155.
 
 
-LaTeX Warning: Citation `Mascarenhas' on page 3 undefined on input line 164.
+LaTeX Warning: Citation `Mascarenhas' on page 3 undefined on input line 165.
 
 
-LaTeX Warning: Citation `Marsella' on page 3 undefined on input line 171.
+LaTeX Warning: Citation `Marsella' on page 3 undefined on input line 172.
 
 
-LaTeX Warning: Citation `Zettlemoyer2004' on page 3 undefined on input line 195
+LaTeX Warning: Citation `Zettlemoyer2004' on page 3 undefined on input line 196
 .
 
 
-LaTeX Warning: Citation `Steedman2003' on page 3 undefined on input line 199.
+LaTeX Warning: Citation `Steedman2003' on page 3 undefined on input line 200.
 
 [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 216.
+(Font)              <7> on input line 217.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 216.
+(Font)              <5> on input line 217.
+ [4]
 
-
-LaTeX Warning: Reference `example_goals' on page 4 undefined on input line 277.
-
-
-[4]
-
-LaTeX Warning: Float too large for page by 9.66663pt on input line 351.
+LaTeX Warning: Float too large for page by 9.66663pt on input line 352.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Citation `Paiva2005' on page 5 undefined on input line 375.
+LaTeX Warning: Citation `Paiva2005' on page 5 undefined on input line 376.
 
 
-LaTeX Warning: Citation `Russell2003' on page 5 undefined on input line 375.
-
-
-LaTeX Warning: Reference `plan_selection' on page 5 undefined on input line 383
-.
-
-
-LaTeX Warning: Reference `plan_construction' on page 5 undefined on input line 
-383.
-
-
-LaTeX Warning: Reference `plan_selection' on page 5 undefined on input line 391
-.
-
-
-LaTeX Warning: Reference `plan_construction' on page 5 undefined on input line 
-401.
+LaTeX Warning: Citation `Russell2003' on page 5 undefined on input line 376.
 
 [5]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (2.91943pt too wide) detected at line 495
+Overfull \hbox (2.91943pt too wide) detected at line 496
 \OML/cmm/m/it/10 talkAction[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 me; you\OT1/cmr/
 m/n/10 ) \OMS/cmsy/m/n/10 7! \OML/cmm/m/it/10 communicate\OT1/cmr/m/n/10 (\OML/
 cmm/m/it/10 me; you; x:\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 mother\OT1/cmr/m/n/10
@@ -223,7 +376,7 @@ isFat\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )))
  []
 
 
-Overfull \hbox (7.69164pt too wide) detected at line 498
+Overfull \hbox (7.69164pt too wide) detected at line 499
 \OML/cmm/m/it/10 talkAction[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 me; you\OT1/cmr/
 m/n/10 ) \OMS/cmsy/m/n/10 7! \OML/cmm/m/it/10 communicate\OT1/cmr/m/n/10 (\OML/
 cmm/m/it/10 me; you; x:\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 mother\OT1/cmr/m/n/10
@@ -235,27 +388,35 @@ isUgly\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )))
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Citation `Mascarenhas' on page 6 undefined on input line 522.
+LaTeX Warning: Citation `Mascarenhas' on page 6 undefined on input line 523.
 
-[6]
+[6] <Graphics/fatimadiagram_render.png, id=30, 365.6862pt x 266.1945pt>
+File: Graphics/fatimadiagram_render.png Graphic file (type png)
+
+<use Graphics/fatimadiagram_render.png>
+Package pdftex.def Info: Graphics/fatimadiagram_render.png used on input line 5
+77.
+(pdftex.def)             Requested size: 365.6853pt x 266.19385pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 No file newproposal.bbl.
-[7] [8] [9] [10]
+[7] [8] [9] [10] [11 <c:/Users/kwheel3/Documents/GitHub/Fatima/proposal/Graphic
+s/fatimadiagram_render.png>]
 (c:\Users\kwheel3\Documents\GitHub\Fatima\proposal\newproposal.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 2477 strings out of 494045
- 34807 string characters out of 3145964
- 96911 words of memory out of 3000000
- 5789 multiletter control sequences out of 15000+200000
+ 4908 strings out of 494045
+ 69071 string characters out of 3145964
+ 157001 words of memory out of 3000000
+ 8144 multiletter control sequences out of 15000+200000
  8848 words of font info for 31 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 27i,6n,32p,588b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,7n,39p,588b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/P
@@ -267,9 +428,9 @@ s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x
 86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on newproposal.pdf (10 pages, 182364 bytes).
+Output written on newproposal.pdf (11 pages, 365622 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
+ 85 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
