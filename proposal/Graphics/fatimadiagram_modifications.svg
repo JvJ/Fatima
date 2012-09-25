@@ -11,11 +11,11 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg2985"
    version="1.1"
-   inkscape:version="0.48.2 r9819"
+   inkscape:version="0.48.3.1 r9886"
    width="480"
    height="360"
    sodipodi:docname="fatimadiagram_modifications.svg"
-   inkscape:export-filename="C:\Users\kwheel3\Documents\GitHub\Fatima\proposal\Graphics\fatimadiagram_render.png"
+   inkscape:export-filename="C:\Users\JvJ\Documents\GitHub\Fatima\proposal\Graphics\fatimadiagram_modifications_render.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
   <metadata
@@ -81,16 +81,16 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1018"
+     inkscape:window-width="1366"
+     inkscape:window-height="703"
      id="namedview2987"
      showgrid="false"
-     inkscape:zoom="20.6"
-     inkscape:cx="-21.908757"
-     inkscape:cy="332.53949"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
+     inkscape:zoom="1.2875"
+     inkscape:cx="279.50138"
+     inkscape:cy="201.85839"
+     inkscape:window-x="-32000"
+     inkscape:window-y="-32000"
+     inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      showguides="true"
      inkscape:guide-bbox="true" />
@@ -99,6 +99,13 @@
      id="layer1"
      inkscape:label="Layer"
      style="display:inline">
+    <rect
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect3269"
+       width="121.94175"
+       height="40.388348"
+       x="22.582523"
+       y="160.7767" />
     <rect
        style="fill:#ffffff;stroke:#000000;stroke-width:0.71226329;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect4757"
@@ -414,20 +421,30 @@
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="100.72369"
-       y="314.44019"
+       x="120.91786"
+       y="311.3334"
        id="text3316"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3318"
-         x="100.72369"
-         y="314.44019"
-         style="font-style:italic">Deliberated Actions</tspan><tspan
+         x="120.91786"
+         y="311.3334"
+         style="font-style:italic">Deliberated</tspan><tspan
          sodipodi:role="line"
-         x="100.72369"
-         y="326.94019"
+         x="120.91786"
+         y="323.8334"
+         style="font-style:italic"
+         id="tspan3227">Actions</tspan><tspan
+         sodipodi:role="line"
+         x="120.91786"
+         y="336.3334"
          id="tspan3320"
-         style="font-style:italic">(problem-focused)</tspan></text>
+         style="font-style:italic">(problem-</tspan><tspan
+         sodipodi:role="line"
+         x="120.91786"
+         y="348.8334"
+         style="font-style:italic"
+         id="tspan3229">focused)</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -564,20 +581,25 @@
     <text
        xml:space="preserve"
        style="font-size:10px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#800000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="8.1553411"
-       y="-51.650478"
+       x="14.768715"
+       y="1.8550346"
        id="text4937"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan4939"
-         x="8.1553411"
-         y="-51.650478"
-         style="font-style:italic;fill:#800000">assertions of new</tspan><tspan
+         x="14.768715"
+         y="1.8550346"
+         style="font-style:italic;fill:#800000"
+         id="tspan3231">assertions of </tspan><tspan
          sodipodi:role="line"
-         x="8.1553411"
-         y="-39.150478"
+         x="14.768715"
+         y="14.355035"
          id="tspan4941"
-         style="font-style:italic;fill:#800000">facts/predicates</tspan></text>
+         style="font-style:italic;fill:#800000">new facts/</tspan><tspan
+         sodipodi:role="line"
+         x="14.768715"
+         y="26.855034"
+         style="font-style:italic;fill:#800000"
+         id="tspan3239">predicates</tspan></text>
     <path
        sodipodi:type="star"
        style="fill:#ff8080;stroke:#800000;stroke-width:0.69999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
@@ -616,7 +638,7 @@
        transform="translate(181.79521,66.386206)" />
     <path
        sodipodi:type="star"
-       style="fill:#ff8080;stroke:#800000;stroke-width:0.69999999000000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;display:inline"
+       style="fill:#ff8080;stroke:#800000;stroke-width:0.69999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;display:inline"
        id="path4945-4"
        sodipodi:sides="5"
        sodipodi:cx="-105.44815"
@@ -631,7 +653,7 @@
        d="m -102.4275,-21.974956 -3.00934,-1.565124 -2.99535,1.591727 0.55859,-3.345698 -2.43944,-2.356876 3.35456,-0.502632 1.4877,-3.048356 1.51465,3.035055 3.35888,0.472888 -2.41846,2.378399 z"
        inkscape:transform-center-x="0.0069929482"
        inkscape:transform-center-y="-0.48110942"
-       transform="translate(106.77931,-27.073308)" />
+       transform="translate(113.00433,26.043855)" />
     <rect
        style="fill:#00ffff;stroke:#000080;stroke-width:0.62708193;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect4978"
@@ -732,6 +754,54 @@
        id="path5464"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#00ffff;stroke:#000080;stroke-width:0.62708193;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;display:inline"
+       id="rect4978-4-1"
+       width="6.2708197"
+       height="6.2708197"
+       x="140.02164"
+       y="96.503654"
+       transform="matrix(0.70784615,0.70636664,-0.70636664,0.70784615,0,0)" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ff8080;stroke:#800000;stroke-width:0.69999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;display:inline"
+       id="path4945-1-7"
+       sodipodi:sides="5"
+       sodipodi:cx="-105.44815"
+       sodipodi:cy="-26.094025"
+       sodipodi:r1="5.1079402"
+       sodipodi:r2="2.5539701"
+       sodipodi:arg1="0.93804749"
+       sodipodi:arg2="1.566366"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m -102.4275,-21.974956 -3.00934,-1.565124 -2.99535,1.591727 0.55859,-3.345698 -2.43944,-2.356876 3.35456,-0.502632 1.4877,-3.048356 1.51465,3.035055 3.35888,0.472888 -2.41846,2.378399 z"
+       inkscape:transform-center-x="0.0069929482"
+       inkscape:transform-center-y="-0.48110942"
+       transform="translate(136.4066,215.37124)" />
+    <text
+       xml:space="preserve"
+       style="font-size:11px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="38"
+       y="175.86407"
+       id="text3271"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3273"
+         x="38"
+         y="175.86407">Existing Components</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="38.203934"
+       y="193.06796"
+       id="text3275"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3277"
+         x="38.203934"
+         y="193.06796">New Components</tspan></text>
   </g>
   <text
      xml:space="preserve"
