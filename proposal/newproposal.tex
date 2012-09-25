@@ -50,10 +50,10 @@ dynamically.  The more complex and interactive stories in modern games
 may allow the player to experience different paths in dialogue trees,
 but such trees are still required to be manually created by authors.
 Recently, there has been research on methods of creating emergent
-believable behaviour [CITE facade, fatima, acton, etc.], but these are
+believable behaviour \cite{Acton2009,Mascarenhas,Mateasc}, but these are
 lacking true dialogue construction.  Because the mapping of natural
 language sentences to meaningful computational representations
-(logical forms) is still an unsolved problem [CITE Zettlemoyer], it
+(logical forms) is still an unsolved problem \cite{Zettlemoyer2004}, it
 may be best to represent inter-character dialogue as logical forms.
 The proposed thesis will extend an existing believable agent
 framework with a predicate logic-based dialogue module that will
@@ -78,11 +78,11 @@ behaviour.
 
 In addition to social behaviour, the ability to generate dialogue
 dynamically is also lacking.  Modern games which are praised for their
-complex dialogue systems, such as the \emph{Mass Effect} series [CITE Mass
-  Effect] do not in fact have their characters generate dialogue, but
+complex dialogue systems, such as the \emph{Mass Effect} series \cite{BioWare2007}
+ do not in fact have their characters generate dialogue, but
 rather select from pre-written (and voiced) dialogue based on certain
 conditions.  Even experiments in interactive drama such as Facade
-[CITE facade] rely on complex ways of selecting from a set of existing
+\cite{Mateasc} rely on complex ways of selecting from a set of existing
 dialogue acts.  Facade is a highly variable game experience taking
 only about 20 minutes to play through and consisting of a very limited
 environment (a single room with one player character and two NPC's), and
@@ -423,10 +423,10 @@ dialogue construction for any knowledge-related goals.
 
   Knowledge about target:
   \[
-  \lambda x.\lambda p.(knows(self, mother(x,self) \wedge good(p) \wedge p(x)) \mapsto isHappy(self))
+  \lambda x.\lambda p.(knows(target, mother(x,target) \wedge good(p) \wedge p(x)) \mapsto isHappy(target))
   \]
   \[
-  \lambda x.\lambda p.(knows(self, mother(x,self) \wedge bad(p) \wedge p(x)) \mapsto \neg isHappy(self))
+  \lambda x.\lambda p.(knows(target, mother(x,target) \wedge bad(p) \wedge p(x)) \mapsto \neg isHappy(target))
   \]
 
   Planner infers that the effect:
@@ -436,7 +436,7 @@ dialogue construction for any knowledge-related goals.
 
   Can be accomplished with:
   \[
-  \lambda x.\lambda p.(knows(self, mother(x,self) \wedge bad(p) \wedge p(x)) \mapsto \neg isHappy(self))
+  \lambda x.\lambda p.(knows(self, mother(x,target) \wedge bad(p) \wedge p(x)) \mapsto \neg isHappy(target))
   \]
 
   This becomes the new Goal.
@@ -470,10 +470,10 @@ dialogue construction for any knowledge-related goals.
 
   Knowledge about target:
   \[
-  \lambda x.\lambda p.(knows(self, mother(x,self) \wedge good(p) \wedge p(x)) \mapsto isHappy(self))
+  \lambda x.\lambda p.(knows(target, mother(x,target) \wedge good(p) \wedge p(x)) \mapsto isHappy(target))
   \]
   \[
-  \lambda x.\lambda p.(knows(self, mother(x,self) \wedge bad(p) \wedge p(x)) \mapsto \neg isHappy(self))
+  \lambda x.\lambda p.(knows(target, mother(x,target) \wedge bad(p) \wedge p(x)) \mapsto \neg isHappy(target))
   \]
 
   Planner infers that the effect:
@@ -483,7 +483,7 @@ dialogue construction for any knowledge-related goals.
 
   Can be accomplished with:
   \[
-  \lambda x.\lambda p.(knows(self, mother(x,self) \wedge bad(p) \wedge p(x)) \mapsto \neg isHappy(self))
+  \lambda x.\lambda p.(knows(target, mother(x,target) \wedge bad(p) \wedge p(x)) \mapsto \neg isHappy(target))
   \]
 
   This becomes the new Goal.
@@ -508,7 +508,7 @@ dialogue construction for any knowledge-related goals.
   talkAction_1(self, target)
   \]
   \[
-  talkAction_1(self, target)
+  talkAction_2(self, target)
   \]
 
   \caption{Bad Guy's plan for insulting Good Guy's mother with action construction.}
@@ -542,6 +542,24 @@ terminology will be introduced here.
   FAtiMA, scenarios are specified in XML files listing the agents and objects
   in the world.
 
+\item[Appraisal]
+  The process of determining how an agent should process an event, and how that event should
+  affect their emotional state.
+  
+\item[Coping]
+  The process of selecting, based on the agent's current emotional state, which actions to
+  take.
+
+\item[Reactive Level]
+  For both appraisal and coping, this level determines instinctive reactions that are
+  executed immediately (e.g. flinching when getting hit).  These correspond to an
+  agent's \emph{action tendencies}, and represent reactions that the agent has
+  no control over.
+
+\item[Deliberative Level]
+  This level enables the agents to construct long-term complex plans for achieving
+  their goals.
+
 \item[Memory]
   FAtiMA supports both episodic and semantic memory.  Episodic memory represents 
   short-term memory relating to events that have taken place, while semantic
@@ -569,21 +587,65 @@ terminology will be introduced here.
   work.  Through planning, agents can determine which sequences of actions (if any)
   can be used to accomplish their goals.
 
-\end{description}
+\item[Sensors]
+  Refers to the means by which agents detect events in the world.  At the moment,
+  these are triggered by actions taken by other agents or objects.  For the 
+  purpose of the new system, they will have to monitor changes to knowledge bases.
 
-\subsection{Modifications}
+\item[Effectors]
+  Processes through which the agent can affect the world (i.e. actions).
+
+\end{description}
 
 \begin{figure}[h]
   \resizebox{1.0\textwidth}{!}{\includegraphics{Graphics/fatimadiagram_render.png}}
-  \caption{An overview of the current FAtiMA architecture.} \label{fatima_diagram}
+  \caption{An overview of the current FAtiMA architecture\cite{Paiva2005}. }
+  \label{fatima_diagram}
 \end{figure}
 
 \begin{figure}[h]
   \resizebox{1.0\textwidth}{!}{\includegraphics{Graphics/fatimadiagram_modifications_render.png}}
-  \caption{An overview of the proposed changes to the FAtiMA architecture.} \label{fatima_diagram_modifications}
+  \caption{An overview of the proposed changes to the FAtiMA architecture.  Objects with diamonds (blue)
+  represent existing components that were not displayed in the previous diagram.  Objects with stars (red)
+  represent new components.}
+  \label{fatima_diagram_modifications}
 \end{figure}
 
-\section{Summary}
+FAtiMA's current interaction model is shown in figure ~\ref{fatima_diagram}.
+Appraisal and Coping are executed in a cycle.  Actions are appraised, which
+affects the emotional state, world state, and memory.  Coping analyzes these
+states and affects the world yet again, and these actions are re-appraised.
+
+\subsection{Modifications}
+
+Figure ~\ref{fatima_diagram_modifications} shows the proposed modifications
+to the interaction model.  Effectors are split into two categories: Action
+Selection and Dialogue Construction.  In addition, a new linguistic interpretation
+component is added that causes changes in the state of the knowledge base.
+
+The dialogue construction component will require a search algorithm that is
+able to take the current knowledge base state and goal as input, and produce
+an optimal assertion that causes the knowledge base to satisfy the goal.
+
+The linguistic interpretation module will be simpler, and will most likely be
+implemented with only small modifications to the existing knowledge base system.
+
+\subsubsection{Language Renderer and Derenderer}
+
+Optional components are the language renderer and derenderer.  These, if implemented,
+would be able to transform natural language text to logical forms and vice-versa.
+This will only be possible if time and other constraints allow, but will most likely
+be accomplished through use of OpenCCG\cite{White2011} software.
+
+\section{Conclusion}
+
+This thesis will serve as a proof of concept to demonstrate the potential for dynamically
+generated speech among game characters.  Direct generation of dialogue as logical forms
+has not yet been attempted to my knowledge, and the implementation of this thesis may
+lead to new posisbilities for interaction with intelligent game characters.  Natural language
+rendering could also greatly improve believability.  As games grow in complexity, such
+technology may become indispensable for the creation of truly dynamic game experiences
+while alleviating the burden on game authors.
 
 \section{Timeline}
 

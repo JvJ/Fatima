@@ -26,7 +26,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -85,9 +85,9 @@
      inkscape:window-height="1018"
      id="namedview2987"
      showgrid="false"
-     inkscape:zoom="1.8208"
-     inkscape:cx="199.82675"
-     inkscape:cy="319.87447"
+     inkscape:zoom="3.6416"
+     inkscape:cx="219.02523"
+     inkscape:cy="197.5682"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -524,5 +524,15 @@
      style="fill:none;stroke:#000000;stroke-width:0.7;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend);stroke-miterlimit:4;stroke-dasharray:none"
      d="m 285.03955,300.68541 113.13708,0"
      id="path7542"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.7;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend);stroke-miterlimit:4;stroke-dasharray:none"
+     d="m 234.2377,122.74165 0,25.81283"
+     id="path3159"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.7;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend);stroke-miterlimit:4;stroke-dasharray:none"
+     d="m 233.68849,186.99912 0,22.79218"
+     id="path4134"
      inkscape:connector-curvature="0" />
 </svg>

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.5)  24 SEP 2012 16:13
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.5)  25 SEP 2012 16:37
 entering extended mode
 **\nonstopmode\input newproposal.tex
 (c:\Users\kwheel3\Documents\GitHub\Fatima\proposal\newproposal.tex
@@ -299,52 +299,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 42.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 42.
-
-
-LaTeX Warning: Citation `Mateas' on page 1 undefined on input line 90.
-
-[1
+ [1
 
 
 Non-PDF special ignored!
 Non-PDF special ignored!{C:/Users/kwheel3/AppData/Local/MiKTeX/2.9/pdftex/confi
-g/pdftex.map}]
-
-LaTeX Warning: Citation `Mascarenhas' on page 2 undefined on input line 99.
-
-
-LaTeX Warning: Citation `Acton2009' on page 2 undefined on input line 123.
-
-
-LaTeX Warning: Citation `Mateas' on page 2 undefined on input line 127.
-
-
-LaTeX Warning: Citation `Mateasa' on page 2 undefined on input line 139.
-
-
-LaTeX Warning: Citation `Mccoy2010' on page 2 undefined on input line 144.
-
-
-LaTeX Warning: Citation `Mccoy2010' on page 2 undefined on input line 146.
-
-[2]
-
-LaTeX Warning: Citation `Mccoy2011' on page 3 undefined on input line 155.
-
-
-LaTeX Warning: Citation `Mascarenhas' on page 3 undefined on input line 165.
-
-
-LaTeX Warning: Citation `Marsella' on page 3 undefined on input line 172.
-
-
-LaTeX Warning: Citation `Zettlemoyer2004' on page 3 undefined on input line 196
-.
-
-
-LaTeX Warning: Citation `Steedman2003' on page 3 undefined on input line 200.
-
-[3]
+g/pdftex.map}] [2] [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 217.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -355,12 +315,6 @@ LaTeX Warning: Float too large for page by 9.66663pt on input line 352.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Citation `Paiva2005' on page 5 undefined on input line 376.
-
-
-LaTeX Warning: Citation `Russell2003' on page 5 undefined on input line 376.
 
 [5]
 
@@ -387,50 +341,57 @@ isUgly\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )))
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Citation `Mascarenhas' on page 6 undefined on input line 523.
-
 [6] <Graphics/fatimadiagram_render.png, id=30, 365.6862pt x 266.1945pt>
 File: Graphics/fatimadiagram_render.png Graphic file (type png)
 
 <use Graphics/fatimadiagram_render.png>
-Package pdftex.def Info: Graphics/fatimadiagram_render.png used on input line 5
-77.
+Package pdftex.def Info: Graphics/fatimadiagram_render.png used on input line 6
+01.
 (pdftex.def)             Requested size: 365.6853pt x 266.19385pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-No file newproposal.bbl.
-[7] [8] [9] [10] [11 <c:/Users/kwheel3/Documents/GitHub/Fatima/proposal/Graphic
-s/fatimadiagram_render.png>]
-(c:\Users\kwheel3\Documents\GitHub\Fatima\proposal\newproposal.aux)
 
-LaTeX Warning: There were undefined references.
+<Graphics/fatimadiagram_modifications_render.png, id=32, 437.9562pt x 307.3884p
+t>
+File: Graphics/fatimadiagram_modifications_render.png Graphic file (type png)
+ <use Graphics/fatimadiagram_modifications_render.png>
+Package pdftex.def Info: Graphics/fatimadiagram_modifications_render.png used o
+n input line 607.
+(pdftex.def)             Requested size: 437.95512pt x 307.38763pt.
 
- ) 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7] (c:\Users\kwheel3\Documents\GitHub\Fatima\proposal\newproposal.bbl [8])
+[9] [10] [11] [12] [13 <c:/Users/kwheel3/Documents/GitHub/Fatima/proposal/Graph
+ics/fatimadiagram_render.png>] [14 <c:/Users/kwheel3/Documents/GitHub/Fatima/pr
+oposal/Graphics/fatimadiagram_modifications_render.png>]
+(c:\Users\kwheel3\Documents\GitHub\Fatima\proposal\newproposal.aux) ) 
 Here is how much of TeX's memory you used:
- 4908 strings out of 494045
- 69071 string characters out of 3145964
- 157001 words of memory out of 3000000
- 8144 multiletter control sequences out of 15000+200000
+ 4919 strings out of 494045
+ 69509 string characters out of 3145964
+ 158059 words of memory out of 3000000
+ 8152 multiletter control sequences out of 15000+200000
  8848 words of font info for 31 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 39i,7n,39p,588b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on newproposal.pdf (11 pages, 365622 bytes).
+ 39i,7n,39p,589b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on newproposal.pdf (14 pages, 625693 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
+ 97 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
