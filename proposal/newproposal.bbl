@@ -13,6 +13,10 @@ BioWare.
 \newblock {\em {Mass Effect}}.
 \newblock Microsoft Game Studios, 2007.
 
+\bibitem{Ecircus}
+Ecircus.
+\newblock {\em {FearNot!}}
+
 \bibitem{Marsella}
 Stacy~C Marsell, David~V Pynadath, and Stephen~J Read.
 \newblock {PsychSim : Agent-based modeling of social interactions and
@@ -39,6 +43,11 @@ Michael Mateas, Andrew Stern, and Georgia Tech.
 \newblock {Fa\c{c}ade : An Experiment in Building a Fully-Realized Interactive
   Drama}.
 \newblock 2.
+
+\bibitem{Mateas2011}
+Michael Mateas and Noah Wardrip-Fruin.
+\newblock {\em {Prom Week}}.
+\newblock Expressive Intelligence Studio, 2011.
 
 \bibitem{Mccoy2011}
 Josh Mccoy, Mike Treanor, Ben Samuel, Michael Mateas, and Noah Wardrip-fruin.

@@ -150,8 +150,8 @@ stories''.  Through the definition of social and cultural rules that
 can be applied to a given social state, believable social behaviour is
 allowed to emerge.
 
-CiF was used to implement the game \emph{Prom Week} [TODO: Cite the
-  game itsetf?].  \emph{Prom Week} pioneered what the creators termed ``Social
+CiF was used to implement the game \emph{Prom Week} \cite{Mateas2011}.
+\emph{Prom Week} pioneered what the creators termed ``Social
 Physics''\cite{Mccoy2011} -- intuitive rules of social
 interaction that could guide the user's gameplay toward accomplishing
 the game's goals, similar to how physics are used in many puzzle
@@ -163,7 +163,7 @@ situations.
 A more easily accessible (in terms of source code) and more modular
 BAF is the FearNot Affective Mind Architecture (FAtiMA)
 \cite{Mascarenhas}.  FAtiMA was developed initially as an engine for
-\emph{FearNot!}[TODO: Cite fearnot game?], a serious game aimed at
+\emph{FearNot!}\cite{Ecircus}, a serious game aimed at
 teaching school children between ages 8 and 12 how to deal with being
 bullied.
 
@@ -274,8 +274,11 @@ dialogue actions, an example will be provided.  This represents a
 hypothetical scenario involving two characters -- Good Guy and Bad
 Guy, who complement and insult one another.  Three main components are
 defined for each character -- goals, action tendenceies, and
-actions.  These defined in pseudocode, visible in figure
-~\ref{example_goals}.
+actions.  These are defined in pseudocode, visible in figure
+~\ref{example_goals}.  The pseudocode represents first-order logic
+expressions as conjunctions ($\wedge$) of conditions.  Conditions
+are defined as predicates (i.e. $good(x)$ means ``x is good'').
+For clarification, unbound variables are introduced with $\lambda$.
 
 \begin{figure}[h!]
   
@@ -293,7 +296,7 @@ actions.  These defined in pseudocode, visible in figure
   \lambda x.\lambda p.(knows(self, mother(x,self) \wedge good(p) \wedge p(x)) \mapsto isHappy(self))
   \]
   \[
-  \lambda x.\lambda p.(knows(self, mother(x,self) \wedge \neg bad(p) \wedge p(x)) \mapsto \neg isHappy(self))
+  \lambda x.\lambda p.(knows(self, mother(x,self) \wedge bad(p) \wedge p(x)) \mapsto \neg isHappy(self))
   \]
 
   Actions:
@@ -385,10 +388,10 @@ Two examples are shown in figures ~\ref{plan_selection} and ~\ref{plan_construct
 The first example shows an example of how an agent's plan would be
 constructed if using action selection (the current method), while the
 second shows how a plan might be created using action construction
-(the proposed method.  In the example scenario, Bad Guy is attempting
+(the proposed method).  In the example scenario, Bad Guy is attempting
 to fulfill the goal of making some target (Good Guy) feel unhappy.
 
-For each figure, the first few steps are the same.  We'll start with
+For each figure, the first few steps are the same.  Let us start with
 figure ~\ref{plan_selection}.  First, the goal of causing
 unhappiness is identified.  Using knowledge about the Good Guy's
 action tendencies, Bad Guy is able to discern that Good Guy would
@@ -616,9 +619,9 @@ Appraisal and Coping are executed in a cycle.  Actions are appraised, which
 affects the emotional state, world state, and memory.  Coping analyzes these
 states and affects the world yet again, and these actions are re-appraised.
 
-\subsection{Modifications}
+\subsection{Extensions}
 
-Figure ~\ref{fatima_diagram_modifications} shows the proposed modifications
+Figure ~\ref{fatima_diagram_modifications} shows the proposed extensions
 to the interaction model.  Effectors are split into two categories: Action
 Selection and Dialogue Construction.  In addition, a new linguistic interpretation
 component is added that causes changes in the state of the knowledge base.
