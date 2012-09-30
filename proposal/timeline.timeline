@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<timeline>
+  <version>0.17.0</version>
+  <categories>
+  </categories>
+  <events>
+    <event>
+      <start>2012-10-1 0:0:0</start>
+      <end>2012-10-29 0:0:0</end>
+      <text>Background</text>
+      <fuzzy>False</fuzzy>
+      <locked>False</locked>
+      <ends_today>False</ends_today>
+    </event>
+    <event>
+      <start>2012-10-30 0:0:0</start>
+      <end>2012-12-24 0:0:0</end>
+      <text>Design</text>
+      <fuzzy>False</fuzzy>
+      <locked>False</locked>
+      <ends_today>False</ends_today>
+    </event>
+    <event>
+      <start>2012-12-25 0:0:0</start>
+      <end>2013-2-18 0:0:0</end>
+      <text>Implementation Chapter</text>
+      <fuzzy>False</fuzzy>
+      <locked>False</locked>
+      <ends_today>False</ends_today>
+    </event>
+    <event>
+      <start>2013-2-19 0:0:0</start>
+      <end>2013-3-5 0:0:0</end>
+      <text>Introduction and Conclusion</text>
+      <fuzzy>False</fuzzy>
+      <locked>False</locked>
+      <ends_today>False</ends_today>
+    </event>
+    <event>
+      <start>2012-10-1 0:0:0</start>
+      <end>2013-3-18 0:0:0</end>
+      <text>Implementation (Coding)</text>
+      <fuzzy>False</fuzzy>
+      <locked>False</locked>
+      <ends_today>False</ends_today>
+    </event>
+  </events>
+  <view>
+    <displayed_period>
+      <start>2012-8-11 3:30:20</start>
+      <end>2013-3-28 3:50:14</end>
+    </displayed_period>
+    <hidden_categories>
+    </hidden_categories>
+  </view>
+</timeline>
