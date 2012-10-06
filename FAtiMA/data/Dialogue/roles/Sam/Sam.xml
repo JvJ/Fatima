@@ -36,7 +36,7 @@
 	
 	
 	<Goals>
-		<Goal name="MakeAnotherLaugh([target])"/>
+		<Goal name="MakeAnotherLaugh([target])"></Goal>
 	</Goals>
 
 	

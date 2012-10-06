@@ -1,49 +1,21 @@
 
 Connecting to localhost:46874
 
+John: Processing message: AGENTS John User
+
+Sending Look-AT: John
+
 Motivator found: Affiliation
 
 Motivator found: Integrity
 
 Motivator found: Energy
 
+John: Processing message: LOOK-AT John sex:M time:Morning location:Office name:John role:John isPerson:True 
+
 Motivator found: Certainty
 
 Motivator found: Competence
-
-LOADING Needs: 
-
-John: Processing message: AGENTS Sam John User
-
-Sending Look-AT: Sam
-
-Perceiving Entities: [Sam, John, User]
-
-John: Processing message: LOOK-AT Sam sex:M time:Morning location:Office name:Sam role:Sam isPerson:True 
-
-Look-At:Sam sex M
-
-Look-At:Sam time Morning
-
-Look-At:Sam location Office
-
-Look-At:Sam name Sam
-
-Look-At:Sam role Sam
-
-Look-At:Sam isPerson True
-
-Sending Look-AT: John
-
-John: Processing message: ACTION-FINISHED John look-at Sam
-
-can act now!
-
-John: Processing message: ACTION-FINISHED Sam look-at John
-
-can act now!
-
-John: Processing message: LOOK-AT John sex:M time:Morning location:Office name:John role:John isPerson:True 
 
 Look-At:John sex M
 
@@ -55,6 +27,8 @@ Look-At:John name John
 
 Look-At:John role John
 
+LOADING Needs: 
+
 Look-At:John isPerson True
 
 Sending Look-AT: User
@@ -62,18 +36,6 @@ Sending Look-AT: User
 John: Processing message: ACTION-FINISHED John look-at John
 
 can act now!
-
-PropertyChanged: [*] Sam(sex) M
-
-PropertyChanged: [*] Sam(time) Morning
-
-PropertyChanged: [*] Sam(location) Office
-
-PropertyChanged: [*] Sam(name) Sam
-
-PropertyChanged: [*] Sam(role) Sam
-
-PropertyChanged: [*] Sam(isPerson) True
 
 PropertyChanged: [*] SELF(sex) M
 
@@ -87,9 +49,7 @@ PropertyChanged: [*] SELF(role) SELF
 
 PropertyChanged: [*] SELF(isPerson) True
 
-appraising event: EVENT(SELF,look-at,Sam)
-
-appraising event: EVENT(Sam,look-at,SELF)
+Perceiving Entities: [John, User]
 
 appraising event: EVENT(SELF,look-at,SELF)
 
@@ -117,6 +77,158 @@ PropertyChanged: [*] User(facial-exp) HAPPY
 
 appraising event: EVENT(SELF,look-at,User)
 
+John: Processing message: ENTITY-ADDED Sam
+
+Sending Look-AT: Sam
+
+Perceiving Entities: [Sam]
+
+John: Processing message: LOOK-AT Sam sex:M time:Morning location:Office name:Sam role:Sam isPerson:True 
+
+Look-At:Sam sex M
+
+Look-At:Sam time Morning
+
+Look-At:Sam location Office
+
+Look-At:Sam name Sam
+
+Look-At:Sam role Sam
+
+Look-At:Sam isPerson True
+
+John: Processing message: ACTION-FINISHED John look-at Sam
+
+can act now!
+
+John: Processing message: ACTION-FINISHED Sam look-at John
+
+can act now!
+
+John: Processing message: ACTION-FINISHED Sam look-at Sam
+
+can act now!
+
+PropertyChanged: [*] Sam(sex) M
+
+PropertyChanged: [*] Sam(time) Morning
+
+PropertyChanged: [*] Sam(location) Office
+
+PropertyChanged: [*] Sam(name) Sam
+
+PropertyChanged: [*] Sam(role) Sam
+
+PropertyChanged: [*] Sam(isPerson) True
+
+appraising event: EVENT(SELF,look-at,Sam)
+
+appraising event: EVENT(Sam,look-at,SELF)
+
+appraising event: EVENT(Sam,look-at,Sam)
+
+John: Processing message: ACTION-FINISHED Sam look-at User
+
+can act now!
+
+appraising event: EVENT(Sam,look-at,User)
+
+John: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+appraising event: EVENT(Sam,SpeechAct,SELF,Joke)
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+John: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@John(SELF:true) inferseffects: Sam:SuccesfulJoke(SELF)
+
+adding EVENT(Sam,SuccesfulJoke,SELF) = True to ToM John(SELF:true)
+
+ToM [SELF]
+
+adding Sam(toldJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+adding SELF(heardJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(SELF,SpeechAct,Sam,Laugh)
+
+appraising event: EVENT(Sam,SuccesfulJoke,SELF)
+
+John: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+appraising event: EVENT(Sam,SpeechAct,SELF,Joke)
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+John: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@John(SELF:true) inferseffects: Sam:LameJoke(SELF)
+
+adding EVENT(Sam,LameJoke,SELF) = True to ToM John(SELF:true)
+
+ToM [SELF]
+
+adding Sam(toldJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+adding SELF(heardJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(SELF,SpeechAct,Sam,Mock)
+
+appraising event: EVENT(Sam,LameJoke,SELF)
+
+John: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+appraising event: EVENT(Sam,SpeechAct,SELF,Joke)
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+John: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@John(SELF:true) inferseffects: Sam:SuccesfulJoke(SELF)
+
+adding EVENT(Sam,SuccesfulJoke,SELF) = True to ToM John(SELF:true)
+
+ToM [SELF]
+
+adding Sam(toldJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+adding SELF(heardJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(SELF,SpeechAct,Sam,Laugh)
+
+appraising event: EVENT(Sam,SuccesfulJoke,SELF)
+
 John: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
 
 can act now!
@@ -379,6 +491,38 @@ can act now!
 
 appraising event: EVENT(Sam,SpeechAct,SELF,Joke)
 
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+John: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@John(SELF:true) inferseffects: Sam:SuccesfulJoke(SELF)
+
+adding EVENT(Sam,SuccesfulJoke,SELF) = True to ToM John(SELF:true)
+
+ToM [SELF]
+
+adding Sam(toldJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+adding SELF(heardJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(SELF,SpeechAct,Sam,Laugh)
+
+appraising event: EVENT(Sam,SuccesfulJoke,SELF)
+
+John: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+appraising event: EVENT(Sam,SpeechAct,SELF,Joke)
+
 Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
 
 Cannot act now!
@@ -436,3 +580,387 @@ can act now!
 appraising event: EVENT(SELF,SpeechAct,Sam,Mock)
 
 appraising event: EVENT(Sam,LameJoke,SELF)
+
+John: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+appraising event: EVENT(Sam,SpeechAct,SELF,Joke)
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+John: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@John(SELF:true) inferseffects: Sam:SuccesfulJoke(SELF)
+
+adding EVENT(Sam,SuccesfulJoke,SELF) = True to ToM John(SELF:true)
+
+ToM [SELF]
+
+adding Sam(toldJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+adding SELF(heardJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(SELF,SpeechAct,Sam,Laugh)
+
+appraising event: EVENT(Sam,SuccesfulJoke,SELF)
+
+John: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+appraising event: EVENT(Sam,SpeechAct,SELF,Joke)
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+John: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@John(SELF:true) inferseffects: Sam:LameJoke(SELF)
+
+adding EVENT(Sam,LameJoke,SELF) = True to ToM John(SELF:true)
+
+ToM [SELF]
+
+adding Sam(toldJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+adding SELF(heardJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(SELF,SpeechAct,Sam,Mock)
+
+appraising event: EVENT(Sam,LameJoke,SELF)
+
+John: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+appraising event: EVENT(Sam,SpeechAct,SELF,Joke)
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+John: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@John(SELF:true) inferseffects: Sam:SuccesfulJoke(SELF)
+
+adding EVENT(Sam,SuccesfulJoke,SELF) = True to ToM John(SELF:true)
+
+ToM [SELF]
+
+adding Sam(toldJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+adding SELF(heardJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(SELF,SpeechAct,Sam,Laugh)
+
+appraising event: EVENT(Sam,SuccesfulJoke,SELF)
+
+John: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+appraising event: EVENT(Sam,SpeechAct,SELF,Joke)
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+John: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@John(SELF:true) inferseffects: Sam:SuccesfulJoke(SELF)
+
+adding EVENT(Sam,SuccesfulJoke,SELF) = True to ToM John(SELF:true)
+
+ToM [SELF]
+
+adding Sam(toldJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+adding SELF(heardJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(SELF,SpeechAct,Sam,Laugh)
+
+appraising event: EVENT(Sam,SuccesfulJoke,SELF)
+
+John: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+appraising event: EVENT(Sam,SpeechAct,SELF,Joke)
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+John: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@John(SELF:true) inferseffects: Sam:LameJoke(SELF)
+
+adding EVENT(Sam,LameJoke,SELF) = True to ToM John(SELF:true)
+
+ToM [SELF]
+
+adding Sam(toldJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+adding SELF(heardJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(SELF,SpeechAct,Sam,Mock)
+
+appraising event: EVENT(Sam,LameJoke,SELF)
+
+John: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+appraising event: EVENT(Sam,SpeechAct,SELF,Joke)
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+John: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@John(SELF:true) inferseffects: Sam:SuccesfulJoke(SELF)
+
+adding EVENT(Sam,SuccesfulJoke,SELF) = True to ToM John(SELF:true)
+
+ToM [SELF]
+
+adding Sam(toldJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+adding SELF(heardJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(SELF,SpeechAct,Sam,Laugh)
+
+appraising event: EVENT(Sam,SuccesfulJoke,SELF)
+
+John: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+appraising event: EVENT(Sam,SpeechAct,SELF,Joke)
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+John: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@John(SELF:true) inferseffects: Sam:LameJoke(SELF)
+
+adding EVENT(Sam,LameJoke,SELF) = True to ToM John(SELF:true)
+
+ToM [SELF]
+
+adding Sam(toldJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+adding SELF(heardJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(SELF,SpeechAct,Sam,Mock)
+
+appraising event: EVENT(Sam,LameJoke,SELF)
+
+John: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+appraising event: EVENT(Sam,SpeechAct,SELF,Joke)
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+John: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@John(SELF:true) inferseffects: Sam:SuccesfulJoke(SELF)
+
+adding EVENT(Sam,SuccesfulJoke,SELF) = True to ToM John(SELF:true)
+
+ToM [SELF]
+
+adding Sam(toldJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+adding SELF(heardJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(SELF,SpeechAct,Sam,Laugh)
+
+appraising event: EVENT(Sam,SuccesfulJoke,SELF)
+
+John: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+appraising event: EVENT(Sam,SpeechAct,SELF,Joke)
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+John: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@John(SELF:true) inferseffects: Sam:SuccesfulJoke(SELF)
+
+adding EVENT(Sam,SuccesfulJoke,SELF) = True to ToM John(SELF:true)
+
+ToM [SELF]
+
+adding Sam(toldJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+adding SELF(heardJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(SELF,SpeechAct,Sam,Laugh)
+
+appraising event: EVENT(Sam,SuccesfulJoke,SELF)
+
+John: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+appraising event: EVENT(Sam,SpeechAct,SELF,Joke)
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+John: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@John(SELF:true) inferseffects: Sam:SuccesfulJoke(SELF)
+
+adding EVENT(Sam,SuccesfulJoke,SELF) = True to ToM John(SELF:true)
+
+ToM [SELF]
+
+adding Sam(toldJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+adding SELF(heardJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(SELF,SpeechAct,Sam,Laugh)
+
+appraising event: EVENT(Sam,SuccesfulJoke,SELF)
+
+John: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+appraising event: EVENT(Sam,SpeechAct,SELF,Joke)
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+John: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@John(SELF:true) inferseffects: Sam:SuccesfulJoke(SELF)
+
+adding EVENT(Sam,SuccesfulJoke,SELF) = True to ToM John(SELF:true)
+
+ToM [SELF]
+
+adding Sam(toldJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+adding SELF(heardJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(SELF,SpeechAct,Sam,Laugh)
+
+appraising event: EVENT(Sam,SuccesfulJoke,SELF)
+
+John: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+appraising event: EVENT(Sam,SpeechAct,SELF,Joke)
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+John: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@John(SELF:true) inferseffects: Sam:SuccesfulJoke(SELF)
+
+adding EVENT(Sam,SuccesfulJoke,SELF) = True to ToM John(SELF:true)
+
+ToM [SELF]
+
+adding Sam(toldJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+adding SELF(heardJoke) = True to ToM John(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(SELF,SpeechAct,Sam,Laugh)
+
+appraising event: EVENT(Sam,SuccesfulJoke,SELF)
