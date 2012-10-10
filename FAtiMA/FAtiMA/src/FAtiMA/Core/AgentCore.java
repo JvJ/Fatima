@@ -822,6 +822,7 @@ public class AgentCore implements Serializable, AgentModel, IGetModelStrategy {
 					bestActionValue = -1;
 					bestAction = null;
 					
+					// KW: Select best action to take
 					for(IBehaviourComponent c : this._behaviourComponents)
 					{
 						action = c.actionSelection(this);
@@ -837,6 +838,8 @@ public class AgentCore implements Serializable, AgentModel, IGetModelStrategy {
 						
 					}
 
+					
+					// KW: Queue up the action for execution, if possible
 					if(_remoteAgent.canAct() && _remoteAgent.isRunning() && bestAction != null) {
 						
 						_remoteAgent.AddAction(bestAction);
