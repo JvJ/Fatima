@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>ClojureTesting</name>
+	<comment></comment>
+	<projects>
+		<project>AgentLauncher</project>
+		<project>FAtiMA</project>
+		<project>FAtiMA.AdvancedMemory</project>
+		<project>FAtiMA.Culture</project>
+		<project>FAtiMA.DeliberativeComponent</project>
+		<project>FAtiMA.EmotionalIntelligence</project>
+		<project>FAtiMA.Empathy</project>
+		<project>FAtiMA.MotivationalSystem</project>
+		<project>FAtiMA.NormativeComponent</project>
+		<project>FAtiMA.OCCAffectDerivation</project>
+		<project>FAtiMA.ReactiveComponent</project>
+		<project>FAtiMA.SocialImportance</project>
+		<project>FAtiMA.SocialRelations</project>
+		<project>FAtiMA.ToM</project>
+		<project>LanguageEngine</project>
+		<project>LanguageServer</project>
+		<project>WorldTest</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>ccw.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>ccw.nature</nature>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+</projectDescription>

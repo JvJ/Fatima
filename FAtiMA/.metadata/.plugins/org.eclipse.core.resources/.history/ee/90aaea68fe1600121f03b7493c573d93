@@ -1,0 +1,2 @@
+cmdhistory=[";; Switching to fatimatests namespace" "(FAtiMA.AgentLauncher)" "(FAtiMA AgentLauncher)" "(+ 1)" "(System/exit 0)" "(import '(WorldTest))" "(import '(FAtiMA/AgentLauncher))" "(import '\\n        \\n         FAtiMA/AgentLauncher)" "(import 'FAtiMA/AgentLauncher)" "(import 'WorldTest)" "(WorldTest.)" "(import '.FAtiMA.Agent)" "(import 'FAtiMA.Agent)" "(FAtiMa.Agent. )" "(FAtiMA/Agent.)" "(FAtiMA.Agent.)"]
+eclipse.preferences.version=1

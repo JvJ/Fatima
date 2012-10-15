@@ -1,0 +1,33 @@
+(ns fatimatests
+  (:import (WorldTest)
+           (FAtiMA Agent
+                   AgentLauncher)))
+
+
+;data/MindBlindness/
+;MindBlindnessScenarios.xml
+;MindBlindness
+;Tim
+(def ^:dynamic *params*
+  {:reference {:world ["data/MindBlindness/"
+                       "MindBlindnessScenarios.xml"
+                       "MindBlindness"
+                       "Tim"]
+               :agents {:sally ["data/getthereference/"
+                                "GetTheReferenceScenarios.xml"
+                                "GetTheReferenceScenario"
+                                "Sally"
+                                ]
+                        :molly ["data/getthereference/"
+                                "GetTheReferenceScenarios.xml"
+                                "GetTheReferenceScenario"
+                                "Molly"
+                                ]}}})
+
+(defn run-obj
+  [key & _ :as keys]
+  (cond
+    (= key :world) (to-object-array (WorldTest/main (get-in params keys))
+    (= key :agents) (AgentLauncher/main (get-in params keys))
+    :else (println "Error: Bad keys!")
+    ))

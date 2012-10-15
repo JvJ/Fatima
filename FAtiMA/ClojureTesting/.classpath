@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="clojure.jar" sourcepath="clojure-src.jar"/>
+	<classpathentry kind="lib" path="classes"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/AgentLauncher"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FAtiMA"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FAtiMA.AdvancedMemory"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FAtiMA.Culture"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FAtiMA.DeliberativeComponent"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FAtiMA.EmotionalIntelligence"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FAtiMA.Empathy"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FAtiMA.MotivationalSystem"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FAtiMA.NormativeComponent"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FAtiMA.OCCAffectDerivation"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FAtiMA.ReactiveComponent"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FAtiMA.SocialImportance"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FAtiMA.SocialRelations"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FAtiMA.ToM"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/LanguageEngine"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/LanguageServer"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/WorldTest"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

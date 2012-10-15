@@ -1,34 +1,6 @@
 
 Connecting to localhost:46874
 
-Molly: Processing message: AGENTS Sally Molly User
-
-Sending Look-AT: Sally
-
-Molly: Processing message: ACTION-FINISHED Sally look-at Molly
-
-can act now!
-
-Molly: Processing message: LOOK-AT Sally sex:F time:Morning location:Bedroom name:Sally role:Joker isPerson:True 
-
-Look-At:Sally sex F
-
-Look-At:Sally time Morning
-
-Look-At:Sally location Bedroom
-
-Look-At:Sally name Sally
-
-Look-At:Sally role Joker
-
-Look-At:Sally isPerson True
-
-Sending Look-AT: Molly
-
-Molly: Processing message: ACTION-FINISHED Molly look-at Sally
-
-can act now!
-
 Motivator found: Affiliation
 
 Motivator found: Integrity
@@ -41,23 +13,11 @@ Motivator found: Competence
 
 LOADING Needs: 
 
-PropertyChanged: [*] Sally(sex) F
+Molly: Processing message: AGENTS Molly User
 
-PropertyChanged: [*] Sally(time) Morning
+Sending Look-AT: Molly
 
-PropertyChanged: [*] Sally(location) Bedroom
-
-PropertyChanged: [*] Sally(name) Sally
-
-PropertyChanged: [*] Sally(role) Joker
-
-PropertyChanged: [*] Sally(isPerson) True
-
-Perceiving Entities: [Sally, Molly, User]
-
-appraising event: EVENT(Sally,look-at,SELF)
-
-appraising event: EVENT(SELF,look-at,Sally)
+Perceiving Entities: [Molly, User]
 
 Molly: Processing message: LOOK-AT Molly sex:F time:Morning location:Bedroom name:Molly role:Listener isPerson:True 
 
@@ -79,20 +39,6 @@ Molly: Processing message: ACTION-FINISHED Molly look-at Molly
 
 can act now!
 
-PropertyChanged: [*] SELF(sex) F
-
-PropertyChanged: [*] SELF(time) Morning
-
-PropertyChanged: [*] SELF(location) Bedroom
-
-PropertyChanged: [*] SELF(name) SELF
-
-PropertyChanged: [*] SELF(role) Listener
-
-PropertyChanged: [*] SELF(isPerson) True
-
-appraising event: EVENT(SELF,look-at,SELF)
-
 Molly: Processing message: LOOK-AT User isPerson:True has,chocolate:True power:5 facial-exp:HAPPY 
 
 Look-At:User isPerson True
@@ -107,6 +53,18 @@ Molly: Processing message: ACTION-FINISHED Molly look-at User
 
 can act now!
 
+PropertyChanged: [*] SELF(sex) F
+
+PropertyChanged: [*] SELF(time) Morning
+
+PropertyChanged: [*] SELF(location) Bedroom
+
+PropertyChanged: [*] SELF(name) SELF
+
+PropertyChanged: [*] SELF(role) Listener
+
+PropertyChanged: [*] SELF(isPerson) True
+
 PropertyChanged: [*] User(isPerson) True
 
 PropertyChanged: [*] User(has,chocolate) True
@@ -115,23 +73,81 @@ PropertyChanged: [*] User(power) 5
 
 PropertyChanged: [*] User(facial-exp) HAPPY
 
+appraising event: EVENT(SELF,look-at,SELF)
+
 appraising event: EVENT(SELF,look-at,User)
 
+Molly: Processing message: ENTITY-ADDED Sally
+
+Sending Look-AT: Sally
+
+Perceiving Entities: [Sally]
+
+Molly: Processing message: LOOK-AT Sally sex:F time:Morning location:Bedroom name:Sally role:Joker isPerson:True 
+
+Look-At:Sally sex F
+
+Look-At:Sally time Morning
+
+Look-At:Sally location Bedroom
+
+Look-At:Sally name Sally
+
+Look-At:Sally role Joker
+
+Look-At:Sally isPerson True
+
+Molly: Processing message: ACTION-FINISHED Molly look-at Sally
+
+can act now!
+
+Molly: Processing message: ACTION-FINISHED Sally look-at Molly
+
+can act now!
+
+Molly: Processing message: ACTION-FINISHED Sally look-at Sally
+
+can act now!
+
+PropertyChanged: [*] Sally(sex) F
+
+PropertyChanged: [*] Sally(time) Morning
+
+PropertyChanged: [*] Sally(location) Bedroom
+
+PropertyChanged: [*] Sally(name) Sally
+
+PropertyChanged: [*] Sally(role) Joker
+
+PropertyChanged: [*] Sally(isPerson) True
+
+appraising event: EVENT(SELF,look-at,Sally)
+
+appraising event: EVENT(Sally,look-at,SELF)
+
+appraising event: EVENT(Sally,look-at,Sally)
+
+Molly: Processing message: ACTION-FINISHED Sally look-at User
+
+can act now!
+
+appraising event: EVENT(Sally,look-at,User)
+
 Molly: Processing message: ACTION-FINISHED Sally say <SpeechAct type="SpeechAct"><Sender>Sally</Sender><Receiver>Molly</Receiver><Type>Reference</Type><Context id="me">Sally</Context><Context id="you">Molly</Context><Context id="sex">f</Context><Context id="me">Sally</Context><Context id="role">joker</Context><Context id="yourole">listener</Context><Parameters></Parameters></SpeechAct>
 
 can act now!
 
 appraising event: EVENT(Sally,SpeechAct,SELF,Reference)
 
-Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Molly</Sender><Receiver>Sally</Receiver><Type>SuccessfulResponse</Type><Context id="me">Molly</Context><Context id="you">Sally</Context><Context id="sex">f</Context><Context id="me">Molly</Context><Context id="role">listener</Context><Context id="yourole">joker</Context><Parameters></Parameters></SpeechAct>
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Molly</Sender><Receiver>Sally</Receiver><Type>UnsuccessfulResponse</Type><Context id="me">Molly</Context><Context id="you">Sally</Context><Context id="sex">f</Context><Context id="me">Molly</Context><Context id="role">listener</Context><Context id="yourole">joker</Context><Parameters></Parameters></SpeechAct>
 
 Cannot act now!
 
-Molly: Processing message: ACTION-FINISHED Molly say <SpeechAct type="SpeechAct"><Sender>Molly</Sender><Receiver>Sally</Receiver><Type>SuccessfulResponse</Type><Context id="me">Molly</Context><Context id="you">Sally</Context><Context id="sex">f</Context><Context id="me">Molly</Context><Context id="role">listener</Context><Context id="yourole">joker</Context><Parameters></Parameters></SpeechAct>
+Molly: Processing message: ACTION-FINISHED Molly say <SpeechAct type="SpeechAct"><Sender>Molly</Sender><Receiver>Sally</Receiver><Type>UnsuccessfulResponse</Type><Context id="me">Molly</Context><Context id="you">Sally</Context><Context id="sex">f</Context><Context id="me">Molly</Context><Context id="role">listener</Context><Context id="yourole">joker</Context><Parameters></Parameters></SpeechAct>
 
-@Molly(SELF:true) inferseffects: Sally:SuccessfulReference(SELF)
+@Molly(SELF:true) inferseffects: Sally:UnsuccessfulReference(SELF)
 
-adding EVENT(Sally,SuccessfulReference,SELF) = True to ToM Molly(SELF:true)
+adding EVENT(Sally,UnsuccessfulReference,SELF) = True to ToM Molly(SELF:true)
 
 ToM [SELF]
 
@@ -145,70 +161,6 @@ ToM [*]
 
 can act now!
 
-appraising event: EVENT(SELF,SpeechAct,Sally,SuccessfulResponse)
+appraising event: EVENT(SELF,SpeechAct,Sally,UnsuccessfulResponse)
 
-appraising event: EVENT(Sally,SuccessfulReference,SELF)
-
-Molly: Processing message: ACTION-FINISHED Sally say <SpeechAct type="SpeechAct"><Sender>Sally</Sender><Receiver>Molly</Receiver><Type>Reference</Type><Context id="me">Sally</Context><Context id="you">Molly</Context><Context id="sex">f</Context><Context id="me">Sally</Context><Context id="role">joker</Context><Context id="yourole">listener</Context><Parameters></Parameters></SpeechAct>
-
-can act now!
-
-appraising event: EVENT(Sally,SpeechAct,SELF,Reference)
-
-Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Molly</Sender><Receiver>Sally</Receiver><Type>SuccessfulResponse</Type><Context id="me">Molly</Context><Context id="you">Sally</Context><Context id="sex">f</Context><Context id="me">Molly</Context><Context id="role">listener</Context><Context id="yourole">joker</Context><Parameters></Parameters></SpeechAct>
-
-Cannot act now!
-
-Molly: Processing message: ACTION-FINISHED Molly say <SpeechAct type="SpeechAct"><Sender>Molly</Sender><Receiver>Sally</Receiver><Type>SuccessfulResponse</Type><Context id="me">Molly</Context><Context id="you">Sally</Context><Context id="sex">f</Context><Context id="me">Molly</Context><Context id="role">listener</Context><Context id="yourole">joker</Context><Parameters></Parameters></SpeechAct>
-
-@Molly(SELF:true) inferseffects: Sally:SuccessfulReference(SELF)
-
-adding EVENT(Sally,SuccessfulReference,SELF) = True to ToM Molly(SELF:true)
-
-ToM [SELF]
-
-adding Sally(madeReference) = True to ToM Molly(SELF:true)
-
-ToM [*]
-
-adding SELF(heardReference) = True to ToM Molly(SELF:true)
-
-ToM [*]
-
-can act now!
-
-appraising event: EVENT(SELF,SpeechAct,Sally,SuccessfulResponse)
-
-appraising event: EVENT(Sally,SuccessfulReference,SELF)
-
-Molly: Processing message: ACTION-FINISHED Sally say <SpeechAct type="SpeechAct"><Sender>Sally</Sender><Receiver>Molly</Receiver><Type>Reference</Type><Context id="me">Sally</Context><Context id="you">Molly</Context><Context id="sex">f</Context><Context id="me">Sally</Context><Context id="role">joker</Context><Context id="yourole">listener</Context><Parameters></Parameters></SpeechAct>
-
-can act now!
-
-appraising event: EVENT(Sally,SpeechAct,SELF,Reference)
-
-Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Molly</Sender><Receiver>Sally</Receiver><Type>SuccessfulResponse</Type><Context id="me">Molly</Context><Context id="you">Sally</Context><Context id="sex">f</Context><Context id="me">Molly</Context><Context id="role">listener</Context><Context id="yourole">joker</Context><Parameters></Parameters></SpeechAct>
-
-Cannot act now!
-
-Molly: Processing message: ACTION-FINISHED Molly say <SpeechAct type="SpeechAct"><Sender>Molly</Sender><Receiver>Sally</Receiver><Type>SuccessfulResponse</Type><Context id="me">Molly</Context><Context id="you">Sally</Context><Context id="sex">f</Context><Context id="me">Molly</Context><Context id="role">listener</Context><Context id="yourole">joker</Context><Parameters></Parameters></SpeechAct>
-
-@Molly(SELF:true) inferseffects: Sally:SuccessfulReference(SELF)
-
-adding EVENT(Sally,SuccessfulReference,SELF) = True to ToM Molly(SELF:true)
-
-ToM [SELF]
-
-adding Sally(madeReference) = True to ToM Molly(SELF:true)
-
-ToM [*]
-
-adding SELF(heardReference) = True to ToM Molly(SELF:true)
-
-ToM [*]
-
-can act now!
-
-appraising event: EVENT(SELF,SpeechAct,Sally,SuccessfulResponse)
-
-appraising event: EVENT(Sally,SuccessfulReference,SELF)
+appraising event: EVENT(Sally,UnsuccessfulReference,SELF)

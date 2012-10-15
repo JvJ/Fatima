@@ -1,9 +1,23 @@
 
 Connecting to localhost:46874
 
+Motivator found: Affiliation
+
+Motivator found: Integrity
+
+Motivator found: Energy
+
+Motivator found: Certainty
+
+Motivator found: Competence
+
+LOADING Needs: 
+
 Sam: Processing message: AGENTS Sam User
 
 Sending Look-AT: Sam
+
+Perceiving Entities: [Sam, User]
 
 Sam: Processing message: LOOK-AT Sam sex:M time:Morning location:Office name:Sam role:Sam isPerson:True 
 
@@ -39,18 +53,6 @@ Sam: Processing message: ACTION-FINISHED Sam look-at User
 
 can act now!
 
-Motivator found: Affiliation
-
-Motivator found: Integrity
-
-Motivator found: Energy
-
-Motivator found: Certainty
-
-Motivator found: Competence
-
-LOADING Needs: 
-
 PropertyChanged: [*] SELF(sex) M
 
 PropertyChanged: [*] SELF(time) Morning
@@ -71,8 +73,3598 @@ PropertyChanged: [*] User(power) 5
 
 PropertyChanged: [*] User(facial-exp) HAPPY
 
-Perceiving Entities: [Sam, User]
-
 appraising event: EVENT(SELF,look-at,SELF)
 
 appraising event: EVENT(SELF,look-at,User)
+
+Sam: Processing message: ENTITY-ADDED John
+
+Sending Look-AT: John
+
+Sam: Processing message: ACTION-FINISHED John look-at Sam
+
+can act now!
+
+Perceiving Entities: [John]
+
+appraising event: EVENT(John,look-at,SELF)
+
+Sam: Processing message: LOOK-AT John sex:M time:Morning location:Office name:John role:John isPerson:True 
+
+Look-At:John sex M
+
+Look-At:John time Morning
+
+Look-At:John location Office
+
+Look-At:John name John
+
+Look-At:John role John
+
+Look-At:John isPerson True
+
+Sam: Processing message: ACTION-FINISHED Sam look-at John
+
+can act now!
+
+Sam: Processing message: ACTION-FINISHED John look-at John
+
+can act now!
+
+PropertyChanged: [*] John(sex) M
+
+PropertyChanged: [*] John(time) Morning
+
+PropertyChanged: [*] John(location) Office
+
+PropertyChanged: [*] John(name) John
+
+PropertyChanged: [*] John(role) John
+
+PropertyChanged: [*] John(isPerson) True
+
+appraising event: EVENT(SELF,look-at,John)
+
+appraising event: EVENT(John,look-at,John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 2.8518715 Competence: 0.8479063 Urgency: 1.0 Total: 4.8362393
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sam: Processing message: ACTION-FINISHED John look-at User
+
+can act now!
+
+appraising event: EVENT(John,look-at,User)
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 2.9220574 Competence: 1.0 Urgency: 1.0 Total: 5.844115
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 7.4542475 Competence: 1.0 Urgency: 1.0 Total: 14.908495
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 7.489797 Competence: 1.0 Urgency: 1.0 Total: 14.979594
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 4.651488 Competence: 1.0 Urgency: 1.0 Total: 9.302976
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 4.7589498 Competence: 1.0 Urgency: 1.0 Total: 9.5178995
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 8.626485 Competence: 1.0 Urgency: 1.0 Total: 17.25297
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 8.667548 Competence: 1.0 Urgency: 1.0 Total: 17.335096
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 10.232333 Competence: 1.0 Urgency: 1.0 Total: 20.464666
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 10.275748 Competence: 1.0 Urgency: 1.0 Total: 20.551497
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 11.353522 Competence: 1.0 Urgency: 1.0 Total: 22.707045
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 12.157717 Competence: 1.0 Urgency: 1.0 Total: 24.315434
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 12.195436 Competence: 1.0 Urgency: 1.0 Total: 24.390871
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 8.175353 Competence: 1.0 Urgency: 1.0 Total: 16.350706
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 8.295364 Competence: 1.0 Urgency: 1.0 Total: 16.590729
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 11.066034 Competence: 1.0 Urgency: 1.0 Total: 22.132069
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 11.10827 Competence: 1.0 Urgency: 1.0 Total: 22.21654
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 12.01683 Competence: 1.0 Urgency: 1.0 Total: 24.03366
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 12.055421 Competence: 1.0 Urgency: 1.0 Total: 24.110842
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 8.153501 Competence: 1.0 Urgency: 1.0 Total: 16.307001
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 8.27013 Competence: 1.0 Urgency: 1.0 Total: 16.54026
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 11.082056 Competence: 1.0 Urgency: 1.0 Total: 22.164112
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 11.123349 Competence: 1.0 Urgency: 1.0 Total: 22.246698
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 12.0835 Competence: 1.0 Urgency: 1.0 Total: 24.167
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 12.812881 Competence: 1.0 Urgency: 1.0 Total: 25.625763
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 12.847133 Competence: 1.0 Urgency: 1.0 Total: 25.694265
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 8.650056 Competence: 1.0 Urgency: 1.0 Total: 17.300112
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 8.768941 Competence: 1.0 Urgency: 1.0 Total: 17.537882
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 11.55075 Competence: 1.0 Urgency: 1.0 Total: 23.1015
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 11.590237 Competence: 1.0 Urgency: 1.0 Total: 23.180473
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 12.490633 Competence: 1.0 Urgency: 1.0 Total: 24.981266
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 12.526743 Competence: 1.0 Urgency: 1.0 Total: 25.053486
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 8.462322 Competence: 1.0 Urgency: 1.0 Total: 16.924644
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 8.57856 Competence: 1.0 Urgency: 1.0 Total: 17.15712
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 5.233128 Competence: 1.0 Urgency: 1.0 Total: 10.466256
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 5.413874 Competence: 1.0 Urgency: 1.0 Total: 10.827748
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 3.2938461 Competence: 1.0 Urgency: 1.0 Total: 6.5876923
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 7.2252727 Competence: 1.0 Urgency: 1.0 Total: 14.450545
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 7.363625 Competence: 1.0 Urgency: 1.0 Total: 14.72725
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 4.2634196 Competence: 1.0 Urgency: 1.0 Total: 8.526839
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 4.430691 Competence: 1.0 Urgency: 1.0 Total: 8.861382
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 2.9041436 Competence: 1.0 Urgency: 1.0 Total: 5.808287
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 2.972841 Competence: 1.0 Urgency: 1.0 Total: 5.945682
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 2.059796 Competence: 1.0 Urgency: 1.0 Total: 4.119592
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 2.1141248 Competence: 1.0 Urgency: 1.0 Total: 4.2282495
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 1.4694033 Competence: 1.0 Urgency: 1.0 Total: 2.9388065
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 1.5366604 Competence: 1.0 Urgency: 1.0 Total: 3.0733209
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 1.0518372 Competence: 1.0 Urgency: 1.0 Total: 2.1036744
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 0.7259239 Competence: 1.0 Urgency: 1.0 Total: 1.4518478
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 0.76009214 Competence: 1.0 Urgency: 1.0 Total: 1.5201843
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 0.51680374 Competence: 1.0 Urgency: 1.0 Total: 1.0336075
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 0.558107 Competence: 1.0 Urgency: 1.0 Total: 1.116214
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 5.5687146 Competence: 1.0 Urgency: 1.0 Total: 11.137429
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 5.6965203 Competence: 1.0 Urgency: 1.0 Total: 11.393041
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 3.0960357 Competence: 1.0 Urgency: 1.0 Total: 6.1920714
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 3.265362 Competence: 1.0 Urgency: 1.0 Total: 6.530724
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 2.0494623 Competence: 1.0 Urgency: 1.0 Total: 4.0989246
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 2.1272037 Competence: 1.0 Urgency: 1.0 Total: 4.2544074
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 6.791194 Competence: 1.0 Urgency: 1.0 Total: 13.582388
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 6.9172425 Competence: 1.0 Urgency: 1.0 Total: 13.834485
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 10.705245 Competence: 1.0 Urgency: 1.0 Total: 21.41049
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 10.747908 Competence: 1.0 Urgency: 1.0 Total: 21.495815
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 12.421414 Competence: 1.0 Urgency: 1.0 Total: 24.842829
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 12.453397 Competence: 1.0 Urgency: 1.0 Total: 24.906794
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 13.541292 Competence: 1.0 Urgency: 1.0 Total: 27.082584
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 13.569577 Competence: 1.0 Urgency: 1.0 Total: 27.139154
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 9.254869 Competence: 1.0 Urgency: 1.0 Total: 18.509739
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 9.363174 Competence: 1.0 Urgency: 1.0 Total: 18.726349
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 12.435254 Competence: 1.0 Urgency: 1.0 Total: 24.870508
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 12.466355 Competence: 1.0 Urgency: 1.0 Total: 24.93271
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 8.414464 Competence: 1.0 Urgency: 1.0 Total: 16.828928
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 11.854385 Competence: 1.0 Urgency: 1.0 Total: 23.70877
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 11.886234 Competence: 1.0 Urgency: 1.0 Total: 23.772469
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 13.230717 Competence: 1.0 Urgency: 1.0 Total: 26.461433
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 13.259139 Competence: 1.0 Urgency: 1.0 Total: 26.518278
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 8.957469 Competence: 1.0 Urgency: 1.0 Total: 17.914938
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 9.066224 Competence: 1.0 Urgency: 1.0 Total: 18.132448
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 5.5662103 Competence: 1.0 Urgency: 1.0 Total: 11.132421
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 5.74084 Competence: 1.0 Urgency: 1.0 Total: 11.48168
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 3.5191495 Competence: 1.0 Urgency: 1.0 Total: 7.038299
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 3.6029847 Competence: 1.0 Urgency: 1.0 Total: 7.2059693
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 2.5069964 Competence: 1.0 Urgency: 1.0 Total: 5.013993
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 2.5942597 Competence: 1.0 Urgency: 1.0 Total: 5.1885195
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 1.7699387 Competence: 1.0 Urgency: 1.0 Total: 3.5398774
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 6.732344 Competence: 1.0 Urgency: 1.0 Total: 13.464688
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 6.862416 Competence: 1.0 Urgency: 1.0 Total: 13.724832
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 3.9158084 Competence: 1.0 Urgency: 1.0 Total: 7.831617
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 4.07759 Competence: 1.0 Urgency: 1.0 Total: 8.15518
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 8.629219 Competence: 1.0 Urgency: 1.0 Total: 17.258438
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 5.2207184 Competence: 1.0 Urgency: 1.0 Total: 10.441437
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 5.397814 Competence: 1.0 Urgency: 1.0 Total: 10.795628
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 5.567589 Competence: 1.0 Urgency: 1.0 Total: 11.135178
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 3.3809485 Competence: 1.0 Urgency: 1.0 Total: 6.761897
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 3.4705982 Competence: 1.0 Urgency: 1.0 Total: 6.9411964
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 8.097246 Competence: 1.0 Urgency: 1.0 Total: 16.194492
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 11.860246 Competence: 1.0 Urgency: 1.0 Total: 23.720491
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 11.901336 Competence: 1.0 Urgency: 1.0 Total: 23.802671
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 7.9256845 Competence: 1.0 Urgency: 1.0 Total: 15.851369
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 8.041733 Competence: 1.0 Urgency: 1.0 Total: 16.083466
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 11.906625 Competence: 1.0 Urgency: 1.0 Total: 23.81325
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 11.9380045 Competence: 1.0 Urgency: 1.0 Total: 23.876009
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 13.563495 Competence: 1.0 Urgency: 1.0 Total: 27.12699
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Intention: MakeAnotherLaugh(John) Utilitity: 13.58803 Competence: 1.0 Urgency: 1.0 Total: 27.17606
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 9.219941 Competence: 1.0 Urgency: 1.0 Total: 18.439882
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Mock</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+@Sam(SELF:true) inferseffects: SELF:LameJoke(John)
+
+adding EVENT(SELF,LameJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+appraising event: EVENT(John,SpeechAct,SELF,Mock)
+
+appraising event: EVENT(SELF,LameJoke,John)
+
+Updating motivator Affiliation
+
+Goal FAILED - MakeAnotherLaugh(John)
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 12.722191 Competence: 1.0 Urgency: 1.0 Total: 25.444382
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Adding a new Intention: MakeAnotherLaugh(John)
+
+Selecting Action: SELF:SuccesfulJoke(John)from plan:Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeAnotherLaugh(John) Utilitity: 12.748678 Competence: 1.0 Urgency: 1.0 Total: 25.497356
+
+Sam: Processing message: ACTION-FINISHED Sam say <SpeechAct type="SpeechAct"><Sender>Sam</Sender><Receiver>John</Receiver><Type>Joke</Type><Context id="me">Sam</Context><Context id="you">John</Context><Context id="sex">m</Context><Context id="me">Sam</Context><Context id="role">sam</Context><Context id="yourole">john</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,John,Joke)
+
+Sam: Processing message: ACTION-FINISHED John say <SpeechAct type="SpeechAct"><Sender>John</Sender><Receiver>Sam</Receiver><Type>Laugh</Type><Context id="me">John</Context><Context id="you">Sam</Context><Context id="sex">m</Context><Context id="me">John</Context><Context id="role">john</Context><Context id="yourole">sam</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sam(SELF:true) inferseffects: SELF:SuccesfulJoke(John)
+
+adding EVENT(SELF,SuccesfulJoke,John) = True to ToM Sam(SELF:true)
+
+ToM [SELF]
+
+adding SELF(toldJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+adding John(heardJoke) = True to ToM Sam(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]: extending a link for condition [*]:EVENT(SELF,SuccesfulJoke,John) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(John,SpeechAct,SELF,Laugh)
+
+appraising event: EVENT(SELF,SuccesfulJoke,John)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeAnotherLaugh(John)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeAnotherLaugh(John)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccesfulJoke(John)]
+
+Intention: MakeAnotherLaugh(John) Utilitity: 8.5404625 Competence: 1.0 Urgency: 1.0 Total: 17.080925
