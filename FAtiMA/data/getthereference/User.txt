@@ -1,0 +1,4 @@
+isPerson True
+has,chocolate True
+power 5
+facial-exp HAPPY

@@ -1,0 +1,16 @@
+# global variables
+
+Type(value:Reference)
+-> Utterance(value: "Get the power!")
+
+Type(value:Reference)
+-> Utterance(value: "Get the power!")
+
+Type(value:SuccessfulResponse)
+-> Utterance(value: "Nintendo power!")
+
+Type(value:UnsuccessfulResponse)
+-> Utterance(value: "I cannot understand this!")
+
+
+

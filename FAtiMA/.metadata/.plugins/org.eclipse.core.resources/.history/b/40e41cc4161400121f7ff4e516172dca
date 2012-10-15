@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DomainActions>
+
+	<DialogPair	name="SuccessfulReference([target])">
+		<PreConditions>
+			<Property name="[target](isPerson)" operator="=" value="True"/>
+		</PreConditions>
+				
+	</DialogPair>
+
+</DomainActions>

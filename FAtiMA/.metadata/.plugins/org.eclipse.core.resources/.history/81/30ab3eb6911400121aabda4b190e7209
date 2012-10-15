@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GoalLibrary	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:noNamespaceSchemaLocation="./schemas/GoalLibrary.xsd">
+				
+	<ActivePursuitGoal name="MakeSuccessfulReference([target])">
+		<PreConditions>
+			<RecentEvent subject="[SELF]" action="look-at" target="[target]"/>
+			<Property name="[target](isPerson)" operator="=" value="True" />
+			<Property name="" operator="=" value=""/>
+		</PreConditions>
+	</ActivePursuitGoal>
+				
+</GoalLibrary>

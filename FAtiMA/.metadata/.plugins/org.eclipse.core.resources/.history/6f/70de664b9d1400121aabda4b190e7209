@@ -1,0 +1,17 @@
+# global variables
+
+Type(value:Joke)
+-> Utterance(value: "A termite walks into a barroom and asks: Is the bar tender here?")
+
+Type(value:Joke)
+-> Utterance(value: "A termite walks into a barroom and asks: Is the bar tender here?")
+
+Type(value:Laugh)
+-> Utterance(value: "Ahah! Nice Joke!")
+
+
+Type(value:Mock)
+-> Utterance(value: "That is the worst joke ever!")
+
+
+

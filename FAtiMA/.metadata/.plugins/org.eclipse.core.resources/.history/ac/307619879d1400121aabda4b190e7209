@@ -1,0 +1,14 @@
+# global variables
+
+Type(value:Reference)
+-> Utterance(value: "Get the power!")
+
+Type(value:SuccessfulResponse)
+-> Utterance(value: "Nintendo power!")
+
+
+Type(value:Mock)
+-> Utterance(value: "That is the worst joke ever!")
+
+
+

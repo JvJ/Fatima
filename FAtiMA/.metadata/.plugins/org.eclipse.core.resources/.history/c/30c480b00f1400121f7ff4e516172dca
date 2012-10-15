@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scenarios name="GetTheReferenceScenario">
+	<WorldSimulator port="46874"
+					scenery="Bedroom"
+					actionsFile="CompositeActions"
+					agentLanguageFile="/language/agent/en/language-set-1"
+					userLanguageFile="/language/user/en/language-set-1"
+					userOptionsFile="UserOptions"
+					simplifiedVersion="True">
+					
+					<Objects>
+						<Object name="User"/>
+					</Objects>
+	</WorldSimulator>
+	
+	<Agent	name="Sally"
+			displayName="Sally"
+			role="Joker"
+			platform="worldsim"
+			host="localhost"
+			port="46874"
+			debugMode="True"
+			sex="F"
+			actionsFile="CompositeActions"
+			goalsile="CompositeGoalLibrary">
+		
+		<Properties>
+			<Property name="location" value="Office"/>
+			<Property name="time" value="Mornint"/>
+			<Property name="isPerson" value="True"/>
+		</Properties>
+	</Agent>
+	
+	<Agent	name="Sally"
+			displayName="Sally"
+			role="Listener"
+			platform="worldsim"
+			host="localhost"
+			port="46874"
+			debugMode="True"
+			sex="F"
+			actionsFile="CompositeActions"
+			goalsile="CompositeGoalLibrary">
+		
+		<Properties>
+			<Property name="location" value="Office"/>
+			<Property name="time" value="Mornint"/>
+			<Property name="isPerson" value="True"/>
+		</Properties>
+	</Agent>
+	
+</Scenarios>
+
+

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 IMPORT_FILES_AND_FOLDERS_RELATIVE=true
 IMPORT_FILES_AND_FOLDERS_TYPE=7,1
 PROBLEMS_FILTERS_MIGRATE=true
@@ -5,3 +6,13 @@ eclipse.preferences.version=1
 platformState=1347283520525
 quickStart=true
 tipsAndTricks=true
+=======
+IMPORT_FILES_AND_FOLDERS_RELATIVE=true
+IMPORT_FILES_AND_FOLDERS_TYPE=7,1
+PROBLEMS_FILTERS_MIGRATE=true
+TASKS_FILTERS_MIGRATE=true
+eclipse.preferences.version=1
+platformState=1349382345898
+quickStart=true
+tipsAndTricks=true
+>>>>>>> Added New Scenario

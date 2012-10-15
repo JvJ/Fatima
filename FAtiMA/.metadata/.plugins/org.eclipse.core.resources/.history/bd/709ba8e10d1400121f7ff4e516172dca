@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scenarios name="GetTheReferenceScenario">
+	<WorldSimulator port="46874"
+					scenery="Bedroom"
+					actionsFile="CompositeActions"
+					agentLanguageFile="/language/agent/en/language-set-1"
+					userLanguageFile="/language/user/en/language-set-1"
+					userOptionsFile="UserOptions"
+					simplifiedVersion="True">
+					
+					<Objects>
+					
+	</WorldSimulator>
+</Scenarios>
+
+

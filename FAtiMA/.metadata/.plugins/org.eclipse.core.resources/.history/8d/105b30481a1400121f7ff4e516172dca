@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DomainActions>
+
+	<DialogPair	name="SuccessfulReference([target])">
+		<PreConditions>
+			<Property name="[target](isPerson)" operator="=" value="True"/>
+			<Property name="[AGENT]" operator="!=" value="True"/>
+		</PreConditions>
+		
+		<InitiationAct name="Reference"/>
+		<ReactiveAct name="SuccessfulResponse"/>
+		
+		<Effects>
+			<Effect probability="1.0">
+				<Property name="[AGENT](madeReference)" operator="=" value="True"/>
+				<Property name="[target](heardReference)" operator="=" value="True"/>
+			</Effect>
+		</Effects>
+		
+		<EffectsOnDrives>
+			<Motivator drive=""
+		</EffectsOnDrives>
+		
+	</DialogPair>
+
+</DomainActions>
