@@ -7,87 +7,9 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "38d61363ace9e615a8cbe30b871ec01e97f39ed1",
-    "jarFileModificationDate": "2012-08-24T14:38:13.350-04:00",
+    "jarFileFingerprint": "ce6fd58818145ee4ea57eea327419057d179b068",
+    "jarFileModificationDate": "2012-09-23T01:24:41.794-04:00",
     "location": "C:\\Program Files\\Java\\jre7\\lib\\jsse.jar",
-    "javaRuntime": true
-  },
-  {
-    "symbolicName": "xml-apis",
-    "version": {
-      "major": -1,
-      "minor": -1,
-      "micro": -1,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "065acede1e5305bd2b92213d7b5761328c6f4fd9",
-    "jarFileModificationDate": "2012-09-10T08:41:45.147-04:00",
-    "location": "C:\\Users\\kwheel3\\Documents\\fwdfatimasourcecode\\FAtiMA\\FAtiMA-daf4176c9ab2\\LanguageEngine\\xml-apis.jar",
-    "javaRuntime": false
-  },
-  {
-    "symbolicName": "jre",
-    "version": {
-      "major": 1,
-      "minor": 0,
-      "micro": 0,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "94fb962b574d1213db0cfbc0e2a3cd1bce4f5f61",
-    "jarFileModificationDate": "2012-08-24T14:38:10.403-04:00",
-    "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\zipfs.jar",
-    "javaRuntime": true
-  },
-  {
-    "symbolicName": "jre",
-    "version": {
-      "major": 1,
-      "minor": 0,
-      "micro": 0,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "400702659d0f6f07fa8c5e5bb5a108fa861375d9",
-    "jarFileModificationDate": "2012-08-24T14:38:10.269-04:00",
-    "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\access-bridge-64.jar",
-    "javaRuntime": true
-  },
-  {
-    "symbolicName": "spin",
-    "version": {
-      "major": -1,
-      "minor": -1,
-      "micro": -1,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "ea31d6681f03b505ea72c329d47e699d96800637",
-    "jarFileModificationDate": "2012-09-10T08:41:44.379-04:00",
-    "location": "C:\\Users\\kwheel3\\Documents\\fwdfatimasourcecode\\FAtiMA\\FAtiMA-daf4176c9ab2\\LanguageEngine\\spin.jar",
-    "javaRuntime": false
-  },
-  {
-    "symbolicName": "jre",
-    "version": {
-      "major": 1,
-      "minor": 0,
-      "micro": 0,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "e56f608c78923443cec90aec737a6d349c26698c",
-    "jarFileModificationDate": "2012-08-24T14:38:13.424-04:00",
-    "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\localedata.jar",
-    "javaRuntime": true
-  },
-  {
-    "symbolicName": "jre",
-    "version": {
-      "major": 1,
-      "minor": 0,
-      "micro": 0,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "3bc962b5272bc739745ed6f269c4e1a3df83254b",
-    "jarFileModificationDate": "2012-08-24T14:38:10.289-04:00",
-    "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\dnsns.jar",
     "javaRuntime": true
   },
   {
@@ -99,8 +21,34 @@
       "qualifier": ""
     },
     "jarFileFingerprint": "9b99629e3c0f1a3adb66ee9795a92bee2e02a46b",
-    "jarFileModificationDate": "2012-09-10T08:41:44.949-04:00",
-    "location": "C:\\Users\\kwheel3\\Documents\\fwdfatimasourcecode\\FAtiMA\\FAtiMA-daf4176c9ab2\\LanguageEngine\\xercesImpl.jar",
+    "jarFileModificationDate": "2012-09-28T17:06:48.273-04:00",
+    "location": "C:\\Users\\JvJ\\Documents\\GitHub\\Fatima\\FAtiMA\\LanguageEngine\\xercesImpl.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jena",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a441f914a6803b9c2f839a4a671ef8635056a15a",
+    "jarFileModificationDate": "2012-09-28T17:06:48.034-04:00",
+    "location": "C:\\Users\\JvJ\\Documents\\GitHub\\Fatima\\FAtiMA\\LanguageEngine\\jena.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "xml-apis",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "065acede1e5305bd2b92213d7b5761328c6f4fd9",
+    "jarFileModificationDate": "2012-09-28T17:06:48.281-04:00",
+    "location": "C:\\Users\\JvJ\\Documents\\GitHub\\Fatima\\FAtiMA\\LanguageEngine\\xml-apis.jar",
     "javaRuntime": false
   },
   {
@@ -111,8 +59,73 @@
       "micro": 0,
       "qualifier": ""
     },
+    "jarFileFingerprint": "3a4349a332a6de893e4ad297421bd405fa0825f5",
+    "jarFileModificationDate": "2012-09-23T01:24:22.022-04:00",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\zipfs.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "9e97dada90c0f9e6531a349d8afaac488f6ff9cc",
+    "jarFileModificationDate": "2012-09-23T01:24:22.007-04:00",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\access-bridge-64.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "org.clojure.clojure",
+    "version": {
+      "major": 1,
+      "minor": 3,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "04830e76a9e8c029acb257a70c5cf30592e5a301",
+    "jarFileModificationDate": "2012-10-15T17:52:28.829-04:00",
+    "location": "C:\\Users\\JvJ\\Documents\\GitHub\\Fatima\\FAtiMA\\ClojureTesting\\clojure.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "dc85787a60ac1c9379a7f0e1c78b3005bec8dfbc",
+    "jarFileModificationDate": "2012-09-23T01:24:43.043-04:00",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\localedata.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5d128a70e24c25e7106978ecb9962434b06356b8",
+    "jarFileModificationDate": "2012-09-23T01:24:22.008-04:00",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\dnsns.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
     "jarFileFingerprint": "f56383db77ae9502e6ca617e57d55ee73d631c46",
-    "jarFileModificationDate": "2012-08-24T14:38:10.317-04:00",
+    "jarFileModificationDate": "2012-09-23T01:24:22.016-04:00",
     "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\sunec.jar",
     "javaRuntime": true
   },
@@ -125,35 +138,22 @@
       "qualifier": ""
     },
     "jarFileFingerprint": "9c65be66b7d064aa969eed550ce6bca0c930fd4c",
-    "jarFileModificationDate": "2012-08-24T14:38:10.455-04:00",
+    "jarFileModificationDate": "2012-09-23T01:24:22.092-04:00",
     "location": "C:\\Program Files\\Java\\jre7\\lib\\jce.jar",
     "javaRuntime": true
   },
   {
-    "symbolicName": "jazzy-core",
+    "symbolicName": "jre",
     "version": {
-      "major": -1,
-      "minor": -1,
-      "micro": -1,
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "bd670b820be133a94e40864e1a1a63c778af2fa7",
-    "jarFileModificationDate": "2012-09-10T08:41:42.866-04:00",
-    "location": "C:\\Users\\kwheel3\\Documents\\fwdfatimasourcecode\\FAtiMA\\FAtiMA-daf4176c9ab2\\LanguageEngine\\jazzy-core.jar",
-    "javaRuntime": false
-  },
-  {
-    "symbolicName": "xmlenc-0.52",
-    "version": {
-      "major": -1,
-      "minor": -1,
-      "micro": -1,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "d82554efbe65906d83b3d97bd7509289e9db561a",
-    "jarFileModificationDate": "2012-09-10T08:41:54.190-04:00",
-    "location": "C:\\Users\\kwheel3\\Documents\\fwdfatimasourcecode\\FAtiMA\\FAtiMA-daf4176c9ab2\\FAtiMA\\lib\\xmlenc-0.52.jar",
-    "javaRuntime": false
+    "jarFileFingerprint": "4838808e80df811cfb2bf7faf361b3cbc16f9f81",
+    "jarFileModificationDate": "2011-08-30T23:05:02-04:00",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\dns_sd.jar",
+    "javaRuntime": true
   },
   {
     "symbolicName": "jre",
@@ -164,7 +164,7 @@
       "qualifier": ""
     },
     "jarFileFingerprint": "70020954a878f151d863091253774186b91b4ac2",
-    "jarFileModificationDate": "2012-08-24T14:38:10.386-04:00",
+    "jarFileModificationDate": "2012-09-23T01:24:22.020-04:00",
     "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\sunmscapi.jar",
     "javaRuntime": true
   },
@@ -176,10 +176,36 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "a9f42867fc3623a1c2017bcf90eb06538e853688",
-    "jarFileModificationDate": "2012-08-24T14:38:13.019-04:00",
+    "jarFileFingerprint": "70ea78a4a4d90afbeb4160e9be437f61401f4129",
+    "jarFileModificationDate": "2012-09-23T01:24:37.220-04:00",
     "location": "C:\\Program Files\\Java\\jre7\\lib\\charsets.jar",
     "javaRuntime": true
+  },
+  {
+    "symbolicName": "edu.mit.jwi_2.2.2",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6a345dbdc649907ea8aed55e73c5e3c444bdf3e4",
+    "jarFileModificationDate": "2012-09-28T17:06:45.410-04:00",
+    "location": "C:\\Users\\JvJ\\Documents\\GitHub\\Fatima\\FAtiMA\\FAtiMA.AdvancedMemory\\lib\\edu.mit.jwi_2.2.2.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "spin",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "ea31d6681f03b505ea72c329d47e699d96800637",
+    "jarFileModificationDate": "2012-09-28T17:06:48.078-04:00",
+    "location": "C:\\Users\\JvJ\\Documents\\GitHub\\Fatima\\FAtiMA\\LanguageEngine\\spin.jar",
+    "javaRuntime": false
   },
   {
     "symbolicName": "jre",
@@ -189,8 +215,8 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "22f0e0ed90483f5a39b355e378d10cb3c462eefa",
-    "jarFileModificationDate": "2012-08-24T14:38:10.493-04:00",
+    "jarFileFingerprint": "f6734262725d0c84f5e43cdeab419da9b80b299c",
+    "jarFileModificationDate": "2012-09-23T01:24:22.095-04:00",
     "location": "C:\\Program Files\\Java\\jre7\\lib\\jfr.jar",
     "javaRuntime": true
   },
@@ -202,8 +228,8 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "b69221416bfdc8e7b4e331bcc43a930ded279a66",
-    "jarFileModificationDate": "2012-08-24T14:38:10.297-04:00",
+    "jarFileFingerprint": "acba57835f18f9baca84e63b54b010b7bcddc96f",
+    "jarFileModificationDate": "2012-09-23T01:24:22.009-04:00",
     "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\jaccess.jar",
     "javaRuntime": true
   },
@@ -215,10 +241,23 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "ab814348c304a88d161b0140ae4489d5738d4c7d",
-    "jarFileModificationDate": "2012-08-24T14:38:12.904-04:00",
+    "jarFileFingerprint": "b44a09b019925253268e23192c164ff621ff2932",
+    "jarFileModificationDate": "2012-09-23T01:24:36.585-04:00",
     "location": "C:\\Program Files\\Java\\jre7\\lib\\rt.jar",
     "javaRuntime": true
+  },
+  {
+    "symbolicName": "xmlenc-0.52",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "d82554efbe65906d83b3d97bd7509289e9db561a",
+    "jarFileModificationDate": "2012-09-28T17:06:47.460-04:00",
+    "location": "C:\\Users\\JvJ\\Documents\\GitHub\\Fatima\\FAtiMA\\FAtiMA\\lib\\xmlenc-0.52.jar",
+    "javaRuntime": false
   },
   {
     "symbolicName": "jre",
@@ -228,8 +267,8 @@
       "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "702178e557ab2bdefa389c4f618c3593e3310aa1",
-    "jarFileModificationDate": "2012-08-24T14:38:10.657-04:00",
+    "jarFileFingerprint": "d67f302f916616348e4d6938898f02d0f97c784b",
+    "jarFileModificationDate": "2012-09-23T01:24:22.598-04:00",
     "location": "C:\\Program Files\\Java\\jre7\\lib\\resources.jar",
     "javaRuntime": true
   },
@@ -242,34 +281,21 @@
       "qualifier": ""
     },
     "jarFileFingerprint": "2bad7bafb33c65f78f00999c4a8d9ab9728c21b4",
-    "jarFileModificationDate": "2012-08-24T14:38:10.329-04:00",
+    "jarFileModificationDate": "2012-09-23T01:24:22.018-04:00",
     "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\sunjce_provider.jar",
     "javaRuntime": true
   },
   {
-    "symbolicName": "edu.mit.jwi_2.2.2",
+    "symbolicName": "jazzy-core",
     "version": {
       "major": -1,
       "minor": -1,
       "micro": -1,
       "qualifier": ""
     },
-    "jarFileFingerprint": "6a345dbdc649907ea8aed55e73c5e3c444bdf3e4",
-    "jarFileModificationDate": "2012-09-10T08:41:50.236-04:00",
-    "location": "C:\\Users\\kwheel3\\Documents\\fwdfatimasourcecode\\FAtiMA\\FAtiMA-daf4176c9ab2\\FAtiMA.AdvancedMemory\\lib\\edu.mit.jwi_2.2.2.jar",
-    "javaRuntime": false
-  },
-  {
-    "symbolicName": "jena",
-    "version": {
-      "major": -1,
-      "minor": -1,
-      "micro": -1,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "a441f914a6803b9c2f839a4a671ef8635056a15a",
-    "jarFileModificationDate": "2012-09-10T08:41:44.028-04:00",
-    "location": "C:\\Users\\kwheel3\\Documents\\fwdfatimasourcecode\\FAtiMA\\FAtiMA-daf4176c9ab2\\LanguageEngine\\jena.jar",
+    "jarFileFingerprint": "bd670b820be133a94e40864e1a1a63c778af2fa7",
+    "jarFileModificationDate": "2012-09-28T17:06:47.939-04:00",
+    "location": "C:\\Users\\JvJ\\Documents\\GitHub\\Fatima\\FAtiMA\\LanguageEngine\\jazzy-core.jar",
     "javaRuntime": false
   }
 ]

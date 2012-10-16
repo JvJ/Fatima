@@ -75,8 +75,11 @@ public class AgentLauncher {
 		String scenarioName = args[2];
 		String agentName = args[3];	
 		
+		System.out.println("Mark 1");
 		FAtiMA.Core.AgentCore agent = new AgentCore(agentName);
+		System.out.println("Mark 2");
 		agent.initialize(scenarioDirectory, scenarioFile,scenarioName,agentName);
+		System.out.println("Mark 3");
 		
 		return agent;
 	}
