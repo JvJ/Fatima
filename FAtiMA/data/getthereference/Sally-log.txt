@@ -1,4 +1,298 @@
 
 Connecting to localhost:46874
 
-Exception: java.net.ConnectException: Connection refused: connect
+Sally: Processing message: AGENTS Sally User
+
+Sending Look-AT: Sally
+
+Motivator found: Affiliation
+
+Motivator found: Integrity
+
+Motivator found: Energy
+
+Motivator found: Certainty
+
+Motivator found: Competence
+
+LOADING Needs: 
+
+Perceiving Entities: [Sally, User]
+
+Sally: Processing message: LOOK-AT Sally sex:F time:Morning location:Bedroom name:Sally role:Joker isPerson:True 
+
+Look-At:Sally sex F
+
+Look-At:Sally time Morning
+
+Look-At:Sally location Bedroom
+
+Look-At:Sally name Sally
+
+Look-At:Sally role Joker
+
+Look-At:Sally isPerson True
+
+Sending Look-AT: User
+
+Sally: Processing message: ACTION-FINISHED Sally look-at Sally
+
+can act now!
+
+Sally: Processing message: LOOK-AT User isPerson:True has,chocolate:True power:5 facial-exp:HAPPY 
+
+Look-At:User isPerson True
+
+Look-At:User has,chocolate True
+
+Look-At:User power 5
+
+Look-At:User facial-exp HAPPY
+
+Sally: Processing message: ACTION-FINISHED Sally look-at User
+
+can act now!
+
+PropertyChanged: [*] SELF(sex) F
+
+PropertyChanged: [*] SELF(time) Morning
+
+PropertyChanged: [*] SELF(location) Bedroom
+
+PropertyChanged: [*] SELF(name) SELF
+
+PropertyChanged: [*] SELF(role) Joker
+
+PropertyChanged: [*] SELF(isPerson) True
+
+PropertyChanged: [*] User(isPerson) True
+
+PropertyChanged: [*] User(has,chocolate) True
+
+PropertyChanged: [*] User(power) 5
+
+PropertyChanged: [*] User(facial-exp) HAPPY
+
+appraising event: EVENT(SELF,look-at,SELF)
+
+appraising event: EVENT(SELF,look-at,User)
+
+Sally: Processing message: ENTITY-ADDED Molly
+
+Sending Look-AT: Molly
+
+Perceiving Entities: [Molly]
+
+Sally: Processing message: LOOK-AT Molly sex:F time:Morning location:Bedroom name:Molly role:Listener isPerson:True 
+
+Look-At:Molly sex F
+
+Look-At:Molly time Morning
+
+Look-At:Molly location Bedroom
+
+Look-At:Molly name Molly
+
+Look-At:Molly role Listener
+
+Look-At:Molly isPerson True
+
+Sally: Processing message: ACTION-FINISHED Sally look-at Molly
+
+can act now!
+
+Sally: Processing message: ACTION-FINISHED Molly look-at Sally
+
+can act now!
+
+PropertyChanged: [*] Molly(sex) F
+
+PropertyChanged: [*] Molly(time) Morning
+
+PropertyChanged: [*] Molly(location) Bedroom
+
+PropertyChanged: [*] Molly(name) Molly
+
+PropertyChanged: [*] Molly(role) Listener
+
+PropertyChanged: [*] Molly(isPerson) True
+
+appraising event: EVENT(SELF,look-at,Molly)
+
+appraising event: EVENT(Molly,look-at,SELF)
+
+Adding 1st level intention: MakeSuccessfulReference(Molly)
+
+Intention: MakeSuccessfulReference(Molly) Utilitity: 2.866124 Competence: 0.8473848 Urgency: 1.0 Total: 4.85742
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeSuccessfulReference(Molly)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Sally: Processing message: ACTION-FINISHED Molly look-at Molly
+
+can act now!
+
+appraising event: EVENT(Molly,look-at,Molly)
+
+Sally: Processing message: ACTION-FINISHED Molly look-at User
+
+can act now!
+
+appraising event: EVENT(Molly,look-at,User)
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Adding a new Intention: MakeSuccessfulReference(Molly)
+
+Selecting Action: SELF:SuccessfulReference(Molly)from plan:Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sally</Sender><Receiver>Molly</Receiver><Type>Reference</Type><Context id="me">Sally</Context><Context id="you">Molly</Context><Context id="sex">f</Context><Context id="me">Sally</Context><Context id="role">joker</Context><Context id="yourole">listener</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Intention: MakeSuccessfulReference(Molly) Utilitity: 2.9357774 Competence: 1.0 Urgency: 1.0 Total: 5.871555
+
+Sally: Processing message: ACTION-FINISHED Sally say <SpeechAct type="SpeechAct"><Sender>Sally</Sender><Receiver>Molly</Receiver><Type>Reference</Type><Context id="me">Sally</Context><Context id="you">Molly</Context><Context id="sex">f</Context><Context id="me">Sally</Context><Context id="role">joker</Context><Context id="yourole">listener</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,Molly,Reference)
+
+Sally: Processing message: ACTION-FINISHED Molly say <SpeechAct type="SpeechAct"><Sender>Molly</Sender><Receiver>Sally</Receiver><Type>SuccessfulResponse</Type><Context id="me">Molly</Context><Context id="you">Sally</Context><Context id="sex">f</Context><Context id="me">Molly</Context><Context id="role">listener</Context><Context id="yourole">joker</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sally(SELF:true) inferseffects: SELF:SuccessfulReference(Molly)
+
+adding EVENT(SELF,SuccessfulReference,Molly) = True to ToM Sally(SELF:true)
+
+ToM [SELF]
+
+adding SELF(madeReference) = True to ToM Sally(SELF:true)
+
+ToM [*]
+
+adding Molly(heardReference) = True to ToM Sally(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]: extending a link for condition [*]:EVENT(SELF,SuccessfulReference,Molly) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(Molly,SpeechAct,SELF,SuccessfulResponse)
+
+appraising event: EVENT(SELF,SuccessfulReference,Molly)
+
+Updating motivator Affiliation
+
+Adding 1st level intention: MakeSuccessfulReference(Molly)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeSuccessfulReference(Molly)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Intention: MakeSuccessfulReference(Molly) Utilitity: 1.2454633 Competence: 1.0 Urgency: 1.0 Total: 2.4909265
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Adding a new Intention: MakeSuccessfulReference(Molly)
+
+Selecting Action: SELF:SuccessfulReference(Molly)from plan:Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sally</Sender><Receiver>Molly</Receiver><Type>Reference</Type><Context id="me">Sally</Context><Context id="you">Molly</Context><Context id="sex">f</Context><Context id="me">Sally</Context><Context id="role">joker</Context><Context id="yourole">listener</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sally: Processing message: ACTION-FINISHED Sally say <SpeechAct type="SpeechAct"><Sender>Sally</Sender><Receiver>Molly</Receiver><Type>Reference</Type><Context id="me">Sally</Context><Context id="you">Molly</Context><Context id="sex">f</Context><Context id="me">Sally</Context><Context id="role">joker</Context><Context id="yourole">listener</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,Molly,Reference)
+
+Intention: MakeSuccessfulReference(Molly) Utilitity: 1.3843033 Competence: 1.0 Urgency: 1.0 Total: 2.7686067
+
+Sally: Processing message: ACTION-FINISHED Molly say <SpeechAct type="SpeechAct"><Sender>Molly</Sender><Receiver>Sally</Receiver><Type>SuccessfulResponse</Type><Context id="me">Molly</Context><Context id="you">Sally</Context><Context id="sex">f</Context><Context id="me">Molly</Context><Context id="role">listener</Context><Context id="yourole">joker</Context><Parameters></Parameters></SpeechAct>
+
+can act now!
+
+@Sally(SELF:true) inferseffects: SELF:SuccessfulReference(Molly)
+
+adding EVENT(SELF,SuccessfulReference,Molly) = True to ToM Sally(SELF:true)
+
+ToM [SELF]
+
+adding SELF(madeReference) = True to ToM Sally(SELF:true)
+
+ToM [*]
+
+adding Molly(heardReference) = True to ToM Sally(SELF:true)
+
+ToM [*]
+
+can act now!
+
+ContinuousP Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]: extending a link for condition [*]:EVENT(SELF,SuccessfulReference,Molly) to start.
+
+Continuous P. Plan P=1.0 Steps: [] removing redundant step
+
+appraising event: EVENT(Molly,SpeechAct,SELF,SuccessfulResponse)
+
+appraising event: EVENT(SELF,SuccessfulReference,Molly)
+
+Updating motivator Affiliation
+
+Processing external request: SAVE_ADV_MEMORY 
+
+Adding 1st level intention: MakeSuccessfulReference(Molly)
+
+Switching 2nd level intention from null to Intention: ActivePursuitGoal: MakeSuccessfulReference(Molly)
+
+Best plan: Plan P=1.0 Steps: []
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Best plan: Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Found solution: Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Intention: MakeSuccessfulReference(Molly) Utilitity: 0.48684588 Competence: 1.0 Urgency: 1.0 Total: 0.97369176
+
+Plan Finished: Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Plan Commited: Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Adding a new Intention: MakeSuccessfulReference(Molly)
+
+Selecting Action: SELF:SuccessfulReference(Molly)from plan:Plan P=1.0 Steps: [SELF:SuccessfulReference(Molly)]
+
+Sending action for execution: say <SpeechAct type="SpeechAct"><Sender>Sally</Sender><Receiver>Molly</Receiver><Type>Reference</Type><Context id="me">Sally</Context><Context id="you">Molly</Context><Context id="sex">f</Context><Context id="me">Sally</Context><Context id="role">joker</Context><Context id="yourole">listener</Context><Parameters></Parameters></SpeechAct>
+
+Cannot act now!
+
+Sally: Processing message: ACTION-FINISHED Sally say <SpeechAct type="SpeechAct"><Sender>Sally</Sender><Receiver>Molly</Receiver><Type>Reference</Type><Context id="me">Sally</Context><Context id="you">Molly</Context><Context id="sex">f</Context><Context id="me">Sally</Context><Context id="role">joker</Context><Context id="yourole">listener</Context><Parameters></Parameters></SpeechAct>
+
+appraising event: EVENT(SELF,SpeechAct,Molly,Reference)
+
+Intention: MakeSuccessfulReference(Molly) Utilitity: 0.6517878 Competence: 1.0 Urgency: 1.0 Total: 1.3035756

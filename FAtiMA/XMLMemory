@@ -2,40 +2,40 @@
    <SemanticMemory>
       <KnowledgeBase/>
       <WorkingMemory>
-         <WMSlot persistent="true" displayName="ProbBias(Drop1)" name="Drop1" value="0.0"/>
-         <WMSlot persistent="true" displayName="ProbBias(Drop2)" name="Drop2" value="0.0"/>
-         <WMSlot persistent="true" displayName="ProbBias(Drop3)" name="Drop3" value="0.0"/>
-         <WMSlot persistent="true" displayName="ProbBias(Pick4)" name="Pick4" value="0.0"/>
-         <WMSlot persistent="true" displayName="ProbBias(Pick5)" name="Pick5" value="0.0"/>
-         <WMSlot persistent="true" displayName="ProbBias(Pick6)" name="Pick6" value="0.0"/>
-         <WMSlot persistent="true" displayName="ProbBias(Eat7)" name="Eat7" value="0.0"/>
-         <WMSlot persistent="true" displayName="ProbBias(Eat8)" name="Eat8" value="0.0"/>
-         <WMSlot persistent="false" displayName="SELF(sex)" name="sex" value="M"/>
+         <WMSlot persistent="true" displayName="ProbBias(SuccessfulReference1)" name="SuccessfulReference1" value="0.0"/>
+         <WMSlot persistent="true" displayName="ProbBias(SuccessfulReference2)" name="SuccessfulReference2" value="0.0"/>
+         <WMSlot persistent="true" displayName="ProbBias(SuccessfulReference3)" name="SuccessfulReference3" value="0.0"/>
+         <WMSlot persistent="true" displayName="ProbBias(UnsuccessfulReference4)" name="UnsuccessfulReference4" value="0.0"/>
+         <WMSlot persistent="true" displayName="ProbBias(UnsuccessfulReference5)" name="UnsuccessfulReference5" value="0.0"/>
+         <WMSlot persistent="true" displayName="ProbBias(UnsuccessfulReference6)" name="UnsuccessfulReference6" value="0.0"/>
+         <WMSlot persistent="true" displayName="ProbBias(SpeechAct7)" name="SpeechAct7" value="0.0"/>
+         <WMSlot persistent="true" displayName="ActionContext()" name="ActionContext" value="EVENT(Sally,SuccessfulReference,SELF)"/>
+         <WMSlot persistent="false" displayName="Sally(sex)" name="sex" value="F"/>
+         <WMSlot persistent="false" displayName="Sally(time)" name="time" value="Morning"/>
+         <WMSlot persistent="false" displayName="Sally(location)" name="location" value="Bedroom"/>
+         <WMSlot persistent="false" displayName="Sally(name)" name="name" value="Sally"/>
+         <WMSlot persistent="false" displayName="Sally(role)" name="role" value="Joker"/>
+         <WMSlot persistent="false" displayName="Sally(isPerson)" name="isPerson" value="True"/>
+         <WMSlot persistent="false" displayName="SELF(sex)" name="sex" value="F"/>
          <WMSlot persistent="false" displayName="SELF(time)" name="time" value="Morning"/>
-         <WMSlot persistent="false" displayName="SELF(location)" name="location" value="Office"/>
+         <WMSlot persistent="false" displayName="SELF(location)" name="location" value="Bedroom"/>
          <WMSlot persistent="false" displayName="SELF(name)" name="name" value="SELF"/>
-         <WMSlot persistent="false" displayName="SELF(role)" name="role" value="SELF"/>
+         <WMSlot persistent="false" displayName="SELF(role)" name="role" value="Listener"/>
          <WMSlot persistent="false" displayName="SELF(isPerson)" name="isPerson" value="True"/>
-         <WMSlot persistent="false" displayName="apple(isFruit)" name="isFruit" value="True"/>
-         <WMSlot persistent="false" displayName="apple(eatable)" name="eatable" value="True"/>
-         <WMSlot persistent="false" displayName="apple(type)" name="type" value="object"/>
-         <WMSlot persistent="true" displayName="ActionContext()" name="ActionContext" value="EVENT(User,Drop,apple)"/>
-         <WMSlot persistent="false" displayName="chocolate(isFruit)" name="isFruit" value="False"/>
-         <WMSlot persistent="false" displayName="chocolate(isChocolate)" name="isChocolate" value="True"/>
-         <WMSlot persistent="false" displayName="chocolate(eatable)" name="eatable" value="True"/>
-         <WMSlot persistent="false" displayName="chocolate(type)" name="type" value="object"/>
          <WMSlot persistent="false" displayName="User(isPerson)" name="isPerson" value="True"/>
          <WMSlot persistent="false" displayName="User(has,chocolate)" name="chocolate" value="True"/>
          <WMSlot persistent="false" displayName="User(power)" name="power" value="5"/>
          <WMSlot persistent="false" displayName="User(facial-exp)" name="facial-exp" value="HAPPY"/>
-         <WMSlot persistent="false" displayName="apple(onfloor)" name="onfloor" value="True"/>
-         <WMSlot persistent="false" displayName="User(has,apple)" name="apple" value="False"/>
+         <WMSlot persistent="true" displayName="EVENT(Sally,SuccessfulReference,SELF)" name="SELF" value="True"/>
+         <WMSlot persistent="true" displayName="Sally(madeReference)" name="madeReference" value="True"/>
+         <WMSlot persistent="true" displayName="SELF(heardReference)" name="heardReference" value="True"/>
+         <WMSlot persistent="true" displayName="ProbBias(Molly,SpeechAct,Sally,SuccessfulResponse)" name="SuccessfulResponse" value="0.0"/>
       </WorkingMemory>
    </SemanticMemory>
-   <EpisodicMemory nextEventID="5" agentSimulationTime="254470" eventCounter="12">
+   <EpisodicMemory nextEventID="10" agentSimulationTime="40933" eventCounter="22">
       <AutobiographicalMemory>
          <Episode location="[]" people="[]" objects="[]">
-            <EpisodeTime narrativeTime="0" realTime="1347283768306" eventSequence="1"/>
+            <EpisodeTime narrativeTime="0" realTime="1350421079859" eventSequence="1"/>
          </Episode>
       </AutobiographicalMemory>
       <STEpisodicMemory/>

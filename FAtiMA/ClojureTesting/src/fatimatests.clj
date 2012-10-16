@@ -38,10 +38,10 @@
                                  (WorldTest/main (str-array prm))))
                                
     (= (second keys) :agents) (do
-                               (let [prm (get-in *params* keys)]
-                                 (println "Calling with: " prm)
-                                 (print-files prm)
-                                 (AgentLauncher/main (str-array prm))))
+                                (let [prm (get-in *params* keys)]
+                                  (println "Calling with: " prm)
+                                  (print-files prm)
+                                  (AgentLauncher/main (str-array prm))))
     
     :else (println "Error: Bad keys!")
     ))

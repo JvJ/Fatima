@@ -1,0 +1,10 @@
+name says "Thundercats!"
+
+name says "Hooooo!"
+
+name says "Get the power!"
+
+name says "Nintendo power!"
+
+name says "Thundercats!"
+
